@@ -1,0 +1,26 @@
+title: Risiken und Grenzen der Anpassungsarten
+difficulty: 3
+question: |
+  Analysiere die folgenden Aussagen und entscheide, ob sie korrekt sind. Falls nicht, korrigiere sie und begründe deine Korrektur.
+
+  **Aussage 1:** „Konfiguration ist immer die beste Wahl, weil sie am günstigsten ist."
+
+  **Aussage 2:** „Refactoring ist das Gleiche wie Bug-Fixing. Beide beheben Fehler im Code."
+
+  **Aussage 3:** „Wenn ein Unternehmen ein Plug-in von einem unbekannten Anbieter installiert, trägt es kein besonderes Risiko, weil das Plug-in ja vom Hersteller geprüft wurde."
+
+  **Aussage 4:** „Individualentwicklung ist immer teurer als Customizing."
+
+  Beantworte anschließend: Welche Anpassungsform ist deiner Meinung nach am schwierigsten rückgängig zu machen? Begründe.
+tip: |
+  Achte auf absolute Aussagen wie „immer" oder „nie" – sie sind im IT-Kontext meist zu vereinfachend.
+solution: |
+  **Aussage 1:** Falsch. Konfiguration ist nur sinnvoll, wenn das gewünschte Verhalten durch vorhandene Einstellungen erreichbar ist. Wenn nicht, führt das Beharren auf Konfiguration zum Scheitern des Projekts.
+
+  **Aussage 2:** Falsch. Refactoring verändert das Verhalten der Software *nicht* – es verbessert nur die innere Struktur. Bug-Fixing behebt konkrete Fehler und ändert das Verhalten an einer fehlerhaften Stelle.
+
+  **Aussage 3:** Falsch. Drittanbieter-Plug-ins sind ein Sicherheitsrisiko. Sie haben möglicherweise Zugriff auf Systemdaten und werden nicht zwingend vom Plattformbetreiber sicherheitsgeprüft. Der Anbieter kann das Plug-in auch einstellen.
+
+  **Aussage 4:** Falsch. In manchen Fällen ist Individualentwicklung günstiger als Customizing – z. B. wenn die Anpassung in einem komplexen ERP sehr aufwändig ist oder wenn das Customizing langfristig hohe Wartungskosten erzeugt.
+
+  **Schwierigste Rückgängigmachung:** Individualentwicklung. Es entsteht proprietärer Code mit hohen Wechselkosten. Auch Customizing kann schwer zurückrollbar sein, wenn es tief in Systemtabellen eingreift.

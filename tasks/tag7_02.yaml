@@ -1,0 +1,38 @@
+title: Entscheidungstabelle erstellen
+difficulty: 2
+question: |
+  Erstelle eine vollständige Entscheidungstabelle für das folgende Szenario:
+
+  **Versandkostenregelung eines Online-Shops:**
+  - Wenn der Bestellwert ≥ 50 € **und** der Kunde ein Premium-Mitglied ist → versandkostenfrei
+  - Wenn der Bestellwert ≥ 50 € **und** der Kunde kein Premium-Mitglied ist → 2,99 € Versand
+  - Wenn der Bestellwert < 50 € **und** der Kunde ein Premium-Mitglied ist → 1,99 € Versand
+  - Wenn der Bestellwert < 50 € **und** der Kunde kein Premium-Mitglied ist → 4,99 € Versand
+
+  **Aufgaben:**
+  1. Erstelle die vollständige Entscheidungstabelle (Bedingungsteil + Aktionsteil).
+  2. Wie viele Regeln hat die Tabelle? Begründe mit der Formel.
+  3. Welcher Regel entspricht ein Kunde, der 35 € bestellt und kein Mitglied ist?
+tip: |
+  Beginne mit den Bedingungen: Bestellwert ≥ 50 € (J/N) und Premium-Mitglied (J/N). Dann ergeben sich 4 Kombinationen.
+solution: |
+  1.
+  ```
+  ┌──────────────────────────────┬────┬────┬────┬────┐
+  │ Bedingungen                  │ R1 │ R2 │ R3 │ R4 │
+  ├──────────────────────────────┼────┼────┼────┼────┤
+  │ Bestellwert ≥ 50 €           │ J  │ J  │ N  │ N  │
+  │ Premium-Mitglied             │ J  │ N  │ J  │ N  │
+  ├──────────────────────────────┼────┼────┼────┼────┤
+  │ Aktionen                     │    │    │    │    │
+  ├──────────────────────────────┼────┼────┼────┼────┤
+  │ Versandkostenfrei            │ X  │    │    │    │
+  │ 2,99 € Versand               │    │ X  │    │    │
+  │ 1,99 € Versand               │    │    │ X  │    │
+  │ 4,99 € Versand               │    │    │    │ X  │
+  └──────────────────────────────┴────┴────┴────┴────┘
+  ```
+
+  2. 2 Bedingungen → 2² = **4 Regeln**
+
+  3. Bestellwert < 50 € (N) + kein Mitglied (N) → **R4** → **4,99 € Versand**

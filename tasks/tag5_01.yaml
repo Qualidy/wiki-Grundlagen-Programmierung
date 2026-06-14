@@ -1,0 +1,34 @@
+title: Lastenheft vs. Pflichtenheft
+difficulty: 1
+question: |
+  Beantworte die folgenden Fragen:
+
+  1. Wer erstellt das Lastenheft – Auftraggeber oder Auftragnehmer?
+
+  2. Wer erstellt das Pflichtenheft – Auftraggeber oder Auftragnehmer?
+
+  3. Was beschreibt das Lastenheft – das „Was" oder das „Wie"?
+
+  4. Ordne die folgenden Aussagen dem richtigen Dokument zu:
+     - „Das System wird mit PHP 8.2 und einer MySQL-Datenbank umgesetzt."
+     - „Die Software muss es ermöglichen, Rechnungen als PDF zu exportieren."
+     - „Die Benutzeroberfläche wird mit dem Framework Bootstrap realisiert."
+     - „Das System soll mindestens 500 gleichzeitige Nutzer unterstützen."
+
+  5. Was ist die **Eselsbrücke** für Lasten- und Pflichtenheft (aus dem Kapitel)?
+tip: |
+  Denke an die Perspektive: Der Auftraggeber beschreibt sein Problem, der Auftragnehmer beschreibt seine Lösung.
+solution: |
+  1. **Auftraggeber**
+
+  2. **Auftragnehmer**
+
+  3. Das **„Was"** – was soll das System leisten?
+
+  4.
+  - „PHP 8.2 und MySQL" → **Pflichtenheft** (technische Umsetzung)
+  - „Rechnungen als PDF exportieren" → **Lastenheft** (Funktion, die gefordert wird)
+  - „Bootstrap-Framework" → **Pflichtenheft** (technische Entscheidung)
+  - „500 gleichzeitige Nutzer" → **Lastenheft** (nicht-funktionale Anforderung)
+
+  5. Das Lastenheft beschreibt die **Last** (Aufgabe) des Auftraggebers. Das Pflichtenheft beschreibt die **Pflicht** (Verpflichtung) des Auftragnehmers.

@@ -1,0 +1,26 @@
+title: Wasserfallmodell beschreiben
+difficulty: 1
+question: |
+  Beantworte die folgenden Fragen zum Wasserfallmodell:
+
+  1. Nenne die sechs Phasen des Wasserfallmodells in der richtigen Reihenfolge.
+
+  2. Was bedeutet es, dass das Wasserfallmodell „linear" ist?
+
+  3. Nenne zwei Vorteile des Wasserfallmodells.
+
+  4. Nenne zwei Nachteile des Wasserfallmodells.
+
+  5. Für welche Art von Projekten eignet sich das Wasserfallmodell besonders gut?
+tip: |
+  Die Phasen des Wasserfallmodells entsprechen denen, die du in Kapitel 3 kennengelernt hast – in einer festen Reihenfolge ohne Rückkehr.
+solution: |
+  1. Anforderungsanalyse → Entwurf → Implementierung → Test → Deployment → Wartung
+
+  2. Linear bedeutet: Jede Phase wird vollständig abgeschlossen, bevor die nächste beginnt. Es gibt keine Rückkopplung oder Iteration.
+
+  3. Vorteile: Hohe Planbarkeit (Budget und Zeitplan früh bekannt), klare Dokumentation durch definierte Meilensteine.
+
+  4. Nachteile: Kunde sieht das fertige Produkt erst spät; nachträgliche Anforderungsänderungen sind teuer.
+
+  5. Geeignet für: Projekte mit stabilen, klar definierten Anforderungen – z. B. sicherheitskritische Systeme (Medizin, Luft- und Raumfahrt) oder Projekte mit fest vereinbartem Vertragsumfang.

@@ -1,0 +1,22 @@
+title: Sprachauswahl begründen
+difficulty: 3
+question: |
+  Du bist IT-Berater. Für die folgenden Projekte soll eine geeignete Programmiersprache empfohlen werden. Begründe deine Wahl jeweils mit dem Paradigma, dem Einsatzszenario und mindestens einem konkreten Vorteil.
+
+  **Projekt A:** Eine Webseite für eine kleine Bäckerei soll erstellt werden. Sie zeigt Produkte, Öffnungszeiten und ein Kontaktformular. Das Budget ist gering, der Entwickler hat wenig Erfahrung.
+
+  **Projekt B:** Ein Unternehmen möchte eine komplexe Warenwirtschaftssoftware entwickeln, die über Jahre gepflegt und von mehreren Teams erweitert werden soll.
+
+  **Projekt C:** Ein Datenwissenschaftler soll große Datensätze analysieren und maschinelle Lernmodelle trainieren.
+
+  **Projekt D:** Ein Firmware-Entwickler soll die Software für einen eingebetteten Mikrocontroller schreiben. Der Speicher ist auf 64 KB begrenzt.
+tip: |
+  Denke an: Einstiegsfreundlichkeit, Wartbarkeit bei großen Projekten, verfügbare Bibliotheken und Hardware-Nähe.
+solution: |
+  **Projekt A:** PHP oder Python. Beide sind Einstiegsfreundlich, schnell einsetzbar und für serverseitige Webentwicklung optimiert. Kein Build-Schritt nötig, viele fertige CMS (WordPress = PHP).
+
+  **Projekt B:** Java oder C#. Objektorientiert, streng typisiert, gut für große Teams und langlebige Codebasen. Compiler prüft Fehler früh; umfangreiche Frameworks verfügbar (Spring, .NET).
+
+  **Projekt C:** Python. Umfangreichste Bibliotheken für Datenwissenschaft (NumPy, pandas, scikit-learn, TensorFlow). Schnelle Iteration durch Interpreter; interaktive Notebooks (Jupyter).
+
+  **Projekt D:** C oder C++. Imperative, hardwarenahe Sprachen mit direktem Speicherzugriff. Sehr effizienter Maschinencode, geringer Overhead – ideal für ressourcenbeschränkte Systeme.

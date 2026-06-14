@@ -1,0 +1,47 @@
+title: Klassendiagramm lesen
+difficulty: 2
+question: |
+  Betrachte das folgende Klassendiagramm einer vereinfachten Bibliotheksverwaltung:
+
+  ```
+  ┌──────────────────┐         ┌──────────────────┐
+  │    Buch          │         │    Ausleihe       │
+  ├──────────────────┤         ├──────────────────┤
+  │ - isbn: String   │    *    │ - ausleihDatum   │
+  │ - titel: String  ├─────────┤ - rueckgabeDatum │
+  │ - autor: String  │ 1       ├──────────────────┤
+  ├──────────────────┤         │ + verlängern()   │
+  │ + getISBN()      │         └────────┬─────────┘
+  │ + getTitel()     │                  │ *
+  └──────────────────┘                  │
+                                        │ 1
+                               ┌────────┴─────────┐
+                               │    Leser          │
+                               ├──────────────────┤
+                               │ - name: String   │
+                               │ - ausweisNr: Int │
+                               ├──────────────────┤
+                               │ + ausleihen()    │
+                               │ + zurückgeben()  │
+                               └──────────────────┘
+  ```
+
+  **Aufgaben:**
+
+  1. Nenne alle drei Klassen und ihre Attribute.
+  2. Was bedeutet das `-` vor den Attributen? Was würde `+` bedeuten?
+  3. Was bedeutet die `1` und die `*` an den Verbindungslinien?
+  4. Kann ein Buch mehreren Lesern gleichzeitig ausgeliehen sein? Begründe anhand des Diagramms.
+  5. Welche Methode hat ein `Leser`-Objekt? Was könnte `ausleihen()` intern tun?
+tip: |
+  Die Zahlen an den Linien sind Kardinalitäten – wie viele Objekte der einen Klasse mit wie vielen der anderen verknüpft sind.
+solution: |
+  1. **Buch**: isbn, titel, autor. **Ausleihe**: ausleihDatum, rueckgabeDatum. **Leser**: name, ausweisNr.
+
+  2. `-` = private (nur innerhalb der Klasse zugreifbar). `+` = public (von außen zugreifbar).
+
+  3. `1` = genau ein Objekt. `*` = null oder mehr Objekte. Ein Buch kann mit mehreren Ausleihen verknüpft sein (1 Buch → * Ausleihen, z. B. über die Zeit). Ein Leser kann mehrere Ausleihen haben.
+
+  4. Das Diagramm zeigt `1 Buch – * Ausleihen`, was für Ausleihen über die **Zeit** gilt (Buchhistorie). Ob gleichzeitige Ausleihe möglich ist, hängt von der Implementierungslogik ab – das Diagramm lässt es offen.
+
+  5. Methoden: `ausleihen()` und `zurückgeben()`. `ausleihen()` könnte intern ein neues `Ausleihe`-Objekt erzeugen, das Datum setzen und den Buchbestand aktualisieren.

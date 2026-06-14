@@ -1,0 +1,26 @@
+title: Teststufen unterscheiden
+difficulty: 3
+question: |
+  Erkläre den Unterschied zwischen den vier Teststufen (Unit-Test, Integrationstest, Systemtest, Abnahmetest) und beantworte die folgenden Fragen:
+
+  1. Ein Entwickler testet eine einzelne Funktion, die einen Rabatt berechnet. Er übergibt Testdaten und prüft, ob das Ergebnis korrekt ist. Welche Teststufe ist das?
+
+  2. Das QA-Team prüft, ob das Login-Modul und das Berechtigungsmodul korrekt zusammenarbeiten. Welche Teststufe?
+
+  3. Der Auftraggeber führt selbst Tests durch, um zu prüfen, ob die Software seinen Anforderungen entspricht, bevor er sie abnimmt. Welche Teststufe?
+
+  4. In welcher Teststufe sollten Fehler am günstigsten zu beheben sein? Begründe.
+
+  5. Warum ist der Abnahmetest besonders kritisch für das Projekt?
+tip: |
+  Denke an die Beschreibung jeder Teststufe: Was wird getestet, und wer testet?
+solution: |
+  1. **Unit-Test** – einzelne Funktion/Methode wird isoliert getestet.
+
+  2. **Integrationstest** – Zusammenspiel mehrerer Komponenten/Module wird geprüft.
+
+  3. **Abnahmetest (UAT)** – der Auftraggeber selbst prüft gegen seine Anforderungen.
+
+  4. **Unit-Test** – Fehler in einzelnen Funktionen sind am günstigsten zu beheben, da sie früh erkannt werden, bevor sie sich in der Systemintegration fortpflanzen.
+
+  5. Der Abnahmetest ist die letzte Qualitätshürde. Scheitert er, wird das Produkt nicht abgenommen – das Projekt gilt als nicht erfüllt. Gleichzeitig sind Fehler hier am teuersten zu beheben, da der Code bereits fertig ist.

@@ -1,0 +1,22 @@
+title: ERM-Grundbegriffe
+difficulty: 1
+question: |
+  Beantworte die folgenden Fragen zu den Grundbegriffen des ERM:
+
+  1. Was ist eine **Entität**? Nenne ein Beispiel.
+  2. Was ist ein **Entitätstyp**? Wie unterscheidet er sich von einer Entität?
+  3. Was ist ein **Attribut**? Nenne zwei Attribute für den Entitätstyp „Mitarbeiter".
+  4. Was ist ein **Primärschlüssel**? Warum braucht jeder Entitätstyp einen?
+  5. Ist eine E-Mail-Adresse ein guter Primärschlüssel? Begründe kurz.
+tip: |
+  Eine Entität ist ein konkretes Einzelobjekt, ein Entitätstyp ist die Kategorie (Schablone).
+solution: |
+  1. Eine Entität ist ein konkretes, eindeutig identifizierbares Objekt der realen Welt, über das Daten gespeichert werden sollen. Beispiel: „Mitarbeiterin Maria Müller, MitarbeiterID 42".
+
+  2. Ein Entitätstyp fasst gleichartige Entitäten zusammen – er ist die Schablone. „Mitarbeiter" ist ein Entitätstyp. Maria Müller (ID 42) ist eine konkrete Entität dieses Typs.
+
+  3. Beispiele: Name, Gehalt, Abteilung, Einstellungsdatum
+
+  4. Ein Primärschlüssel identifiziert jede Entität eindeutig. Ohne ihn können zwei Datensätze nicht sicher voneinander unterschieden werden.
+
+  5. Bedingt geeignet – eine E-Mail kann sich ändern (kein stabiler Schlüssel) und ist technisch gesehen recht lang. Besser ist eine technische ID (z. B. integer-basierte Mitarbeiternummer).

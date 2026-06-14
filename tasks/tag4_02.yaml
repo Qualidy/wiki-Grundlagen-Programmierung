@@ -1,0 +1,26 @@
+title: Spiralmodell erklären
+difficulty: 2
+question: |
+  Das Spiralmodell besteht aus vier Quadranten, die in jeder Iteration durchlaufen werden.
+
+  1. Nenne die vier Quadranten des Spiralmodells.
+
+  2. Was ist der zentrale Gedanke des Spiralmodells, der es vom Wasserfallmodell unterscheidet?
+
+  3. Was ist ein Prototyp im Kontext des Spiralmodells – und wozu dient er?
+
+  4. Erkläre: Was bedeutet es, dass das Spiralmodell „iterativ" ist?
+
+  5. Warum eignet sich das Spiralmodell **nicht** für alle Projekte? Nenne einen konkreten Grund.
+tip: |
+  Der zentrale Unterschied liegt in der Behandlung von Risiken – das Spiralmodell macht Risikomanagement zur Hauptaufgabe.
+solution: |
+  1. (1) Ziele & Alternativen festlegen, (2) Risiken bewerten & reduzieren, (3) Ergebnis entwickeln & verifizieren, (4) Nächste Iteration planen.
+
+  2. Im Spiralmodell ist **Risikomanagement** das zentrale Prinzip. Risiken werden in jeder Iteration explizit analysiert und durch Prototypen oder Reviews reduziert – das Wasserfallmodell berücksichtigt Risiken kaum systematisch.
+
+  3. Ein Prototyp ist ein frühes, vereinfachtes Modell eines Teilbereichs. Er dient dazu, Unsicherheiten zu klären (z. B. „Ist die Technologie geeignet?") und frühes Feedback zu erhalten, bevor in teure Entwicklung investiert wird.
+
+  4. Iterativ bedeutet: Der Entwicklungsprozess wird mehrfach (in Zyklen) wiederholt. In jedem Zyklus wird das Produkt um einen weiteren Bereich erweitert oder verfeinert.
+
+  5. Nicht für alle Projekte: Der Overhead durch kontinuierliche Risikoanalysen und Iterationsplanung lohnt sich erst ab einer bestimmten Projektgröße. Für kleine, klar definierte Projekte ist er ineffizient.

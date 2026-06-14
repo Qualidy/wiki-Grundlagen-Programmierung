@@ -1,0 +1,34 @@
+title: Entscheidungstabelle lesen
+difficulty: 1
+question: |
+  Lies die folgende Entscheidungstabelle und beantworte die Fragen:
+
+  ```
+  ┌──────────────────────────────┬────┬────┬────┬────┐
+  │ Bedingungen                  │ R1 │ R2 │ R3 │ R4 │
+  ├──────────────────────────────┼────┼────┼────┼────┤
+  │ Mitglied im Club             │ J  │ J  │ N  │ N  │
+  │ Bestellung > 50 €            │ J  │ N  │ J  │ N  │
+  ├──────────────────────────────┼────┼────┼────┼────┤
+  │ Aktionen                     │    │    │    │    │
+  ├──────────────────────────────┼────┼────┼────┼────┤
+  │ 20 % Rabatt                  │ X  │    │    │    │
+  │ 10 % Rabatt                  │    │ X  │ X  │    │
+  │ Kein Rabatt                  │    │    │    │ X  │
+  └──────────────────────────────┴────┴────┴────┴────┘
+  ```
+
+  1. Was passiert bei Regel R2? Beschreibe die Bedingungen und die Aktion.
+  2. Ein Kunde ist kein Clubmitglied und bestellt für 75 €. Welche Regel gilt? Wie viel Rabatt bekommt er?
+  3. Wie viele mögliche Kombinationen gibt es insgesamt (Formel und Ergebnis)?
+  4. Ist diese Tabelle vollständig? Begründe kurz.
+tip: |
+  Die Anzahl möglicher Kombinationen bei n Bedingungen beträgt 2^n.
+solution: |
+  1. R2: Mitglied im Club (Ja) + Bestellung ≤ 50 € (Nein) → 10 % Rabatt
+
+  2. Kein Mitglied (N) + Bestellung > 50 € (J) → Regel **R3** → **10 % Rabatt**
+
+  3. 2 Bedingungen → 2² = **4 mögliche Kombinationen**. Alle 4 sind in der Tabelle vorhanden.
+
+  4. **Ja, vollständig** – alle 4 möglichen Kombinationen sind durch R1–R4 abgedeckt.

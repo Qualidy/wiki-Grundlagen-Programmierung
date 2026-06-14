@@ -1,0 +1,42 @@
+title: Versandprozess vollständig modellieren
+difficulty: 4
+question: |
+  **Szenario:** Ein Online-Shop hat folgenden Versandprozess:
+
+  1. Kunde gibt Bestellung auf
+  2. System prüft Lagerbestand: Wenn nicht vorhanden → Lieferant wird benachrichtigt, Bestellung wartet
+  3. Wenn Ware verfügbar: Lagermitarbeiter packt die Bestellung
+  4. Versandabteilung wählt Versanddienstleister (Bestellwert ≥ 100 € → DHL Express, sonst → Standardversand)
+  5. Tracking-E-Mail wird an Kunden gesendet
+  6. Lieferung erfolgt
+
+  ---
+
+  **Aufgaben:**
+
+  1. Erstelle eine **Entscheidungstabelle** für die Versandart-Entscheidung (Schritt 4). Ergänze eine dritte Bedingung sinnvoll (eigene Wahl).
+
+  2. Beschreibe, wie ein **DFD (Level 1)** für diesen Prozess aussehen würde. Nenne mindestens 3 Prozessknoten, 2 externe Einheiten und 1 Datenspeicher.
+
+  3. Erstelle ein **UML-Aktivitätsdiagramm** (Textdarstellung) mit 3 Swimlanes: Kunde, System/Lager, Versandabteilung.
+
+  4. Welche der drei Modellierungsformen (Entscheidungstabelle, DFD, Aktivitätsdiagramm) liefert welche Information? Erstelle eine Vergleichstabelle mit den Spalten: Methode | Fokus | Stärke | Typischer Einsatz.
+
+  **Deliverables:** Entscheidungstabelle + DFD-Beschreibung + Aktivitätsdiagramm (Text) + Vergleichstabelle
+tip: |
+  Für das Aktivitätsdiagramm: Weise jede Aktivität einer Swimlane zu. Übergaben zwischen Swimlanes sind Nachrichten/Ergebnisse.
+solution: |
+  **Bewertungskriterien:**
+
+  1. Entscheidungstabelle: min. 3 Bedingungen (z. B. Bestellwert ≥ 100 €, Express-Mitglied, Auslandslieferung) → 2³ = 8 Regeln, plausible Aktionen.
+
+  2. DFD: Externe Einheiten: Kunde, Lieferant. Prozesse: Bestellung erfassen, Lagerbestand prüfen, Versand vorbereiten. Datenspeicher: Lagerbestand-DB / Bestelldatenbank.
+
+  3. Aktivitätsdiagramm: Swimlane Kunde (Bestellung aufgeben, Tracking erhalten), Swimlane System/Lager (Bestand prüfen, Lieferant benachrichtigen, Packen), Swimlane Versand (Dienstleister wählen, Versenden).
+
+  4. Vergleichstabelle:
+     | Methode | Fokus | Stärke | Typischer Einsatz |
+     |---|---|---|---|
+     | Entscheidungstabelle | Regeln/Bedingungen | Vollständigkeit | Regelbasierte Logik |
+     | DFD | Datenfluss | Systemüberblick | Analysephase |
+     | Aktivitätsdiagramm | Prozessablauf + Rollen | Verantwortlichkeiten | Entwurf, Doku |

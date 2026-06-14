@@ -1,0 +1,1637 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../kapitel10/">
+      
+      
+        <link rel="next" href="../kapitel12/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Kapitel 11 – Stile steuern - Content Creation mit KI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-11-stile-steuern" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Content Creation mit KI" class="md-header__button md-logo" aria-label="Content Creation mit KI" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Content Creation mit KI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kapitel 11 – Stile steuern
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Übersicht
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 1 – Was ist Copilot?
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 2 – Texte schreiben
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 3 – Ideen & Planung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel4/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 4 – ChatGPT im Überblick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel5/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 5 – Gute Prompts & RCFT
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel6/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 6 – Prompts verbessern
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel7/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 7 – Blog, Social & Newsletter
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel8/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 8 – Persona & Storytelling
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel9/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 9 – Was ist Midjourney?
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel10/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 10 – Prompt-Aufbau für Bilder
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 11 – Stile steuern
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel12/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 12 – Bilder verfeinern
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel13/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 13 – Social & Marketing-Bilder
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel14/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 14 – Konsistenz & Workflow
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel15/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 15 – Fortgeschrittene Techniken
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel16/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 16 – Midjourney & Canva
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel17/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 17 – Visuelle Identität
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel18/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 18 – Recht & Ethik
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Content Creation mit KI" class="md-nav__button md-logo" aria-label="Content Creation mit KI" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Content Creation mit KI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 1 – Was ist Copilot?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 2 – Texte schreiben
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 3 – Ideen & Planung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 4 – ChatGPT im Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 5 – Gute Prompts & RCFT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 6 – Prompts verbessern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 7 – Blog, Social & Newsletter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 8 – Persona & Storytelling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 9 – Was ist Midjourney?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 10 – Prompt-Aufbau für Bilder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 11 – Stile steuern
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 11 – Stile steuern
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#was-du-in-diesem-kapitel-lernst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was du in diesem Kapitel lernst
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-gehst-du-vor" class="md-nav__link">
+    <span class="md-ellipsis">
+      So gehst du vor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-stilkategorien-uberblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1 Stilkategorien – Überblick
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-stil-uber-worter-steuern" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.2 Stil über Wörter steuern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-realismus-steuern" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.3 Realismus steuern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-materialien-und-texturen" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.4 Materialien und Texturen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-kompositionsangaben" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.5 Kompositionsangaben
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-farben-und-stimmung" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.6 Farben und Stimmung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-stil-referenz" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.7 Stil-Referenz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kurzubungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kurzübungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workshop
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 12 – Bilder verfeinern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 13 – Social & Marketing-Bilder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 14 – Konsistenz & Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 15 – Fortgeschrittene Techniken
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 16 – Midjourney & Canva
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 17 – Visuelle Identität
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 18 – Recht & Ethik
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="kapitel-11-stile-steuern">Kapitel 11 – Stile steuern<a class="headerlink" href="#kapitel-11-stile-steuern" title="Permanent link">&para;</a></h1>
+<div class="kurs-progress">
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step active"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+</div>
+
+<div class="lernziele">
+<h3 id="was-du-in-diesem-kapitel-lernst">Was du in diesem Kapitel lernst<a class="headerlink" href="#was-du-in-diesem-kapitel-lernst" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Unterschiede zwischen <strong>Foto-, Illustrations- und 3D-Look</strong> und wann welcher passt</li>
+<li>Wie du Stil, Stimmung und Ästhetik über konkrete Begriffe im Prompt steuerst</li>
+<li>Wie <strong>Materialien und Texturen</strong> das Markenbild prägen</li>
+<li>Wie <strong>Kompositionsangaben</strong> die Bildwirkung gezielt beeinflussen</li>
+<li>Wie <strong>Stil-Referenzen</strong> für einen konsistenten Marken-Look sorgen</li>
+</ul>
+</div>
+<hr />
+<h2 id="so-gehst-du-vor">So gehst du vor<a class="headerlink" href="#so-gehst-du-vor" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Lies die Kapitelinhalte und erzeuge zu jedem Stilbeispiel mindestens eine Bildvariante in Midjourney.</li>
+<li>Bearbeite die <strong>Kurzübungen</strong>.</li>
+<li>Arbeite die <strong>Workshop-Aufgabe</strong> durch.</li>
+</ol>
+<hr />
+<h2 id="111-stilkategorien-uberblick">11.1 Stilkategorien – Überblick<a class="headerlink" href="#111-stilkategorien-uberblick" title="Permanent link">&para;</a></h2>
+<p>Midjourney kann dasselbe Motiv in völlig unterschiedlichen visuellen Sprachen erzeugen. Die Wahl des Stils ist eine <strong>strategische Entscheidung</strong> – sie bestimmt, wie eine Marke wahrgenommen wird.</p>
+<table>
+<thead>
+<tr>
+<th>Stilrichtung</th>
+<th>Stichwörter im Prompt</th>
+<th>Typischer Einsatz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Realistisches Foto</strong></td>
+<td><code>product photography, photorealistic, shot on DSLR</code></td>
+<td>Shop, Website, LinkedIn</td>
+</tr>
+<tr>
+<td><strong>Editorial / Lifestyle</strong></td>
+<td><code>editorial fashion photo, natural light, magazine style, candid</code></td>
+<td>Instagram, Kampagnen</td>
+</tr>
+<tr>
+<td><strong>Flat Design / Illustration</strong></td>
+<td><code>flat vector illustration, bold colors, minimal shapes, clean lines</code></td>
+<td>Erklärposts, jüngere Zielgruppe</td>
+</tr>
+<tr>
+<td><strong>3D-Render</strong></td>
+<td><code>3D render, octane render, soft shadows, clean background</code></td>
+<td>Tech, SaaS, Produkt-Mockups</td>
+</tr>
+<tr>
+<td><strong>Aquarell / Kunstdruck</strong></td>
+<td><code>soft watercolor illustration, delicate brushstrokes, pastel tones</code></td>
+<td>Lifestyle, Handwerk, Gastronomie</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Praxisregel:</strong> Ein realistisches Produktfoto für den Online-Shop, ein Lifestyle-Bild für Instagram. Nicht beides mischen.</p>
+<hr />
+<h2 id="112-stil-uber-worter-steuern">11.2 Stil über Wörter steuern<a class="headerlink" href="#112-stil-uber-worter-steuern" title="Permanent link">&para;</a></h2>
+<p>Midjourney reagiert stark auf <strong>Stilbegriffe im Prompt</strong>. Dieselbe Szene kann völlig unterschiedlich wirken – hier am Beispiel LumaSkin (Serum):</p>
+<p><strong>Realistisches Produktfoto:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Matte white skincare serum bottle on marble surface, soft spa lighting, luxury beauty product photography, sharp focus --ar 4:5 --no text, logo
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Flache Illustration:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Flat vector illustration of a skincare serum bottle, pastel pink and cream palette, minimal geometric shapes, clean white background --ar 4:5 --no text, logo
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Aquarell:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Soft watercolor illustration of a skincare serum bottle, delicate brushstrokes, blush pink tones, botanical elements, artisan beauty brand aesthetic --ar 4:5 --no text, logo
+</code></pre></div></td></tr></table></div></p>
+<p>Das Motiv ist identisch – nur die Stilkategorie ändert sich. Für LumaSkin mit der Zielgruppe „vertrauenswürdig, sachlich" empfiehlt sich das reale Foto.</p>
+<hr />
+<h2 id="113-realismus-steuern">11.3 Realismus steuern<a class="headerlink" href="#113-realismus-steuern" title="Permanent link">&para;</a></h2>
+<p>Midjourney hat einen eigenen ästhetischen Standard-Look – Bilder wirken oft makellos und etwas unwirklich. Für <strong>vertrauenswürdige Marketing-Bilder</strong> kann das kontraproduktiv sein.</p>
+<p><strong>Realismus erhöhen:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>photorealistic, shot on Canon EOS R5, natural imperfections, authentic feel
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Weniger „KI-Glanz":</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>--style raw
+</code></pre></div></td></tr></table></div>
+(reduziert Midjourneys automatische Verschönerung – Funktion je nach Interface-Version verfügbar)</p>
+<p><strong>Bewusst künstlerischer Look</strong> (für Kampagnen mit starker Bildsprache):
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cinematic, dreamy, vibrant surreal, painterly
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h2 id="114-materialien-und-texturen">11.4 Materialien und Texturen<a class="headerlink" href="#114-materialien-und-texturen" title="Permanent link">&para;</a></h2>
+<p>Konkrete Materialangaben verändern das Bild erheblich – und transportieren gleichzeitig <strong>Markenwerte</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Material / Textur</th>
+<th>Assoziationen</th>
+<th>Markenbeispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>linen, natural cotton</code></td>
+<td>Nachhaltigkeit, Einfachheit</td>
+<td>GreenLoop</td>
+</tr>
+<tr>
+<td><code>marble, travertine stone</code></td>
+<td>Luxus, Premium, Clean</td>
+<td>LumaSkin</td>
+</tr>
+<tr>
+<td><code>rustic wood, terracotta</code></td>
+<td>Handwerk, Wärme, Tradition</td>
+<td>BakeHaus</td>
+</tr>
+<tr>
+<td><code>weathered rock, pine wood</code></td>
+<td>Abenteuer, Natur, Outdoor</td>
+<td>Waldwerk</td>
+</tr>
+<tr>
+<td><code>glass, brushed metal</code></td>
+<td>Tech, Modern, Professionell</td>
+<td>FlowTask</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel – GreenLoop:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Organic cotton tote bag on natural linen tablecloth, dried eucalyptus sprig, soft daylight, sustainable fashion flat lay --ar 1:1 --no text, logo, plastic
+</code></pre></div></td></tr></table></div></p>
+<p>Das Wort <code>plastic</code> im <code>--no</code>-Teil schließt billig wirkende Oberflächen aus – passend zur Nachhaltigkeits-Positionierung.</p>
+<hr />
+<h2 id="115-kompositionsangaben">11.5 Kompositionsangaben<a class="headerlink" href="#115-kompositionsangaben" title="Permanent link">&para;</a></h2>
+<p>Komposition beeinflusst, <strong>wo das Auge hingeht</strong> und wie viel Freiraum für Text im Layout bleibt:</p>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>centered composition</code></td>
+<td>Produkt mittig, ruhig, klar</td>
+</tr>
+<tr>
+<td><code>rule of thirds</code></td>
+<td>Motiv leicht versetzt, wirkt natürlicher</td>
+</tr>
+<tr>
+<td><code>flat lay</code></td>
+<td>Vogelperspektive, Produkt + Requisiten auf Fläche</td>
+</tr>
+<tr>
+<td><code>overhead shot</code></td>
+<td>Direkt von oben, Tabletop-Stil</td>
+</tr>
+<tr>
+<td><code>45-degree angle</code></td>
+<td>Leicht schräg, klassisch für Food und Produkt</td>
+</tr>
+<tr>
+<td><code>negative space at top</code></td>
+<td>Freiraum oben – Platz für Text-Overlay in Canva</td>
+</tr>
+<tr>
+<td><code>negative space on the left</code></td>
+<td>Freiraum links – für Querformat-Banner mit Text</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wann Freiraum planen?</strong><br />
+Immer dann, wenn später in Canva oder PowerPoint <strong>Text auf das Bild</strong> kommt. Das ist der normale Workflow: Midjourney liefert das Bild ohne Text, das Layout-Tool fügt Headline und Caption hinzu.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Product centered with generous negative space at top and bottom, clean white background --ar 1:1
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="116-farben-und-stimmung">11.6 Farben und Stimmung<a class="headerlink" href="#116-farben-und-stimmung" title="Permanent link">&para;</a></h2>
+<p>Farben gehören <strong>direkt in den Prompt</strong> – nicht nur als einzelne Farbnamen, sondern als Palette und Stimmungsbeschreibung:</p>
+<p><strong>Zu schwach:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>green color, natural product photo
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Konkret und wirkungsvoll:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sage green and warm cream color palette, muted earth tones, calm and unhurried mood, Scandinavian minimalism
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Farbpaletten der Kursmarken:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Marke</th>
+<th>Palette im Prompt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GreenLoop</strong></td>
+<td><code>sage green, cream, warm linen tones, muted earth palette</code></td>
+</tr>
+<tr>
+<td><strong>Nordkorn</strong></td>
+<td><code>oat beige, warm white, honey tones, morning light warmth</code></td>
+</tr>
+<tr>
+<td><strong>LumaSkin</strong></td>
+<td><code>soft rose, clean white, light grey, minimal and trustworthy</code></td>
+</tr>
+<tr>
+<td><strong>BakeHaus</strong></td>
+<td><code>golden brown, terracotta, warm amber, rustic warmth</code></td>
+</tr>
+<tr>
+<td><strong>Waldwerk</strong></td>
+<td><code>forest green, slate grey, dark navy, earthy and rugged</code></td>
+</tr>
+<tr>
+<td><strong>FlowTask</strong></td>
+<td><code>cool white, light blue-grey, clean and modern, professional</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="117-stil-referenz">11.7 Stil-Referenz<a class="headerlink" href="#117-stil-referenz" title="Permanent link">&para;</a></h2>
+<p>Wenn ein Bild den gewünschten Marken-Look trifft, lässt sich dieser Look für <strong>weitere Motive</strong> wiederverwenden – über eine <strong>Stil-Referenz</strong>.</p>
+<p><strong>Vorgehen im Web-Interface:</strong></p>
+<ol>
+<li>Ein Referenzbild erzeugen, das Farben und Stimmung der Marke trifft</li>
+<li>Das Bild im Interface als <strong>Style Reference</strong> auswählen (oder URL mit <code>--sref</code> hinterlegen)</li>
+<li>Neue Prompts mit dieser Referenz ausführen</li>
+<li>Vergleichen: Wirken die Bilder wie eine Serie?</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Marke GreenLoop – Referenz-Look</p>
+<p>Gedämpfte Naturtöne, Leinen-Texturen, weiches Tageslicht, wenig Kontrast. Das Referenzbild entsteht einmal – danach können Flat Lays, Detail-Aufnahmen und Lifestyle-Bilder alle im gleichen Look produziert werden.</p>
+</div>
+<p>Die Stil-Referenz ist das Bild-Äquivalent zum <strong>Persona-Block</strong> aus Woche 1: einmal definiert, immer wieder anwendbar.</p>
+<hr />
+<h2 id="kurzubungen">Kurzübungen<a class="headerlink" href="#kurzubungen" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--1">Grundlagen</span> Drei Stilrichtungen für ein Motiv</summary>
+<p><strong>Motiv:</strong> eine einzelne Kaffeetasse (passend zum Übungs-Café-Szenario).</p>
+<p>Erzeugen Sie <strong>drei Bilder</strong> mit gleichem Motiv, unterschiedlichem Look – nur der Stil-Teil im Prompt ändert sich:</p>
+<ol>
+<li><strong>Foto:</strong> <code>lifestyle product photography, natural light</code></li>
+<li><strong>Illustration:</strong> <code>flat vector illustration, bold simple shapes</code></li>
+<li><strong>3D:</strong> <code>3D render, soft shadows, clean minimal background</code></li>
+</ol>
+<p>Jeweils <code>--ar 1:1 --no text, logo</code>. Speichern Sie alle drei und notieren Sie, welcher Stil für welchen Kanal passieren könnte.</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Nur ein Baustein pro Durchlauf ändern – so sehen Sie den Effekt des Stils klar.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p>Foto → Instagram/Website. Illustration → erklärende Posts, junge Zielgruppe. 3D → Tech/SaaS (z. B. FlowTask), weniger für BakeHaus.</p>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--2">Fortgeschritten</span> Realistischer Produkt-Look</summary>
+<p>Erzeugen Sie ein <strong>realistisches Produktfoto</strong> für <strong>LumaSkin</strong> (weiße Serumflasche, Spa-Stimmung):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Photorealistic product photo of matte white skincare serum bottle on travertine stone, soft diffused spa lighting, luxury beauty editorial, sharp focus, subtle natural imperfections --ar 4:5 --no text, logo, cartoon, oversaturated
+</code></pre></div></td></tr></table></div>
+<p>Vergleichen Sie mit einer Version <strong>ohne</strong> <code>photorealistic</code> und <code>natural imperfections</code> – nur <code>skincare product photo</code>.</p>
+<p><strong>Deliverable:</strong> zwei Bilder, ein Satz: Welches wirkt glaubwürdiger für Marketing?</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Realismus-Begriffe reduzieren den typischen „zu schönen“ Midjourney-Look.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p>Die Version mit photorealistic + imperfections wirkt oft weniger „KI-glatt“ – besser für Vertrauen bei Kosmetik.</p>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--3">Experte</span> Markenfarben im Prompt</summary>
+<p>Erzeugen Sie zwei <strong>GreenLoop</strong>-Bilder mit expliziter Farbpalette im Prompt:</p>
+<p><strong>Version A:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Sustainable fashion flat lay, sage green and cream color palette, muted earth tones, linen texture, soft daylight --ar 1:1 --no text, logo
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Version B:</strong> Gleicher Prompt, aber <code>vibrant neon colors, high contrast</code> statt der gedämpften Palette.</p>
+<p>Welche Version passt zur Marke? Speichern Sie A und notieren Sie, warum B für GreenLoop unpassend wäre.</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Farbadjekteive steuern die Stimmung stärker als ein einzelnes Wort „grün“.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p>GreenLoop = gedämpft, natürlich, vertrauenswürdig – Version A. Version B eignet sich eher für Sport/Party-Marken.</p>
+</details>
+</details>
+<hr />
+<h2 id="workshop">Workshop<a class="headerlink" href="#workshop" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--4">Workshop</span> Marken-Look mit Stil-Referenz – LumaSkin</summary>
+<p><strong>Ziel:</strong> Für <strong>LumaSkin</strong> einen wiedererkennbaren Bild-Look definieren und auf ein zweites Motiv übertragen.</p>
+<hr />
+<p><strong>Phase 1 – Referenzbild</strong></p>
+<ol>
+<li>Erzeugen Sie ein Referenzbild mit diesem Prompt:</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Matte white skincare serum bottle on marble surface, soft rose and grey color palette, clean spa atmosphere, luxury beauty product photography, soft diffused light --ar 4:5 --no text, logo, watermark
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Wählen Sie die beste Variante und <strong>upscalen</strong> Sie sie.</li>
+</ol>
+<hr />
+<p><strong>Phase 2 – Stil-Referenz nutzen</strong></p>
+<ol>
+<li>Nutzen Sie das Referenzbild als <strong>Style Reference</strong> (Web-UI) oder notieren Sie die Bild-URL für <code>--sref</code> (falls verfügbar).</li>
+<li>Erzeugen Sie ein <strong>zweites Motiv</strong> im gleichen Look: <code>skincare moisturizer jar</code> statt Serumflasche – gleiche Palette und Stimmung.</li>
+</ol>
+<hr />
+<p><strong>Phase 3 – Vergleich</strong></p>
+<ol>
+<li>Erzeugen Sie dasselbe zweite Motiv <strong>ohne</strong> Stil-Referenz.</li>
+<li>Vergleichen Sie: Wirken beide Bilder wie eine Serie?</li>
+</ol>
+<hr />
+<p><strong>Phase 4 – Abschluss</strong></p>
+<ol>
+<li>Dokumentieren Sie: Referenz-Prompt, Motiv-2-Prompt mit Referenz, beide exportierten Bilder.</li>
+</ol>
+<p><strong>Deliverables:</strong> 1 Referenzbild, 2 Motiv-2-Bilder (mit/ohne Referenz), Prompt-Dokumentation.</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Wenn Stil-Referenz in Ihrer Oberfläche anders heißt: Bild auswählen → „Use as style reference“ o. ä. – Funktion ist entscheidend, nicht der exakte Button-Name.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p>Mit Stil-Referenz: ähnlichere Farben und Licht. Ohne Referenz: oft abweichende Stimmung – Konsistenz braucht Referenz oder sehr identische Prompts.</p>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../kapitel10/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Kapitel 10 – Prompt-Aufbau für Bilder">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 10 – Prompt-Aufbau für Bilder
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../kapitel12/" class="md-footer__link md-footer__link--next" aria-label="Next: Kapitel 12 – Bilder verfeinern">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 12 – Bilder verfeinern
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "navigation.prune", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

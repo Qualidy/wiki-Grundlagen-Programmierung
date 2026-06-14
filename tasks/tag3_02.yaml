@@ -1,0 +1,31 @@
+title: Artefakte zuordnen
+difficulty: 2
+question: |
+  Ordne die folgenden Artefakte (Dokumente / Ergebnisse) der passenden Entwicklungsphase zu. Manche Artefakte können mehreren Phasen zugeordnet werden – begründe dann deine Wahl.
+
+  **Artefakte:**
+  - Lastenheft
+  - Wireframe der Benutzeroberfläche
+  - Bug-Report mit Reproduktionsschritten
+  - Release Notes (Was ist neu in Version 2.0?)
+  - Klassen- und ER-Diagramm
+  - Testbericht
+  - Git-Commit-History
+  - Betriebshandbuch
+  - Change Request (Anforderungsänderung nach Go-Live)
+
+  **Phasen:** Anforderungsanalyse · Entwurf · Implementierung · Test · Deployment · Betrieb/Wartung
+tip: |
+  Überlege, wer das Dokument erstellt und wann es benötigt wird.
+solution: |
+  | Artefakt | Phase |
+  |---|---|
+  | Lastenheft | Anforderungsanalyse |
+  | Wireframe der Benutzeroberfläche | Entwurf |
+  | Klassen- und ER-Diagramm | Entwurf |
+  | Git-Commit-History | Implementierung |
+  | Bug-Report mit Reproduktionsschritten | Test |
+  | Testbericht | Test |
+  | Release Notes | Deployment |
+  | Betriebshandbuch | Deployment / Betrieb |
+  | Change Request | Betrieb/Wartung |

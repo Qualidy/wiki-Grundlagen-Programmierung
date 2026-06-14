@@ -1,0 +1,26 @@
+title: Paradigmen zuordnen
+difficulty: 1
+question: |
+  Ordne die folgenden Programmiersprachen dem passenden Paradigma zu.
+
+  **Programmiersprachen:** Java, PHP, Haskell, C, JavaScript, Python
+
+  Erstelle eine Tabelle mit den Spalten:
+  - Sprache
+  - Paradigma (imperativ / objektorientiert / funktional / skriptbasiert)
+  - Typisches Einsatzszenario (1 Satz)
+
+  Hinweis: Manche Sprachen unterstützen mehrere Paradigmen – wähle das dominante oder nenne beide.
+tip: |
+  Denke daran: Skriptsprachen dienen oft zur Steuerung und Automatisierung. Funktionale Sprachen betonen Seiteneffektfreiheit. OOP dreht sich um Klassen und Objekte.
+solution: |
+  Mögliche Lösung:
+
+  | Sprache     | Paradigma                        | Einsatzszenario                              |
+  |-------------|----------------------------------|----------------------------------------------|
+  | Java        | Objektorientiert                 | Unternehmensanwendungen, Android-Apps         |
+  | PHP         | Skriptbasiert + objektorientiert | Webentwicklung (Serverseitig)                |
+  | Haskell     | Funktional                       | Wissenschaftliche Berechnungen, kritische Systeme |
+  | C           | Imperativ                        | Systemsoftware, Betriebssysteme, Treiber      |
+  | JavaScript  | Skriptbasiert + objektorientiert | Webentwicklung (Frontend, auch Backend)       |
+  | Python      | Imperativ + OOP + funktional     | Datenwissenschaft, KI, Skripting              |

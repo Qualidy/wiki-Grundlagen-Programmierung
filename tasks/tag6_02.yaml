@@ -1,0 +1,44 @@
+title: PAP lesen und beschreiben
+difficulty: 2
+question: |
+  Betrachte den folgenden PAP und beschreibe in Worten, was das Programm tut:
+
+  ```
+  [START]
+     │
+  [Note einlesen]
+     │
+  Ist Note <= 4?
+     /        \
+   Ja          Nein
+   │              │
+  [„Bestanden"  [„Nicht bestanden"
+   ausgeben]     ausgeben]
+     \             /
+      \           /
+      [ENDE]
+  ```
+
+  **Aufgaben:**
+
+  1. Beschreibe in 2–3 Sätzen, was dieses Programm tut.
+
+  2. Was gibt das Programm aus, wenn die Note 3 eingegeben wird?
+
+  3. Was gibt das Programm aus, wenn die Note 5 eingegeben wird?
+
+  4. Erweitere den PAP (in Textform oder als Skizze): Nach der Ausgabe „Nicht bestanden" soll zusätzlich die Meldung „Nachprüfung erforderlich" ausgegeben werden.
+
+  5. Welches strukturelle Element (Kontrollstruktur) ist in diesem PAP zu sehen?
+tip: |
+  Folge dem Pfad des Diagramms: Start → Einlesen → Bedingung → Ausgabe → Ende.
+solution: |
+  1. Das Programm liest eine Note ein. Falls die Note 4 oder besser (also ≤ 4) ist, gibt es „Bestanden" aus. Andernfalls gibt es „Nicht bestanden" aus. Danach endet das Programm.
+
+  2. Note 3: „Bestanden" (da 3 ≤ 4 wahr ist)
+
+  3. Note 5: „Nicht bestanden" (da 5 ≤ 4 falsch ist)
+
+  4. Erweiterung Nein-Zweig: Nach „Nicht bestanden" ausgeben → [„Nachprüfung erforderlich" ausgeben] → [ENDE]
+
+  5. **Selektion (Verzweigung / if-else)** – es gibt einen Entscheidungsknoten mit zwei möglichen Pfaden.

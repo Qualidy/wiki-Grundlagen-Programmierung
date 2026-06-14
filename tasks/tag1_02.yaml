@@ -1,0 +1,18 @@
+title: Compiler oder Interpreter?
+difficulty: 2
+question: |
+  Beantworte die folgenden Fragen zu Compiler- und Interpretersprachen:
+
+  1. Ein Entwickler hat ein Python-Skript geschrieben. Er führt es aus – und erhält eine Fehlermeldung in Zeile 15. Die Zeilen 1–14 wurden bereits ausgeführt. Um welchen Sprachtyp handelt es sich? Begründe kurz.
+
+  2. Ein anderer Entwickler hat ein Java-Programm geschrieben. Beim ersten Ausführungsversuch meldet das System: „Compilation error in line 8: missing semicolon". Das Programm wurde noch nicht gestartet. Um welchen Sprachtyp handelt es sich? Begründe kurz.
+
+  3. Erkläre in 2–3 Sätzen: Warum sind Compiler-Sprachen oft schneller in der Ausführung als Interpreter-Sprachen?
+tip: |
+  Der entscheidende Hinweis: Wann tritt der Fehler auf – vor oder während der Ausführung?
+solution: |
+  1. **Interpreter-Sprache** (Python). Der Interpreter führt Zeile für Zeile aus und stoppt erst beim Fehler. Zeilen 1–14 wurden bereits ausgeführt, was typisch für Interpreter ist.
+
+  2. **Compiler-Sprache** (Java). Der Compiler prüft den gesamten Code vor der Ausführung. Der Fehler tritt schon beim Kompilierungsvorgang auf – das Programm läuft noch gar nicht.
+
+  3. Compiler übersetzen den Quellcode einmalig in optimierten Maschinencode, bevor das Programm startet. Interpreter müssen jede Zeile zur Laufzeit lesen, parsen und ausführen – dieser Overhead macht sie langsamer. Zudem können Compiler Optimierungen vornehmen, die zur Laufzeit nicht mehr möglich wären.

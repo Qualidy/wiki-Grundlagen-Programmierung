@@ -1,0 +1,38 @@
+title: UML-Diagramme für ein Fallbeispiel
+difficulty: 4
+question: |
+  **Szenario:** Eine Arztpraxis möchte ihre Terminverwaltung digitalisieren. Du wirst beauftragt, drei UML-Diagramme zu erstellen.
+
+  **Informationen:**
+  - Patienten können Termine online buchen, absagen oder verschieben
+  - Ärzte und Sprechstundenhilfen können Termine einsehen und bestätigen
+  - Sprechstundenhilfe legt neue Patienten an
+  - Jeder Patient hat: Name, Geburtsdatum, Krankenkasse, Patientennummer
+  - Jeder Termin hat: Datum, Uhrzeit, Arzt, Patient, Status (gebucht/bestätigt/abgesagt)
+  - Beim Buchen eines Termins: Patient wählt Arzt → System prüft Verfügbarkeit → Bei Verfügbarkeit: Termin wird angelegt und Bestätigungs-E-Mail versendet → Bei Nicht-Verfügbarkeit: Alternativzeiten werden vorgeschlagen
+
+  ---
+
+  **Aufgaben:**
+
+  1. Erstelle ein **Use-Case-Diagramm** (Textbeschreibung): Welche Akteure gibt es? Welche Anwendungsfälle? Gibt es `<<include>>`-Beziehungen?
+
+  2. Erstelle ein **Klassendiagramm** (Textbeschreibung): Klassen, Attribute, Methoden und Beziehungen (mit Kardinalitäten).
+
+  3. Beschreibe ein **Sequenzdiagramm** für den Buchungsvorgang: Wer kommuniziert mit wem? In welcher Reihenfolge?
+
+  4. Welches Diagramm würde ein Auftraggeber zuerst sehen wollen? Begründe.
+
+  **Deliverables:** Drei Diagrammbeschreibungen + Begründung
+tip: |
+  Beginne mit dem Use-Case-Diagramm – es ist die Außenperspektive und zeigt, worum es geht. Dann Klassendiagramm für die Struktur, dann Sequenz für einen konkreten Ablauf.
+solution: |
+  **Bewertungskriterien:**
+
+  1. Use-Case: Akteure: Patient, Arzt, Sprechstundenhilfe. AFs: Termin buchen/absagen/verschieben/bestätigen/einsehen, Patient anlegen. Login als <<include>> bei Aktionen sinnvoll.
+
+  2. Klassen: Patient (name, geb, krankenkasse, patientennr), Termin (datum, uhrzeit, status), Arzt (name, fachrichtung). Beziehungen: Patient 1:n Termin, Arzt 1:n Termin. Methoden: Termin.bestätigen(), Patient.anlegen().
+
+  3. Sequenzdiagramm: Patient → System: Termin anfragen. System → DB: Verfügbarkeit prüfen. DB → System: Ergebnis. System → Patient: Bestätigung/Alternativzeiten. System → E-Mail-Server: Bestätigungsmail senden.
+
+  4. **Use-Case-Diagramm** – zeigt dem Auftraggeber auf einem Blick, wer das System nutzt und was es können soll. Kein technisches Vorwissen nötig.

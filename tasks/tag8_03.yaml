@@ -1,0 +1,41 @@
+title: Use-Case-Diagramm analysieren
+difficulty: 3
+question: |
+  Betrachte das folgende Use-Case-Diagramm für ein Online-Banking-System:
+
+  ```
+  ┌────────────────────────────────────────────────────┐
+  │                Online-Banking-System               │
+  │                                                    │
+  │   ( Konto ansehen )                               │
+  │   ( Überweisung durchführen ) ──<<include>>──► ( Login )
+  │   ( Dauerauftrag einrichten ) ──<<include>>──► ( Login )
+  │   ( Kontoauszug herunterladen )                   │
+  │   ( Passwort ändern ) ──<<include>>──► ( Login )  │
+  │                                                    │
+  └────────────────────────────────────────────────────┘
+        👤 Kunde          👤 Bank-Administrator
+  ```
+
+  Der Bank-Administrator hat Zugriff auf: Konto ansehen, Kontoauszug herunterladen.
+  Der Kunde hat Zugriff auf alle Funktionen.
+
+  **Aufgaben:**
+
+  1. Erkläre in eigenen Worten, was `<<include>>` bedeutet.
+  2. Warum ist Login als `<<include>>`-Beziehung und nicht als eigenständiger Anwendungsfall (ohne Pfeil) modelliert?
+  3. Gibt es eine Funktion, die beide Akteure nutzen können? Welche?
+  4. Ergänze: Welcher neue Anwendungsfall wäre sinnvoll – und für welchen Akteur?
+  5. Was ist der Unterschied zwischen `<<include>>` und `<<extend>>`?
+tip: |
+  <<include>> = wird immer ausgeführt (verpflichtend). <<extend>> = wird nur unter bestimmten Bedingungen ausgeführt (optional).
+solution: |
+  1. `<<include>>` bedeutet, dass der aufrufende Anwendungsfall zwingend den eingebundenen AF enthält. Immer wenn eine Überweisung stattfindet, muss der Nutzer eingeloggt sein (Login wird immer ausgeführt).
+
+  2. Login ist keine eigenständige nützliche Funktion für den Nutzer – er bucht keine „Logins". Es ist eine Voraussetzung für andere Funktionen. Deshalb wird es als `<<include>>` modelliert.
+
+  3. **Konto ansehen** und **Kontoauszug herunterladen** (beide Akteure haben Zugriff darauf).
+
+  4. Beispiele: „Zwei-Faktor-Authentifizierung einrichten" (Kunde), „Kontosperrung veranlassen" (Administrator).
+
+  5. `<<include>>` = immer ausgeführt, verpflichtend. `<<extend>>` = optional, nur unter bestimmten Bedingungen. Beispiel: „Tipp anzeigen" könnte bei „Login" als `<<extend>>` modelliert sein – wird nur beim ersten Login angezeigt.

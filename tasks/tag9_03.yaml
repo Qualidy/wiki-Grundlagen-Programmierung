@@ -1,0 +1,39 @@
+title: ER-Diagramm lesen und ergänzen
+difficulty: 3
+question: |
+  Betrachte das folgende ER-Diagramm für ein Hotelreservierungssystem:
+
+  ```
+  ┌───────────┐      1:n     ┌──────────────────┐     n:1    ┌───────────┐
+  │   Gast    │──────────────│   Reservierung   │────────────│   Zimmer  │
+  ├───────────┤              ├──────────────────┤            ├───────────┤
+  │ GastID PK │              │ ReservierungID PK│            │ ZimmerNr  │
+  │ Name      │              │ Anreise          │            │ Typ       │
+  │ E-Mail    │              │ Abreise          │            │ Preis/Nacht│
+  └───────────┘              │ Gesamtbetrag     │            └───────────┘
+                             └──────────────────┘
+  ```
+
+  **Aufgaben:**
+
+  1. Erkläre in Worten, was dieses ER-Diagramm beschreibt.
+
+  2. Kann ein Zimmer mehrere Reservierungen haben? Begründe anhand des Diagramms.
+
+  3. Ein Gast bucht gleichzeitig zwei Zimmer für dasselbe Datum. Wie viele Reservierungs-Datensätze entstehen?
+
+  4. Das Hotel möchte auch **Mitarbeiter** erfassen, die Reservierungen anlegen. Ergänze: Welche Kardinalität hätte die Beziehung zwischen „Mitarbeiter" und „Reservierung"? Welche Attribute bräuchte der Entitätstyp Mitarbeiter mindestens?
+
+  5. Was bedeutet „PK" – und was passiert, wenn zwei Reservierungen dieselbe ReservierungID hätten?
+tip: |
+  1:n bedeutet: Eine Seite hat „1", die andere „n" (viele). Schau, auf welcher Seite die 1 steht.
+solution: |
+  1. Das Diagramm beschreibt: Gäste können mehrere Reservierungen machen. Jede Reservierung gehört zu genau einem Gast und genau einem Zimmer. Ein Zimmer kann mehrere Reservierungen haben (zu verschiedenen Zeiten).
+
+  2. Ja. Die Beziehung Zimmer – Reservierung ist n:1 (aus Zimmer-Sicht: Ein Zimmer hat mehrere Reservierungen). Ein Zimmer kann also zu verschiedenen Zeiträumen mehrfach gebucht sein.
+
+  3. **2 Reservierungs-Datensätze** – für jedes Zimmer eine separate Reservierung.
+
+  4. Mitarbeiter – Reservierung: **1:n** (ein Mitarbeiter legt mehrere Reservierungen an; eine Reservierung wurde von genau einem Mitarbeiter angelegt). Attribute: MitarbeiterID (PK), Name, Rolle.
+
+  5. PK = Primärschlüssel. Wenn zwei Reservierungen dieselbe ID hätten, wäre die Eindeutigkeit verletzt – das Datenbanksystem würde dies als Fehler abweisen.

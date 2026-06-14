@@ -1,0 +1,49 @@
+title: Hello World vergleichen und erklären
+difficulty: 3
+question: |
+  Betrachte die folgenden Hello-World-Programme in drei Sprachen:
+
+  **PHP:**
+  ```php
+  <?php
+  echo "Hello, World!";
+  ```
+
+  **Python:**
+  ```python
+  print("Hello, World!")
+  ```
+
+  **Java:**
+  ```java
+  public class HelloWorld {
+      public static void main(String[] args) {
+          System.out.println("Hello, World!");
+      }
+  }
+  ```
+
+  **Aufgaben:**
+
+  1. Erkläre den Unterschied im Umfang des Codes: Warum braucht Java so viel mehr Rahmencode als PHP oder Python?
+
+  2. PHP und Python sind Interpreter-Sprachen, Java ist eine Compiler-Sprache. Erkläre in je 2 Sätzen, wie das „Ausführen" bei beiden Typen abläuft.
+
+  3. Was ist der Zweck eines „Hello World"-Programms? Warum beginnt man in jeder Sprache damit?
+
+  4. Beschreibe in einem Satz: Was ist der wesentliche Schritt „von der Quelle zum ausführbaren Programm" bei einer Interpreter-Sprache?
+
+  5. Was bedeutet der Begriff „IDE"? Nenne zwei Vorteile einer IDE gegenüber einem einfachen Texteditor.
+tip: |
+  Java ist eine stark typisierte OOP-Sprache. Jedes Programm muss in einer Klasse stehen, und der Einstiegspunkt heißt immer `main`.
+solution: |
+  1. Java ist eine stark typisierte Objektorientierte Sprache: Jeder Code muss in einer Klasse stehen. Die `main`-Methode ist der Pflicht-Einstiegspunkt jedes Java-Programms. PHP und Python sind Skriptsprachen, die direkt ohne Klassen-Rahmen ausführbar sind.
+
+  2. **Interpreter:** Der Interpreter liest den Quellcode Zeile für Zeile und führt ihn sofort aus. Es gibt keinen separaten Build-Schritt.
+     **Compiler:** Der Compiler übersetzt den gesamten Quellcode vor der ersten Ausführung in Maschinencode oder Bytecode. Erst danach kann das Programm gestartet werden.
+
+  3. „Hello World" testet, ob die Entwicklungsumgebung korrekt eingerichtet ist und die Sprache richtig installiert wurde. Es ist die kleinstmögliche Erfolgskontrolle: Wenn der Text erscheint, funktioniert alles.
+
+  4. **Quellcode schreiben → Interpreter aufrufen → direkte Ausführung.** (Kein Build-Schritt nötig.)
+
+  5. IDE = **Integrated Development Environment** (Integrierte Entwicklungsumgebung). Vorteile: Syntax-Highlighting hebt Fehler sofort hervor; Auto-Vervollständigung beschleunigt das Schreiben und reduziert Tippfehler.

@@ -1,0 +1,38 @@
+title: Programmiersprachen – Gesamtanalyse
+difficulty: 4
+question: |
+  **Szenario:** Du wirst als Junior-Berater in ein mittelständisches Unternehmen (200 Mitarbeiter) eingesetzt. Das Unternehmen möchte seine IT-Landschaft modernisieren und stellt dir folgende Situation vor:
+
+  - **Bestandssystem A:** Eine Lagerverwaltungssoftware in COBOL aus den 1980er-Jahren. Wenige Mitarbeiter kennen die Sprache noch.
+  - **Geplantes Projekt B:** Eine neue webbasierte Bestellplattform für Großkunden (Frontend + Backend + Datenbankanbindung).
+  - **Geplantes Projekt C:** Automatisierung von wiederkehrenden Datenexporten (tägliche CSV-Extraktion aus der Datenbank).
+
+  ---
+
+  **Aufgabe (in Gruppenarbeit oder allein):**
+
+  1. Recherchiere kurz: Was ist COBOL? Welchem Paradigma entspricht es?
+
+  2. Für Projekt B: Empfehle eine Frontend-Sprache und eine Backend-Sprache. Begründe beide Entscheidungen je mit Paradigma und Einsatzszenario (ca. 3–4 Sätze je Sprache).
+
+  3. Für Projekt C: Welche Sprache würdest du empfehlen? Begründe kurz.
+
+  4. Diskutiere: Was sind die Risiken, wenn Bestandssystem A einfach weiterläuft und nicht modernisiert wird? Nenne mindestens 3 Risiken.
+
+  5. Fasse deine Empfehlungen in einem kurzen „Technologie-Memo" (max. 15 Sätze) zusammen, das du dem Geschäftsführer übergeben könntest.
+
+  **Deliverables:** Technologie-Memo (schriftlich oder als Stichpunktliste)
+tip: |
+  Tipp für die Gruppenarbeit: Teilt die Aufgaben auf – eine Person übernimmt die COBOL-Recherche, andere formulieren die Empfehlungen, eine Person schreibt das Memo.
+solution: |
+  **Bewertungskriterien:**
+
+  1. COBOL = imperativ, prozedurale Geschäftslogik, Stapelverarbeitung – entstanden in den 1950/60ern.
+
+  2. Frontend: JavaScript / TypeScript (Browserstandard, reaktive UIs). Backend: Java, PHP, Node.js oder Python – jeweils gut begründete Wahl akzeptabel.
+
+  3. Projekt C: Python oder Bash/PowerShell – einfach, schnell zu schreiben, gute CSV/Datenbankbibliotheken.
+
+  4. Risiken: Kein Personal mehr vorhanden (Wissensverlust), keine modernen Libraries/Security-Updates, schwere Integration mit neuen Systemen, steigende Wartungskosten.
+
+  5. Memo: Strukturierte Empfehlung mit Begründungen – vollständige Punkte 1–4 abgedeckt.

@@ -1,0 +1,23 @@
+title: PAP-Symbole erkennen
+difficulty: 1
+question: |
+  Ordne die folgenden Beschreibungen dem passenden PAP-Symbol zu:
+
+  **Symbol-Optionen:** Terminal (Oval) · Prozess (Rechteck) · Entscheidung (Raute) · Ein-/Ausgabe (Parallelogramm) · Verbindungsstelle (Kreis) · Fluss (Pfeil)
+
+  **Beschreibungen:**
+  1. Zeigt den Beginn oder das Ende eines Programms an.
+  2. Stellt eine Rechenoperation oder Zuweisung dar (z. B. x = a + b).
+  3. Verbindet zwei Elemente und zeigt die Richtung des Ablaufs.
+  4. Stellt eine Ja/Nein-Verzweigung dar.
+  5. Zeigt das Einlesen einer Benutzereingabe oder die Ausgabe eines Ergebnisses.
+  6. Ermöglicht es, zwei Stellen im Diagramm zu verbinden, ohne eine Linie durchzuziehen.
+tip: |
+  Denke an die Form der Symbole: Eine Raute ist spitz zulaufend – wie eine Entscheidung, die in verschiedene Richtungen zeigen kann.
+solution: |
+  1. **Terminal (Oval)** – Start oder Ende
+  2. **Prozess (Rechteck)** – Verarbeitungsoperation
+  3. **Fluss (Pfeil)** – Verbindung mit Richtung
+  4. **Entscheidung (Raute)** – Verzweigung (Ja/Nein)
+  5. **Ein-/Ausgabe (Parallelogramm)** – Einlesen oder Ausgeben
+  6. **Verbindungsstelle (Kreis)** – Sprung zu anderer Stelle im Diagramm

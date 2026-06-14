@@ -1,0 +1,24 @@
+title: Modellierungsform wählen
+difficulty: 3
+question: |
+  Für die folgenden Situationen soll die geeignetste Modellierungsform gewählt werden. Begründe jeweils deine Wahl in 2–3 Sätzen.
+
+  **Optionen:** PAP · Struktogramm · Datenflussplan (DFD) · Entscheidungstabelle · UML-Aktivitätsdiagramm
+
+  **Situation 1:** Eine Fachabteilung möchte verstehen, wie Kundendaten durch ihr CRM-System fließen: Wo kommen sie her? Welche Prozesse verarbeiten sie? Wo werden sie gespeichert?
+
+  **Situation 2:** Ein Entwickler möchte die Logik einer Rabattfunktion dokumentieren, die von drei Bedingungen abhängt (Kundenstatus, Produktkategorie, Bestellmenge). Alle Kombinationen sollen lückenlos abgedeckt sein.
+
+  **Situation 3:** Ein Projektmanager möchte den Prozess einer Urlaubsantragsbearbeitung visualisieren: Mitarbeiter stellt Antrag → Vorgesetzter genehmigt oder lehnt ab → HR verarbeitet die Entscheidung. Der Fokus liegt auf Verantwortlichkeiten.
+
+  **Situation 4:** Ein Schüler soll lernen, wie eine einfache WHILE-Schleife funktioniert. Er soll ein Diagramm zeichnen, das die Grundstruktur klarmacht.
+tip: |
+  Denke an den Zweck jeder Methode: DFD = Datenfluss, Entscheidungstabelle = Kombinationen, Aktivitätsdiagramm = Verantwortlichkeiten/Swimlanes, PAP/Struktogramm = Algorithmen.
+solution: |
+  1. **Datenflussplan (DFD)** – Zeigt, woher Daten kommen, wie sie verarbeitet werden und wo sie gespeichert werden. Ideal für Systemanalyse und Anforderungsklärung.
+
+  2. **Entscheidungstabelle** – Drei Bedingungen ergeben 2³ = 8 Kombinationen. Die Tabelle stellt sicher, dass keine Kombination vergessen wird und jede Regel eindeutig ist.
+
+  3. **UML-Aktivitätsdiagramm mit Swimlanes** – Swimlanes trennen die Verantwortlichkeitsbereiche (Mitarbeiter, Vorgesetzter, HR) visuell. Ideal für teamübergreifende Prozesse.
+
+  4. **PAP oder Struktogramm** – Beide eignen sich für Lernzwecke bei einfachen Algorithmen. Der PAP ist intuitiver für Einsteiger; das Struktogramm verdeutlicht die Struktur der Schleife als verschachtelten Block.

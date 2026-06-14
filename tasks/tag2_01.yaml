@@ -1,0 +1,21 @@
+title: Anpassungsart erkennen
+difficulty: 1
+question: |
+  Ordne die folgenden Situationen der jeweils passenden Anpassungsart zu:
+  Konfiguration · Customizing · Erweiterung/Plug-in · Individualentwicklung · Refactoring
+
+  1. Eine Firma ändert in ihrer E-Mail-Software die Signaturvorlage für alle Mitarbeiter.
+  2. Ein Online-Shop installiert ein kostenloses Plugin für die Bewertungsfunktion.
+  3. Ein Unternehmen lässt eine spezielle Software für seine einzigartige Produktionslinie entwickeln – es gibt kein vergleichbares Produkt auf dem Markt.
+  4. Ein ERP-System wird so eingestellt, dass der Bestellprozess drei statt zwei Genehmigungsstufen hat.
+  5. Ein Entwickler überarbeitet eine 500-Zeilen-Funktion in drei kleinere, besser benannte Funktionen. Das Verhalten ändert sich nicht.
+  6. In einer Buchhaltungssoftware wird der Mehrwertsteuersatz von 19 % auf 7 % für bestimmte Produktgruppen gesetzt.
+tip: |
+  Frage dich bei jeder Situation: Wird die Software selbst verändert? Wird neuer Code geschrieben? Oder werden nur Einstellungen geändert?
+solution: |
+  1. **Konfiguration** – Einstellung innerhalb der Software (keine Programmierung nötig)
+  2. **Erweiterung / Plug-in** – Ein fertiges Add-on wird installiert
+  3. **Individualentwicklung** – Keine Standardlösung verfügbar, vollständige Neuentwicklung
+  4. **Customizing** – Vorgesehener Anpassungsmechanismus im ERP-System genutzt
+  5. **Refactoring** – Strukturverbesserung ohne Verhaltensänderung
+  6. **Konfiguration / Parametrisierung** – Wert in Einstellungen hinterlegt

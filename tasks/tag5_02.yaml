@@ -1,0 +1,29 @@
+title: Muss- und Kann-Anforderungen formulieren
+difficulty: 2
+question: |
+  Das Unternehmen „FitNow GmbH" möchte eine App für Fitnesskursbuchungen entwickeln. Du hast folgende Informationen gesammelt:
+
+  - Nutzer sollen sich registrieren und einloggen können (**unverzichtbar**)
+  - Kurse sollen nach Datum gefiltert werden können (**unverzichtbar**)
+  - Eine Wunschliste für Lieblingskurse wäre schön (**wünschenswert**)
+  - Push-Benachrichtigungen bei neuen Kursen wären ein nettes Feature (**wünschenswert**)
+  - Eine iOS-App wird **nicht** entwickelt (nur Android und Web)
+  - Die App muss DSGVO-konform sein (**unverzichtbar**)
+
+  **Aufgabe:**
+
+  1. Formuliere aus jeder Information eine korrekte Anforderung (vollständiger Satz) und kennzeichne sie als **Muss**, **Kann** oder **Nicht-Anforderung**.
+
+  2. Warum ist die letzte Information (iOS-App) eine **Nicht-Anforderung** und kein Kann?
+tip: |
+  Achte auf die Formulierung: Muss-Anforderungen enthalten „muss", Kann-Anforderungen „kann" oder „sollte".
+solution: |
+  1.
+  - „Das System **muss** es Nutzern ermöglichen, sich zu registrieren und einzuloggen." → Muss
+  - „Das System **muss** Kurse nach Datum filterbar anzeigen." → Muss
+  - „Das System **kann** eine Wunschliste für Lieblingskurse anbieten." → Kann
+  - „Das System **kann** Push-Benachrichtigungen bei neuen Kursen versenden." → Kann
+  - „Das System wird **keine** iOS-App bereitstellen." → Nicht-Anforderung
+  - „Das System **muss** die Anforderungen der DSGVO erfüllen." → Muss
+
+  2. Eine Nicht-Anforderung grenzt den Umfang explizit ab – sie verhindert Missverständnisse. Wenn jemand später fragt „Wann kommt die iOS-App?", zeigt die Nicht-Anforderung, dass dies nie geplant war. Ein „Kann" würde suggerieren, es könnte optional später kommen.

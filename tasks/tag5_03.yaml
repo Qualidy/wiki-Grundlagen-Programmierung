@@ -1,0 +1,26 @@
+title: Abnahmekriterien bewerten und formulieren
+difficulty: 3
+question: |
+  Bewerte die folgenden Abnahmekriterien: Sind sie gut formuliert (messbar, eindeutig, testbar)? Falls nicht, formuliere sie besser.
+
+  1. „Die Software soll schnell sein."
+  2. „Der Login-Vorgang muss in unter 2 Sekunden abgeschlossen sein."
+  3. „Die Oberfläche soll modern und ansprechend aussehen."
+  4. „Das System muss alle gespeicherten Dateien täglich sichern."
+  5. „Bei mehr als 5 Fehlversuchen beim Login soll das Konto gesperrt werden."
+  6. „Das System muss gut performen."
+
+  Formuliere anschließend **zwei eigene Abnahmekriterien** für eine Funktion deiner Wahl (z. B. Passwort zurücksetzen, Produkt in Warenkorb legen, Rechnung als PDF exportieren).
+tip: |
+  Ein gutes Abnahmekriterium kann direkt in einen Testfall umgewandelt werden: „Gib X ein → erwarte Y."
+solution: |
+  1. ❌ Schlecht – nicht messbar. Besser: „Jede Suchanfrage muss in unter 3 Sekunden ein Ergebnis liefern."
+  2. ✅ Gut – messbar und testbar.
+  3. ❌ Schlecht – subjektiv. Besser: „Die Oberfläche entspricht dem in Anhang A definierten Corporate Design."
+  4. ✅ Gut – eindeutig und testbar (wann, was wird gesichert).
+  5. ✅ Gut – eindeutig, testbar, Grenzwert klar.
+  6. ❌ Schlecht – vage. Besser: „Das System soll unter Normallast (100 gleichzeitige Nutzer) eine Antwortzeit von unter 1 Sekunde erreichen."
+
+  Beispielhafte Eigene Abnahmekriterien (Passwort zurücksetzen):
+  - „Wenn ein Nutzer seinen Benutzernamen eingibt und auf ‚Passwort zurücksetzen' klickt, erhält er innerhalb von 2 Minuten eine E-Mail mit einem Reset-Link."
+  - „Der Reset-Link ist genau 24 Stunden gültig. Nach Ablauf erscheint eine Fehlermeldung."

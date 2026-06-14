@@ -1,0 +1,64 @@
+title: PHP-Programm analysieren – Notenverwaltung
+difficulty: 4
+question: |
+  **Szenario:** Du arbeitest als IT-Supporter in einer Berufsschule. Ein Lehrer zeigt dir folgenden PHP-Code für eine einfache Notenausgabe und bittet dich, ihn zu erklären und zu verbessern.
+
+  ```php
+  <?php
+  // Notenliste für Schüler
+  $name = "Jan Berger";
+  $noten = [2, 3, 1, 4, 2, 3];
+  $summe = 0;
+  $anzahl = 0;
+
+  for ($i = 0; $i < 6; $i++) {
+      $summe = $summe + $noten[$i];
+      $anzahl = $anzahl + 1;
+  }
+
+  $durchschnitt = $summe / $anzahl;
+
+  if ($durchschnitt <= 2.5) {
+      $bewertung = "Sehr gut bis gut";
+  } elseif ($durchschnitt <= 3.5) {
+      $bewertung = "Befriedigend";
+  } else {
+      $bewertung = "Verbesserungswürdig";
+  }
+
+  echo $name . ": Durchschnitt " . $durchschnitt . " (" . $bewertung . ")";
+  ```
+
+  ---
+
+  **Aufgaben:**
+
+  1. Erkläre, was dieses Programm Schritt für Schritt tut (mind. 5 Schritte beschreiben).
+
+  2. Was ist die Ausgabe des Programms? Berechne den Durchschnitt manuell.
+
+  3. Was macht die `for`-Schleife? Erkläre die drei Teile (`$i = 0; $i < 6; $i++`).
+
+  4. Identifiziere alle verwendeten Datentypen und Kontrollstrukturen im Code.
+
+  5. Der Lehrer möchte, dass das Programm auch dann funktioniert, wenn in der Zukunft mehr oder weniger Noten eingetragen werden – ohne den Code ändern zu müssen. Welche Zeile müsste angepasst werden und wie?
+
+  6. Welche Informationen würde ein Hello-World-Programm allein noch nicht abdecken, die dieser Code demonstriert?
+
+  **Deliverables:** Schritt-für-Schritt-Erklärung + Ausgabeberechnung + Antworten auf alle Fragen
+tip: |
+  Für Frage 5: PHP hat eine eingebaute Funktion namens `count()`, die die Anzahl der Elemente in einem Array zurückgibt.
+solution: |
+  **Bewertungskriterien:**
+
+  1. Schritte: (1) Name und Notenliste definieren. (2) Summenvariablen auf 0 setzen. (3) For-Schleife addiert alle Noten. (4) Durchschnitt berechnen. (5) Bewertung per if-elseif-else bestimmen. (6) Ausgabe.
+
+  2. Noten: 2+3+1+4+2+3 = 15. Anzahl: 6. Durchschnitt: 15/6 = 2.5. Bewertung: „Sehr gut bis gut" (2.5 ≤ 2.5). Ausgabe: **„Jan Berger: Durchschnitt 2.5 (Sehr gut bis gut)"**
+
+  3. `$i = 0` = Startwert. `$i < 6` = Schleife läuft, solange $i kleiner als 6 ist (also für $i = 0,1,2,3,4,5 – sechs Durchläufe). `$i++` = $i nach jedem Durchlauf um 1 erhöhen.
+
+  4. Datentypen: String ($name), Array ($noten), Integer (Noten, $i), Float ($durchschnitt). Kontrollstrukturen: for-Schleife, if-elseif-else.
+
+  5. `$i < 6` und `$anzahl` berechnung. Besser: `for ($i = 0; $i < count($noten); $i++)` – dann zählt PHP die Noten automatisch. Auch `$anzahl = count($noten)` vor der Schleife möglich.
+
+  6. Hello World zeigt nur Ausgabe. Dieser Code zeigt: Variablen verschiedener Typen, Arrays, Schleifen, Berechnungen, bedingte Ausgabe – echte Programmlogik.

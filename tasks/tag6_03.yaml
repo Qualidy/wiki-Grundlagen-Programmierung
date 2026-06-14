@@ -1,0 +1,47 @@
+title: Struktogramm lesen und PAP vergleichen
+difficulty: 3
+question: |
+  Betrachte das folgende Struktogramm:
+
+  ```
+  ┌──────────────────────────────────────────┐
+  │  Bestellbetrag einlesen                  │
+  ├──────────────────────────────────────────┤
+  │  Solange Bestellbetrag <= 0:             │
+  │ ┌────────────────────────────────────────┤
+  │ │  „Ungültiger Betrag, erneut eingeben"  │
+  │ │  ausgeben                              │
+  │ │  Bestellbetrag einlesen                │
+  └─┴────────────────────────────────────────┘
+  ┌──────────────────────────────────────────┐
+  │  Ist Bestellbetrag >= 50?                │
+  ├──────────────────┬───────────────────────┤
+  │  Ja              │  Nein                 │
+  │  „Versandkostenfrei" │ „Versandkosten: 4,99 €"│
+  │  ausgeben        │  ausgeben             │
+  └──────────────────┴───────────────────────┘
+  ```
+
+  **Aufgaben:**
+
+  1. Beschreibe in 3–4 Sätzen, was dieses Programm tut.
+
+  2. Was wird ausgegeben, wenn der Benutzer zuerst -5, dann 0, dann 75 eingibt?
+
+  3. Welche zwei Kontrollstrukturen sind in diesem Struktogramm erkennbar?
+
+  4. Erkläre den Unterschied zwischen dieser Schleife (Vorbedingung) und einer Schleife mit Nachbedingung. Wann kann der Unterschied wichtig sein?
+
+  5. Was wäre der Hauptunterschied, wenn dasselbe Programm als PAP dargestellt wäre?
+tip: |
+  Verfolge den Ablauf: Erst Eingabe, dann Validierungsschleife, dann Versandkostenprüfung.
+solution: |
+  1. Das Programm liest einen Bestellbetrag ein. Solange der Betrag ungültig ist (≤ 0), wird eine Fehlermeldung ausgegeben und erneut eingelesen. Danach wird geprüft, ob der Betrag ≥ 50 € ist. Falls ja, ist die Lieferung versandkostenfrei; sonst fallen 4,99 € an.
+
+  2. Eingabe -5 → „Ungültiger Betrag" → Eingabe 0 → „Ungültiger Betrag" → Eingabe 75 → „Versandkostenfrei"
+
+  3. **Iteration (WHILE-Schleife mit Vorbedingung)** und **Selektion (if-else-Verzweigung)**
+
+  4. Vorbedingung: Bedingung wird vor dem ersten Durchlauf geprüft – der Block wird möglicherweise nie ausgeführt. Nachbedingung: Bedingung wird nach dem ersten Durchlauf geprüft – der Block wird mindestens einmal ausgeführt. Hier ist die Vorbedingung sinnvoll, da ein gültiger Betrag beim ersten Versuch möglich ist.
+
+  5. Im PAP würde die Schleife als Rücksprung-Pfeil dargestellt (zurück zur Bedingung). Das Struktogramm zeigt die Hierarchie durch Einrückung – keine expliziten Sprünge sichtbar.

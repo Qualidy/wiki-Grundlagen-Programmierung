@@ -1,0 +1,1446 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../kapitel2/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Kapitel 1 – Was ist Copilot? - Content Creation mit KI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-1-was-ist-copilot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Content Creation mit KI" class="md-header__button md-logo" aria-label="Content Creation mit KI" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Content Creation mit KI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kapitel 1 – Was ist Copilot?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Übersicht
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 1 – Was ist Copilot?
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 2 – Texte schreiben
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 3 – Ideen & Planung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel4/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 4 – ChatGPT im Überblick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel5/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 5 – Gute Prompts & RCFT
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel6/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 6 – Prompts verbessern
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel7/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 7 – Blog, Social & Newsletter
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel8/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 8 – Persona & Storytelling
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel9/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 9 – Was ist Midjourney?
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel10/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 10 – Prompt-Aufbau für Bilder
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel11/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 11 – Stile steuern
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel12/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 12 – Bilder verfeinern
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel13/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 13 – Social & Marketing-Bilder
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel14/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 14 – Konsistenz & Workflow
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel15/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 15 – Fortgeschrittene Techniken
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel16/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 16 – Midjourney & Canva
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel17/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 17 – Visuelle Identität
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel18/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 18 – Recht & Ethik
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Content Creation mit KI" class="md-nav__button md-logo" aria-label="Content Creation mit KI" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Content Creation mit KI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 1 – Was ist Copilot?
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 1 – Was ist Copilot?
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#was-du-in-diesem-kapitel-lernst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was du in diesem Kapitel lernst
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-gehst-du-vor" class="md-nav__link">
+    <span class="md-ellipsis">
+      So gehst du vor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-einfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Einführung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-erwartungen-einordnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Erwartungen einordnen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-was-copilot-ubernehmen-kann-und-was-nicht" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Was Copilot übernehmen kann – und was nicht
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-copilot-als-arbeitswerkzeug-chatgpt-im-uberblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Copilot als Arbeitswerkzeug – ChatGPT im Überblick
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kurzubungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kurzübungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workshop
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 2 – Texte schreiben
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 3 – Ideen & Planung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 4 – ChatGPT im Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 5 – Gute Prompts & RCFT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 6 – Prompts verbessern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 7 – Blog, Social & Newsletter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 8 – Persona & Storytelling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 9 – Was ist Midjourney?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 10 – Prompt-Aufbau für Bilder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 11 – Stile steuern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 12 – Bilder verfeinern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 13 – Social & Marketing-Bilder
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 14 – Konsistenz & Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 15 – Fortgeschrittene Techniken
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 16 – Midjourney & Canva
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 17 – Visuelle Identität
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 18 – Recht & Ethik
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="kapitel-1-was-ist-copilot">Kapitel 1 – Was ist Copilot?<a class="headerlink" href="#kapitel-1-was-ist-copilot" title="Permanent link">&para;</a></h1>
+<div class="kurs-progress">
+  <div class="step active"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+</div>
+
+<div class="lernziele">
+<h3 id="was-du-in-diesem-kapitel-lernst">Was du in diesem Kapitel lernst<a class="headerlink" href="#was-du-in-diesem-kapitel-lernst" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Was Microsoft 365 Copilot ist und wie er grundsätzlich funktioniert</li>
+<li>Welche Aufgaben Copilot bei der Content-Arbeit übernehmen kann – und welche nicht</li>
+<li>Wie Copilot als zentrales Arbeitswerkzeug im Kurs eingesetzt wird</li>
+</ul>
+</div>
+<hr />
+<h2 id="so-gehst-du-vor">So gehst du vor<a class="headerlink" href="#so-gehst-du-vor" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Lies die Kapitelinhalte und probiere die Beispiele in Copilot aus.</li>
+<li>Bearbeite die <strong>Kurzübungen</strong> der Reihe nach – von Grundlagen bis Experte.</li>
+<li>Arbeite die <strong>Workshop-Aufgabe</strong> durch. Sie vertieft das Gelernte an einem zusammenhängenden Szenario.</li>
+</ol>
+<hr />
+<h2 id="11-einfuhrung">1.1 Einführung<a class="headerlink" href="#11-einfuhrung" title="Permanent link">&para;</a></h2>
+<p>Microsoft 365 Copilot ist ein KI-Assistent, der in der Microsoft-365-Umgebung eingebettet ist. Er verarbeitet natürlichsprachliche Anweisungen und liefert darauf basierend Textentwürfe, Zusammenfassungen oder inhaltliche Vorschläge.</p>
+<p>Der Hauptzugang im Kurs ist <strong>Copilot Chat</strong> – die Chat-Oberfläche von Microsoft 365 Copilot. Über diese Oberfläche lassen sich alle Content-Aufgaben im Kurs bearbeiten.</p>
+<div class="admonition tip">
+<p class="admonition-title">Zum Einstieg</p>
+<p>Öffnen Sie Copilot Chat über Ihren Microsoft-365-Copilot-Zugang. Bereits der erste Prompt zeigt, wie Copilot auf Anweisungen reagiert.</p>
+</div>
+<hr />
+<h2 id="12-erwartungen-einordnen">1.2 Erwartungen einordnen<a class="headerlink" href="#12-erwartungen-einordnen" title="Permanent link">&para;</a></h2>
+<p>Viele Nutzende sind beim ersten Einsatz enttäuscht: Das Ergebnis klingt generisch, passt nicht zur Marke oder trifft nicht den gewünschten Ton. Das ist kein Fehler des Tools – es liegt fast immer an der Qualität des Prompts.</p>
+<p>Copilot kann nicht wissen, für welche Zielgruppe geschrieben wird, welcher Ton zur Marke passt oder welche Inhalte vermieden werden sollen. Diese Informationen müssen im Prompt mitgegeben werden. Je präziser die Anweisung, desto brauchbarer das Ergebnis. Darum dreht sich dieser Kurs.</p>
+<hr />
+<h2 id="13-was-copilot-ubernehmen-kann-und-was-nicht">1.3 Was Copilot übernehmen kann – und was nicht<a class="headerlink" href="#13-was-copilot-ubernehmen-kann-und-was-nicht" title="Permanent link">&para;</a></h2>
+<p><strong>Copilot unterstützt bei folgenden Aufgaben:</strong></p>
+<ul>
+<li>Aus Stichpunkten einen ersten Textentwurf entwickeln</li>
+<li>Bestehende Texte kürzen, umformulieren oder verlängern</li>
+<li>Den Ton eines Textes anpassen (sachlicher, persönlicher, formeller)</li>
+<li>Mehrere Varianten für Überschriften oder Einstiege vorschlagen</li>
+<li>Ideen und Themenvorschläge generieren</li>
+</ul>
+<p><strong>Was Copilot nicht leisten kann:</strong></p>
+<p>Copilot trifft keine inhaltlichen Entscheidungen. Er kennt weder eure Markenstimme, noch eure Compliance-Vorgaben, noch den strategischen Kontext eines Textes. Die Verantwortung für Botschaft, Qualität und Freigabe bleibt beim Menschen.</p>
+<div class="admonition warning">
+<p class="admonition-title">Faktenprüfung ist Pflicht</p>
+<p>Copilot kann plausibel klingende, aber falsche Angaben produzieren – Zahlen, Namen, Quellen. Alle Ergebnisse müssen vor dem Einsatz inhaltlich geprüft werden.</p>
+</div>
+<hr />
+<h2 id="14-copilot-als-arbeitswerkzeug-chatgpt-im-uberblick">1.4 Copilot als Arbeitswerkzeug – ChatGPT im Überblick<a class="headerlink" href="#14-copilot-als-arbeitswerkzeug-chatgpt-im-uberblick" title="Permanent link">&para;</a></h2>
+<p>Im Kurs wird <strong>primär mit Copilot</strong> gearbeitet. Alle praktischen Übungen und Aufgaben sind auf Copilot Chat ausgelegt.</p>
+<p><strong>ChatGPT</strong> wird kurz thematisiert (Kapitel 4): als eigenständiges Tool mit vergleichbarer Prompt-Logik, das außerhalb der Microsoft-365-Umgebung läuft. Die dort beschriebenen Prinzipien – RCFT, Folgeprompts, No-Gos – gelten für beide Tools gleichermaßen.</p>
+<hr />
+<h2 id="kurzubungen">Kurzübungen<a class="headerlink" href="#kurzubungen" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--1">Grundlagen</span> Erster Prompt in Copilot</summary>
+<p>Öffne <strong>Copilot Chat</strong> in Microsoft 365.</p>
+<p>Gib diesen Prompt ein:</p>
+<blockquote>
+<p>Du bist Texter für ein kleines Café. Schreib einen kurzen Instagram-Post für Montag. Ton: einladend, Du-Form. Max. 60 Wörter.</p>
+</blockquote>
+<p>Formuliere danach <strong>einen Folgeprompt</strong>, der den Entwurf für den Einsatz verbessert – z. B. konkreterer Einstieg, kürzerer Text oder klarer Call-to-Action.</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Der erste Entwurf ist selten der letzte. Ein gezielter Folgeprompt ist der nächste Arbeitsschritt.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p>Beispiel-Folgeprompts:</p>
+<ul>
+<li>„Kürze auf 45 Wörter. Erste Zeile soll neugierig machen."</li>
+<li>„Formuliere den Einstieg direkter. Keine Floskeln."</li>
+<li>„Füge am Ende einen CTA hinzu: ‚Heute vorbeikommen.'"</li>
+</ul>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--2">Fortgeschritten</span> Zwei Varianten in Copilot</summary>
+<p>Arbeite in <strong>Copilot Chat</strong> und gib diesen Prompt ein:</p>
+<blockquote>
+<p>Schreib zwei Varianten für den Einstieg einer Produktseite. Produkt: Trinkflasche aus recyceltem Plastik. Zielgruppe: umweltbewusste Berufstätige. Variante A: sachlich, Sie-Form. Variante B: direkter, Du-Form. Je Variante max. 30 Wörter.</p>
+</blockquote>
+<p>Wähle die passendere Variante und formuliere einen Folgeprompt, der daraus einen vollständigen Absatz für die Produktseite macht (ca. 80 Wörter).</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Copilot kann mehrere Varianten in einem Prompt liefern. Der nächste Schritt ist die Auswahl und Weiterentwicklung – nicht der Vergleich als Textaufgabe.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p>Beispiel-Folgeprompt:</p>
+<blockquote>
+<p>Nimm Variante B. Entwickle daraus einen Produktseiten-Absatz (ca. 80 Wörter). Ton beibehalten. Keine Preisangaben, keine Superlative.</p>
+</blockquote>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--3">Experte</span> Vager vs. präziser Prompt</summary>
+<p>Arbeite in <strong>Copilot Chat</strong> mit der fiktiven App <strong>TimeTrack</strong> (Zeiterfassung für Freelancer, mobil, kostenlos):</p>
+<p><strong>Schritt 1 – vager Prompt:</strong></p>
+<blockquote>
+<p>Schreib einen Text über unser neues Produkt.</p>
+</blockquote>
+<p><strong>Schritt 2 – präziser Prompt:</strong>
+Formuliere einen Prompt mit mindestens: Produktbeschreibung, Zielgruppe, Kanal (z. B. LinkedIn), Ton, Längenvorgabe, mindestens ein No-Go.</p>
+<p><strong>Schritt 3 – Feinschliff:</strong>
+Nimm das Ergebnis aus Schritt 2 und verbessere es mit <strong>einem Folgeprompt</strong> (z. B. Hook schärfen, kürzen, CTA ergänzen).</p>
+<p><strong>Deliverable:</strong> der präzise Prompt aus Schritt 2 und der finale Text aus Schritt 3.</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Der Unterschied zwischen Schritt 1 und 2 zeigt, warum präzise Prompts bessere Ergebnisse liefern. Schritt 3 ist der normale Arbeitsablauf nach dem ersten Entwurf.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p>Beispiel präziser Prompt:</p>
+<blockquote>
+<p>Du bist Texter für TimeTrack, eine Zeiterfassungs-App für Freelancer (mobil, kostenlos). Schreib einen LinkedIn-Post. Zielgruppe: Selbstständige mit wenig Zeit. Max. 800 Zeichen, Sie-Form, sachlich. No-Go: keine erfundenen Statistiken, keine Superlative. Hook in der ersten Zeile, CTA am Ende.</p>
+</blockquote>
+<p>Beispiel-Folgeprompt:</p>
+<blockquote>
+<p>Formuliere den Hook konkreter. Kein Buzzword. CTA: „Jetzt testen."</p>
+</blockquote>
+</details>
+</details>
+<hr />
+<h2 id="workshop">Workshop<a class="headerlink" href="#workshop" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--4">Workshop</span> Copilot kennenlernen – erster Content-Workflow</summary>
+<p><strong>Ausgangslage:</strong> Die fiktive Marke <strong>Nordkorn</strong> verkauft regionales Müsli online. Zielgruppe: Berufstätige 28–45, gesundheitsbewusst, wenig Zeit morgens. Ton: sachlich, freundlich, Du-Form.</p>
+<p>Arbeiten Sie in <strong>Copilot Chat</strong> und dokumentieren Sie Ihre Prompts.</p>
+<hr />
+<p><strong>Phase 1 – Erkundung</strong></p>
+<ol>
+<li>Öffnen Sie Copilot Chat in Microsoft 365.</li>
+<li>Führen Sie einen <strong>vagen Prompt</strong> aus: „Schreib einen Text über unser Müsli."</li>
+<li>Führen Sie einen <strong>präzisen Prompt</strong> aus mit: Produkt, Zielgruppe, Kanal (Instagram), Ton, Länge, mindestens ein No-Go.</li>
+<li>Vergleichen Sie beide Ergebnisse direkt in Copilot.</li>
+</ol>
+<hr />
+<p><strong>Phase 2 – Erste Texte</strong></p>
+<ol>
+<li>Erstellen Sie eine <strong>Instagram-Caption</strong> für den Produkt-Launch (max. 80 Wörter, 3 Hashtags).</li>
+<li>Formulieren Sie <strong>zwei Folgeprompts</strong>: Ton schärfen, Hook verbessern.</li>
+<li>Erstellen Sie eine <strong>LinkedIn-Variante</strong> desselben Inhalts (max. 600 Zeichen, Sie-Form).</li>
+</ol>
+<hr />
+<p><strong>Phase 3 – Grenzen erkennen</strong></p>
+<ol>
+<li>Bitten Sie Copilot um <strong>fünf Nährwert-Claims</strong> für das Müsli. Prüfen Sie, welche Behauptungen problematisch wären.</li>
+<li>Formulieren Sie einen Prompt mit No-Gos für <strong>Gesundheitsversprechen</strong> und lassen Sie die Caption neu schreiben.</li>
+</ol>
+<hr />
+<p><strong>Phase 4 – Abschluss</strong></p>
+<ol>
+<li>Wählen Sie den stärksten Text (Instagram oder LinkedIn).</li>
+<li>Finalisieren Sie ihn mit <strong>einem letzten Folgeprompt</strong>.</li>
+<li>Speichern Sie Ihren <strong>präzisen Prompt aus Schritt 2</strong> und formulieren Sie denselben Prompt für eine zweite fiktive Marke um (z. B. GreenLoop statt Nordkorn).</li>
+</ol>
+<p><strong>Deliverables:</strong> finaler Text, alle verwendeten Prompts, Prompt-Vorlage.</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Phase 1 gemeinsam im Plenum sinnvoll. Phasen 2–3 eigenständig oder in Paaren. Phase 4 kurz im Roundtable vorstellen.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p>Bewertungskriterien (Selbstcheck):</p>
+<ul>
+<li>Präziser Prompt liefert deutlich spezifischeres Ergebnis als vager Prompt</li>
+<li>Finaler Text enthält konkreten Nutzen, kein generisches Marketingdeutsch</li>
+<li>No-Gos zu Gesundheitsversprechen sind im Prompt formuliert und im Text eingehalten</li>
+<li>Mindestens drei Prompts bauen aufeinander auf (Folgeprompts)</li>
+</ul>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Übersicht">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Übersicht
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../kapitel2/" class="md-footer__link md-footer__link--next" aria-label="Next: Kapitel 2 – Texte schreiben">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 2 – Texte schreiben
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "navigation.prune", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

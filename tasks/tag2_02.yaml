@@ -1,0 +1,18 @@
+title: Anpassungsform entscheiden
+difficulty: 2
+question: |
+  Für die folgenden Szenarien soll die wirtschaftlich sinnvollste Anpassungsform gewählt werden. Begründe deine Entscheidung jeweils in 2–3 Sätzen.
+
+  **Szenario 1:** Ein kleines Handwerksunternehmen möchte Rechnungen digital verschicken. Es nutzt bereits eine weit verbreitete Buchhaltungssoftware. Ein Kollege hat gehört, dass es dafür ein kostenfreies Add-on gibt.
+
+  **Szenario 2:** Ein Krankenhaus benötigt eine Software, die Patientendaten mit einer sehr spezifischen medizinischen Gerätesteuerung verknüpft. Es gibt kein Produkt auf dem Markt, das beide Systeme verbindet.
+
+  **Szenario 3:** Eine Software, die seit 10 Jahren im Einsatz ist, funktioniert korrekt, aber neue Entwickler brauchen Monate, um den unstrukturierten Code zu verstehen. Es gibt viele Bugs.
+tip: |
+  Denke an die Kosten-Nutzen-Abwägung: Was ist der günstigste Weg zum Ziel?
+solution: |
+  **Szenario 1:** Erweiterung/Plug-in. Das gewünschte Verhalten kann durch ein bereits existierendes Add-on erreicht werden. Individualentwicklung wäre unverhältnismäßig teuer, da die Funktion nicht unternehmenseinzigartig ist.
+
+  **Szenario 2:** Individualentwicklung. Die Anforderung ist hochspezifisch und kann nicht durch ein Standardprodukt abgedeckt werden. Eine Schnittstelle (API) oder ein eigenständiges Integrationsmodul muss entwickelt werden.
+
+  **Szenario 3:** Refactoring. Die Software funktioniert – es geht nicht darum, neue Funktionen zu ergänzen, sondern die interne Struktur zu verbessern. Dies senkt die Wartungskosten und reduziert zukünftige Fehler.

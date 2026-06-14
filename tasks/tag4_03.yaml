@@ -1,0 +1,18 @@
+title: Vorgehensmodell für Szenarien wählen
+difficulty: 3
+question: |
+  Für die folgenden Projekte soll das geeignetere Vorgehensmodell (Wasserfall oder Spiralmodell) empfohlen werden. Begründe deine Wahl jeweils anhand von: Risikosteuerung, Feedback-Schleifen und Planbarkeit.
+
+  **Projekt A:** Eine Bundesbehörde lässt eine neue Steuerverwaltungssoftware entwickeln. Die gesetzlichen Anforderungen sind vollständig definiert. Ein fixer Abnahme-Termin (18 Monate) und Festpreis sind vertraglich festgelegt.
+
+  **Projekt B:** Ein Start-up entwickelt eine neue App für personalisierte Ernährungsempfehlungen. Die Zielgruppe und die genauen Funktionen sind noch nicht klar – man möchte schnell Feedback von ersten Nutzern.
+
+  **Projekt C:** Eine Produktionslinie eines Automobilherstellers soll mit neuer Steuerungssoftware ausgestattet werden. Die Anforderungen sind detailliert, aber es gibt unbekannte technische Risiken bei der Integration mit der Maschinensteuerung.
+tip: |
+  Denke an die drei Vergleichskriterien: Wie stark variieren die Anforderungen? Wie wichtig ist frühes Feedback? Wie stark muss der Zeitplan planbar sein?
+solution: |
+  **Projekt A:** Wasserfallmodell. Anforderungen sind stabil, Vertrag ist fix. Hohe Planbarkeit wichtig. Risiken sind gering, da Anforderungen vollständig bekannt.
+
+  **Projekt B:** Spiralmodell (oder agil). Anforderungen sind unklar, frühes Nutzerfeedback entscheidend. Iteratives Vorgehen reduziert das Risiko, am Markt vorbeizuentwickeln.
+
+  **Projekt C:** Spiralmodell. Trotz klarer Anforderungen bestehen technische Risiken (Integration). Prototypen und frühe Tests reduzieren das Risiko. Feedback-Schleifen ermöglichen Kurskorrektur bei unerwarteten Integrationsproblemen.

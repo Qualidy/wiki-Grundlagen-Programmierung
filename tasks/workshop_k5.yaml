@@ -1,0 +1,41 @@
+title: Lastenheft erstellen – Buchungsplattform
+difficulty: 4
+question: |
+  **Szenario:** Ein Fitnessstudio-Verbund mit 5 Standorten möchte eine neue Online-Buchungsplattform für Kurse. Du wirst als Analyst beauftragt, das Lastenheft zu erstellen.
+
+  **Ausgangsinformationen (aus einem Interview mit der Geschäftsführerin):**
+
+  > „Unsere Mitglieder sollen Kurse online buchen können, ohne uns anzurufen. Sie sollen sehen, welche Kurse es gibt und wann. Buchungen sollen stornierbar sein. Für uns als Studio wäre es wichtig, Auslastungsberichte zu bekommen. Datenschutz ist uns sehr wichtig. Wir wollen keine eigene App bauen – nur eine Webseite."
+
+  ---
+
+  **Aufgaben:**
+
+  1. Erstelle ein strukturiertes **Lastenheft** mit folgenden Abschnitten:
+     - Ausgangssituation (2–3 Sätze)
+     - Ziele (3–5 Punkte)
+     - Funktionale Anforderungen: mindestens 5 Muss- und 2 Kann-Anforderungen
+     - Nicht-Anforderungen: mindestens 2
+     - Abnahmekriterien: mindestens 3
+
+  2. Formuliere **zwei Fragen**, die du der Geschäftsführerin noch stellen würdest, bevor das Lastenheft finalisiert wird.
+
+  3. Erkläre in 2–3 Sätzen, warum es wichtig ist, im Lastenheft Nicht-Anforderungen explizit zu formulieren.
+
+  **Deliverables:** Strukturiertes Lastenheft (kann als Tabelle oder Fließtext verfasst werden)
+tip: |
+  Halte das Lastenheft in der Sprache des Auftraggebers – kein technisches Jargon. Beschreibe nur das WAS, nicht das WIE.
+solution: |
+  **Bewertungskriterien:**
+
+  1. Lastenheft enthält:
+     - Ausgangssituation erklärt das Problem
+     - Ziele messbar oder zumindest klar formuliert
+     - 5+ Muss-Anforderungen (Kursübersicht, Buchung, Stornierung, Login, Auslastungsberichte, DSGVO)
+     - 2+ Kann-Anforderungen (z. B. Erinnerungs-E-Mail, Bewertungsfunktion)
+     - Nicht-Anforderungen: keine mobile App, keine Bezahlfunktion (falls nicht erwähnt)
+     - Abnahmekriterien: messbar und testbar
+
+  2. Mögliche Fragen: „Müssen Zahlungen online abgewickelt werden?" / „Sollen Mitglieder Kurshistorie einsehen können?" / „Wer verwaltet die Kursdaten?"
+
+  3. Nicht-Anforderungen verhindern Scope Creep und klären Erwartungen. Ohne sie könnte der Auftragnehmer z. B. eine App anbieten, die nicht gewünscht ist – und dennoch in Rechnung stellen.

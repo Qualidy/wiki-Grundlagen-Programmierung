@@ -1,0 +1,43 @@
+title: PHP-Code lesen und verstehen
+difficulty: 2
+question: |
+  Lies den folgenden PHP-Code und beantworte die Fragen:
+
+  ```php
+  <?php
+  $preis = 49.90;
+  $rabatt = 10;
+  $istMitglied = true;
+
+  if ($istMitglied) {
+      $endpreis = $preis - ($preis * $rabatt / 100);
+  } else {
+      $endpreis = $preis;
+  }
+
+  echo "Endpreis: " . $endpreis . " Euro";
+  ```
+
+  **Aufgaben:**
+
+  1. Was gibt dieses Programm aus? Berechne manuell.
+
+  2. Was würde ausgegeben werden, wenn `$istMitglied = false;` gesetzt wäre?
+
+  3. Erkläre, was der `.`-Operator in der letzten Zeile macht.
+
+  4. Was passiert, wenn `$rabatt = 0;` gesetzt wird? Ändert sich das Ergebnis?
+
+  5. Welche Kontrollstruktur wird in diesem Code verwendet?
+tip: |
+  Führe die Berechnung Schritt für Schritt aus: Zuerst $preis * $rabatt / 100, dann $preis minus diesem Wert.
+solution: |
+  1. `$endpreis = 49.90 - (49.90 * 10 / 100) = 49.90 - 4.99 = 44.91`. Ausgabe: **„Endpreis: 44.91 Euro"**
+
+  2. Der else-Zweig wird ausgeführt: `$endpreis = $preis = 49.90`. Ausgabe: **„Endpreis: 49.9 Euro"**
+
+  3. Der `.`-Operator ist der **Verkettungsoperator** in PHP. Er verbindet mehrere Strings zu einem einzigen Text-Ausgabewert.
+
+  4. Wenn `$rabatt = 0`: `49.90 - (49.90 * 0 / 100) = 49.90 - 0 = 49.90`. Ausgabe: **„Endpreis: 49.9 Euro"** – kein Unterschied zu keinem Rabatt.
+
+  5. **Selektion (if-else)** – abhängig vom Wahrheitswert von `$istMitglied` wird ein Pfad gewählt.

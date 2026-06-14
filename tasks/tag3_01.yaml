@@ -1,0 +1,30 @@
+title: Phasen benennen und ordnen
+difficulty: 1
+question: |
+  Bringe die folgenden Aktivitäten in die richtige Reihenfolge und ordne sie der passenden Entwicklungsphase zu:
+
+  **Aktivitäten (durcheinander):**
+  - Testfälle definieren und ausführen
+  - Software auf dem Produktivserver bereitstellen
+  - Anforderungen mit dem Kunden besprechen und dokumentieren
+  - Quellcode schreiben
+  - Fehler im laufenden Betrieb beheben
+  - Datenbankstruktur entwerfen und Architekturdiagramm erstellen
+  - Schulung der Endanwender
+
+  **Phase-Optionen:**
+  Anforderungsanalyse · Entwurf · Implementierung · Test · Deployment · Betrieb/Wartung
+
+  Erstelle eine Tabelle: Aktivität | Phase
+tip: |
+  Denke daran: Die Reihenfolge folgt dem Grundprinzip – erst verstehen, dann planen, dann bauen, dann prüfen, dann ausrollen, dann betreiben.
+solution: |
+  | Aktivität | Phase |
+  |---|---|
+  | Anforderungen mit dem Kunden besprechen und dokumentieren | Anforderungsanalyse |
+  | Datenbankstruktur entwerfen und Architekturdiagramm erstellen | Entwurf |
+  | Quellcode schreiben | Implementierung |
+  | Testfälle definieren und ausführen | Test |
+  | Software auf dem Produktivserver bereitstellen | Deployment |
+  | Schulung der Endanwender | Deployment |
+  | Fehler im laufenden Betrieb beheben | Betrieb/Wartung |

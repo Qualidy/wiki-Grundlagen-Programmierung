@@ -1,0 +1,23 @@
+title: UML-Diagrammarten zuordnen
+difficulty: 1
+question: |
+  Ordne die folgenden Fragen dem passenden UML-Diagramm zu:
+
+  **Diagramm-Optionen:** Use-Case-Diagramm · Aktivitätsdiagramm · Klassendiagramm · Sequenzdiagramm
+
+  **Fragen:**
+  1. Welche Klassen gibt es im System, welche Attribute haben sie und wie stehen sie zueinander?
+  2. Wer nutzt das System und welche Funktionen stehen den Nutzern zur Verfügung?
+  3. In welcher Reihenfolge rufen Objekte Methoden aufeinander auf?
+  4. Wie läuft ein Geschäftsprozess ab – mit Verzweigungen und wer ist jeweils verantwortlich?
+  5. Eine Fachabteilung möchte sehen, welche Aktionen das System dem Buchhalter ermöglicht.
+  6. Ein Entwickler möchte dokumentieren, wie Browser, Server und Datenbank beim Login miteinander kommunizieren.
+tip: |
+  Merke: Use Case = Wer nutzt Was · Aktivität = Ablauf + Rollen · Klasse = Struktur · Sequenz = Zeitliche Kommunikation
+solution: |
+  1. **Klassendiagramm**
+  2. **Use-Case-Diagramm**
+  3. **Sequenzdiagramm**
+  4. **Aktivitätsdiagramm**
+  5. **Use-Case-Diagramm** (Akteur = Buchhalter, Anwendungsfälle = Aktionen)
+  6. **Sequenzdiagramm** (zeitliche Abfolge der Kommunikation zwischen Browser, Server, Datenbank)

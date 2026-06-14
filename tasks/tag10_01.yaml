@@ -1,0 +1,35 @@
+title: Datentypen erkennen
+difficulty: 1
+question: |
+  Ordne die folgenden Werte dem passenden PHP-Datentyp zu:
+
+  **Datentypen:** String · Integer · Float · Boolean · Array · Null
+
+  **Werte:**
+  1. `"Hallo Welt"`
+  2. `42`
+  3. `3.14`
+  4. `true`
+  5. `null`
+  6. `[1, 2, 3, 4]`
+  7. `"123"`
+  8. `false`
+  9. `0.0`
+  10. `""`
+
+  Beantworte außerdem: Was ist der Unterschied zwischen `42` und `"42"`?
+tip: |
+  Anführungszeichen machen aus einer Zahl einen String. Ohne Anführungszeichen ist es eine Zahl.
+solution: |
+  1. **String** – Text in Anführungszeichen
+  2. **Integer** – ganze Zahl
+  3. **Float** – Dezimalzahl
+  4. **Boolean** – Wahrheitswert
+  5. **Null** – kein Wert
+  6. **Array** – Liste von Werten
+  7. **String** – obwohl es wie eine Zahl aussieht, ist es wegen der Anführungszeichen ein String
+  8. **Boolean** – Wahrheitswert (falsch)
+  9. **Float** – Dezimalzahl (auch wenn sie 0 ist)
+  10. **String** – leerer String (nicht null!)
+
+  **Unterschied `42` vs `"42"`:** `42` ist eine Integer-Zahl, mit der man rechnen kann. `"42"` ist ein String-Text – man kann damit zwar in PHP bedingt rechnen (automatische Typkonvertierung), aber konzeptionell ist es ein Text, keine Zahl.

@@ -1,0 +1,33 @@
+title: Algorithmus modellieren – Geldautomat
+difficulty: 4
+question: |
+  **Aufgabe:** Modelliere den folgenden Ablauf eines vereinfachten Geldautomaten als **Struktogramm** (Zeichnung auf Papier oder Beschreibung in Textform) und als **PAP** (Beschreibung der Symbole und Verbindungen).
+
+  **Ablauf:**
+  1. Karte einlesen
+  2. PIN einlesen
+  3. PIN prüfen – falls falsch: Fehlermeldung ausgeben und zurück zu Schritt 2. Nach 3 Fehlversuchen: Karte einziehen und Programm beenden.
+  4. Falls PIN korrekt: Betrag einlesen
+  5. Prüfen, ob Kontostand ≥ Betrag: Falls ja, Betrag ausgeben und Kontostand aktualisieren. Falls nein: Fehlermeldung „Nicht genug Guthaben".
+  6. Karte zurückgeben und Programm beenden.
+
+  ---
+
+  **Aufgaben:**
+
+  1. Erstelle das Struktogramm (Textdarstellung mit Einrückungen reicht).
+  2. Beschreibe den PAP: Welche Symbole kommen vor und in welcher Reihenfolge?
+  3. Benenne alle Kontrollstrukturen, die in diesem Algorithmus vorkommen.
+  4. Welche Schwierigkeit ergibt sich bei der Darstellung des „3 Fehlversuche"-Zählers im PAP?
+tip: |
+  Für den Fehlversuchs-Zähler: Du brauchst eine Variable, die du nach jedem Fehlversuch um 1 erhöhst, und eine Bedingung, die prüft, ob der Zähler 3 erreicht hat.
+solution: |
+  **Bewertungskriterien:**
+
+  1. Struktogramm enthält: Karte/PIN einlesen, WHILE-Schleife (Fehlversuche < 3 UND PIN falsch), Selektion (3 Versuche erreicht → einziehen), Betrag einlesen, Selektion (Kontostand ≥ Betrag), Ausgabe, Karte zurückgeben.
+
+  2. PAP: Terminalsymbol START → Parallelogramm (Karte lesen) → Parallelogramm (PIN lesen) → Raute (PIN korrekt?) → Raute (Versuche = 3?) → Rücksprung oder Einziehen → Parallelogramm (Betrag) → Raute (Kontostand) → Ausgabe → Terminal ENDE.
+
+  3. Kontrollstrukturen: Iteration (Schleife mit Zähler), Selektion (PIN korrekt), Selektion (Guthaben ausreichend), verschachtelte Selektion (Versuche erschöpft).
+
+  4. Der Zähler muss als Prozessschritt (Rechteck: `Versuche = Versuche + 1`) nach jeder Fehleingabe eingetragen werden, und es braucht eine separate Raute für `Versuche == 3`. Das macht den PAP an dieser Stelle komplex.

@@ -50,24 +50,34 @@ def create_task(title="Aufgabe",
                 tip="",
                 difficulty=0,
                 difficulty_icon='🌶',
-                collapsed=False,
+                collapsed=True,
                 solution_video=None,
                 question_video=None):
-    difficulty_icons = difficulty * difficulty_icon + (" " if difficulty else "")
+
+    difficulty_labels = {1: "Grundlagen", 2: "Fortgeschritten", 3: "Experte", 4: "Workshop"}
+    difficulty_label = difficulty_labels.get(difficulty, "")
+    level_badge = (
+        f'<span class="task-level task-level--{difficulty}">{difficulty_label}</span> '
+        if difficulty else ""
+    )
+
     collapsed_symbol = "" if collapsed else "+"
 
-    result = f'???{collapsed_symbol} question "{difficulty_icons}{title}"\n'
+    result = f'???{collapsed_symbol} question "{level_badge}{title}"\n'
+
     if question_video:
         result += add_tabs(youtube_video_admonition(question_video))
 
     result += add_tabs(question)
+
     if tip:
-        result += add_tabs(f'??? info "Tipp"\n') + add_tabs(tip, 2)
+        result += add_tabs('??? info "Tipp"\n') + add_tabs(tip, 2)
     if solution:
-        result += add_tabs(f'??? success "Lösung"\n')
+        result += add_tabs('??? success "Lösung"\n')
         if solution_video:
             result += add_tabs(youtube_video_admonition(solution_video, "Lösungsvideo"), 2)
         result += add_tabs(solution, 2)
+
     return result
 
 

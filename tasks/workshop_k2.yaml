@@ -1,0 +1,34 @@
+title: Softwareanpassung im Unternehmen – Beratungsauftrag
+difficulty: 4
+question: |
+  **Szenario:** Die Firma „TechBau GmbH" (Bauplanung, 80 Mitarbeiter) wendet sich an dich mit folgender Situation:
+
+  > „Wir nutzen seit 5 Jahren eine Standard-Projektplanungssoftware (SaaS). Leider fehlen uns drei Funktionen: (1) Eine automatische Verknüpfung unserer Kundendatenbank mit der Projektübersicht, (2) ein wöchentlicher PDF-Bericht für die Geschäftsleitung und (3) eine Ampelfunktion, die überfällige Projekte rot markiert. Der Anbieter bietet ein offizielles API an. Außerdem haben wir intern festgestellt, dass unser IT-Mitarbeiter in den letzten 3 Jahren Hilfsskripte geschrieben hat, die kaum noch jemand versteht."
+
+  ---
+
+  **Aufgaben:**
+
+  1. Analysiere die drei fehlenden Funktionen. Welche Anpassungsform würdest du für jede empfehlen? Begründe je Funktion.
+
+  2. Was empfiehlst du für die „Hilfsskripte"? Welche Anpassungsform und welches Risiko besteht, wenn nichts unternommen wird?
+
+  3. Erstelle eine Priorisierungstabelle: Ordne alle vier Handlungsfelder nach Dringlichkeit (1 = höchste Priorität) und begründe die Reihenfolge.
+
+  4. Verfasse einen kurzen Beratungsbrief (max. 10 Sätze) an die Geschäftsführung, in dem du deine Empfehlungen zusammenfasst.
+
+  **Deliverables:** Analysetabelle + Priorisierung + Beratungsbrief
+tip: |
+  Ein API (Application Programming Interface) ist eine Schnittstelle, über die externe Programme auf Daten und Funktionen eines Systems zugreifen können. Das ist ein wichtiger Hinweis für die Anpassungsform.
+solution: |
+  **Bewertungskriterien:**
+
+  1. Funktion 1 (Kundendatenbank-Verknüpfung): Individualentwicklung (API-Integration) – das API ermöglicht eine technische Verbindung, die selbst entwickelt werden muss.
+     Funktion 2 (PDF-Bericht): Konfiguration oder leichte Individualentwicklung – viele SaaS-Systeme bieten Report-Funktionen; falls nicht vorhanden → kleines Skript per API.
+     Funktion 3 (Ampelfunktion): Konfiguration oder Customizing – viele Projekttools bieten Farbmarkierungen als Einstellung.
+
+  2. Hilfsskripte: Refactoring. Risiko ohne Maßnahme: Wissensverlust, unkontrollierbare Fehler, keine Wartbarkeit.
+
+  3. Priorisierung: Skripte-Refactoring (hohe Risikominderung) vor API-Integration (hoher Mehrwert) vor PDF-Bericht (praktisch) vor Ampelfunktion (möglicherweise per Konfiguration lösbar).
+
+  4. Beratungsbrief: Klar strukturiert, alle Punkte adressiert, wirtschaftliche Argumentation vorhanden.

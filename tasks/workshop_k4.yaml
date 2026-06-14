@@ -1,0 +1,36 @@
+title: Vorgehensmodell-Vergleich und Projektsimulation
+difficulty: 4
+question: |
+  **Szenario:** Du wirst als IT-Projektleiter bei einem mittelständischen Logistikunternehmen eingesetzt. Das Unternehmen möchte sein Warenwirtschaftssystem durch ein neues System ersetzen. Es gibt zwei Meinungslager:
+
+  - **Fraktion A (Geschäftsführer):** „Wir brauchen Planungssicherheit. Ich will am Tag 1 wissen, was das Projekt kostet und wann es fertig ist."
+  - **Fraktion B (IT-Leiter):** „Die Anforderungen werden sich während des Projekts ändern. Wir sollten flexibel bleiben und früh zeigen, was wir haben."
+
+  Das Projekt: Ca. 2 Jahre Laufzeit, 15 Mitarbeiter im Team, ca. 200 beteiligte Endanwender, Schnittstellen zu 4 Drittsystemen.
+
+  ---
+
+  **Aufgaben:**
+
+  1. Analysiere, welche Argumente für Wasserfall und welche für das Spiralmodell sprechen. Erstelle eine Tabelle mit je 3 Pro-Argumenten pro Modell für dieses spezifische Projekt.
+
+  2. Welches Modell würdest du empfehlen und warum? Gehe explizit auf Risikosteuerung, Feedback und Planbarkeit ein.
+
+  3. Erkläre, wie du Fraktion A (Planungssicherheit) und Fraktion B (Flexibilität) mit deiner Empfehlung überzeugen würdest. Formuliere je eine kurze Ansprache (2–3 Sätze).
+
+  4. Beschreibe, welche Artefakte du in der ersten Projektphase (Monat 1–3) erstellen würdest und warum.
+
+  **Deliverables:** Pro/Contra-Tabelle + Empfehlung + zwei kurze Ansprachen + Artefaktliste
+tip: |
+  Es gibt hier keine eindeutig „richtige" Antwort – entscheidend ist die Qualität der Begründung.
+solution: |
+  **Bewertungskriterien:**
+
+  1. Pro Wasserfall: Budgetplanbarkeit, fester Vertragsrahmen möglich, klare Meilensteine für Geschäftsführer. Pro Spiral: Schnittstellenrisiken klärbar, frühes Feedback von 200 Endanwendern, Anforderungsänderungen einfließbar.
+
+  2. Empfehlung: Spiralmodell (oder hybrides Vorgehen) – begründet mit Komplexität, 4 Drittsystemen, 200 Endanwendern (hohes Feedbackbedarf), unklarem Anforderungsumfang.
+
+  3. An Fraktion A: „Das Spiralmodell gibt uns in jeder Iteration feste Deliverables und Meilensteine. Das Budget pro Phase ist planbar, und wir reduzieren das Risiko teurer Überraschungen am Ende."
+     An Fraktion B: „Jede Iteration endet mit einem nutzbaren Teilprodukt, das Endanwender testen können. Änderungsanforderungen fließen geordnet in die nächste Iteration ein."
+
+  4. Artefakte Monat 1–3: Lastenheft (Anforderungserhebung), Risikoanalyse, Kontextdiagramm (Schnittstellen), erster Prototyp eines zentralen Workflows.

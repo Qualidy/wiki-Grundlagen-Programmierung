@@ -1,0 +1,20 @@
+title: Kardinalitäten bestimmen
+difficulty: 2
+question: |
+  Bestimme für die folgenden Beziehungen die passende Kardinalität (1:1, 1:n oder m:n) und begründe deine Wahl kurz.
+
+  1. Ein **Autor** schreibt **Bücher**. Ein Buch hat genau einen Autor (vereinfacht).
+  2. Ein **Student** belegt **Kurse**. Ein Kurs wird von mehreren Studenten belegt.
+  3. Ein **Land** hat genau eine **Hauptstadt**. Eine Hauptstadt gehört zu genau einem Land.
+  4. Ein **Arzt** behandelt **Patienten**. Ein Patient wird von mehreren Ärzten behandelt.
+  5. Eine **Bestellung** hat mindestens eine **Bestellposition**. Eine Bestellposition gehört zu genau einer Bestellung.
+  6. Ein **Mitarbeiter** leitet genau eine **Abteilung**. Eine Abteilung wird von genau einem Mitarbeiter geleitet.
+tip: |
+  Frage immer beide Richtungen: „Wie viele X gehören zu einem Y?" und „Wie viele Y gehören zu einem X?"
+solution: |
+  1. **1:n** – Ein Autor → mehrere Bücher; ein Buch → genau ein Autor
+  2. **m:n** – Ein Student → mehrere Kurse; ein Kurs → mehrere Studenten
+  3. **1:1** – Ein Land → eine Hauptstadt; eine Hauptstadt → ein Land
+  4. **m:n** – Ein Arzt → mehrere Patienten; ein Patient → mehrere Ärzte
+  5. **1:n** – Eine Bestellung → mehrere Positionen; eine Position → genau eine Bestellung
+  6. **1:1** – Ein Mitarbeiter → eine Abteilung; eine Abteilung → ein Mitarbeiter

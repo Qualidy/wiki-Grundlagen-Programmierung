@@ -1,0 +1,46 @@
+title: Entwicklungsprozess analysieren
+difficulty: 4
+question: |
+  **Szenario:** Die Firma „MediApp GmbH" entwickelt eine neue Software zur digitalen Patientenakte für Arztpraxen. Das Projekt läuft seit 18 Monaten und soll in 3 Monaten fertig sein. Folgende Situation liegt vor:
+
+  - Die Anforderungsanalyse wurde nach 2 Monaten als „abgeschlossen" erklärt.
+  - Der Entwurf dauerte 4 Monate. Das Architekturdiagramm wurde einmal kurz präsentiert.
+  - Die Implementierung läuft seit 10 Monaten. Dabei wurden immer wieder neue Anforderungen direkt von Entwicklern entgegengenommen.
+  - Ein separates Test-Team gibt es nicht. Entwickler testen ihre eigenen Funktionen.
+  - Das Lastenheft existiert, das Pflichtenheft wurde nie fertiggestellt.
+  - Drei Wochen vor dem geplanten Deployment meldet ein Arzt, dass ein wichtiger Workflow komplett fehlt.
+
+  ---
+
+  **Aufgaben:**
+
+  1. Analysiere das Projekt: Welche **Fehler im Entwicklungsprozess** sind erkennbar? Nenne mindestens 5 konkrete Probleme und ordne sie der betroffenen Phase zu.
+
+  2. Welche Konsequenzen kann das fehlende Pflichtenheft haben?
+
+  3. Erkläre, warum Entwickler ihre eigenen Funktionen nicht testen sollten.
+
+  4. Was würdest du als Projektleiter für die verbleibenden 3 Monate konkret empfehlen? (mind. 3 Maßnahmen)
+
+  5. Welche Wartungsart wird in den ersten Monaten nach dem Deployment vermutlich am häufigsten anfallen? Begründe.
+
+  **Deliverables:** Fehleranalyse-Tabelle + Empfehlungsliste
+tip: |
+  Versetze dich in die Lage des Projektleiters: Was hätte früher und klarer geregelt werden müssen?
+solution: |
+  **Mögliche Antworten:**
+
+  1. Fehler:
+     - Anforderungen zu früh „abgeschlossen" → Spätanforderungen unkontrolliert (Anforderungsanalyse)
+     - Kein fertiges Pflichtenheft → fehlende Verbindlichkeit (Anforderungsanalyse/Entwurf)
+     - Scope Creep: neue Anforderungen direkt an Entwickler (Implementierung)
+     - Kein unabhängiges Test-Team (Test)
+     - Kein frühes Stakeholder-Feedback (fehlende Reviews)
+
+  2. Kein Pflichtenheft: Keine verbindliche Beschreibung, was entwickelt wird. Streit über Umfang und Abnahme wahrscheinlich. Der Auftraggeber kann etwas anderes erwarten als geliefert wird.
+
+  3. Eigene Funktionen testen: Befangenheit, blinde Flecken, Tendenz „Es funktioniert, ich habe es ja so gebaut". Unabhängige Tester finden mehr Fehler.
+
+  4. Maßnahmen: Change-Freeze einführen (keine neuen Anforderungen mehr), separaten Testplan erstellen, fehlenden Workflow sofort priorisieren, Pflichtenheft rückwirkend mit Ist-Stand abgleichen.
+
+  5. Korrektive Wartung – nach überstürztem Deployment gibt es erfahrungsgemäß viele Bugs aus unzureichenden Tests.

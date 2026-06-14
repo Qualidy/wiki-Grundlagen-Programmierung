@@ -1,0 +1,43 @@
+title: ER-Modell für eine Schulverwaltung
+difficulty: 4
+question: |
+  **Szenario:** Eine Schule soll ein neues Verwaltungssystem erhalten. Du wirst als Analyst beauftragt, das Datenmodell zu entwerfen.
+
+  **Anforderungen (aus Interviews):**
+  - Schüler haben: Name, Geburtsdatum, Klasse, Schülernummer
+  - Lehrer haben: Name, Fachrichtung, Personalnummer
+  - Fächer haben: Bezeichnung, Stunden pro Woche, Fach-ID
+  - Ein Lehrer unterrichtet mehrere Fächer; ein Fach kann von mehreren Lehrern unterrichtet werden
+  - Ein Schüler besucht mehrere Fächer; in jedem Fach bekommt er eine Note (1–6)
+  - Eine Klasse hat genau einen Klassenlehrer; ein Lehrer kann Klassenlehrer von maximal einer Klasse sein
+  - Klassen haben: Bezeichnung (z. B. „10a"), Schuljahr, Klassen-ID
+
+  ---
+
+  **Aufgaben:**
+
+  1. Identifiziere alle **Entitätstypen** und ihre **Attribute** (inkl. Primärschlüssel).
+
+  2. Bestimme alle **Beziehungen** zwischen den Entitätstypen und gib die **Kardinalitäten** an.
+
+  3. Welche m:n-Beziehungen gibt es? Welche Zwischentabellen (Verknüpfungstabellen) würden benötigt?
+
+  4. Erstelle das **ER-Diagramm** (Textdarstellung mit Entitäten, Beziehungslinien und Kardinalitäten).
+
+  5. Das System soll auch Eltern erfassen, die Nachrichten an Lehrer senden können. Wie würdest du das ERM erweitern?
+
+  **Deliverables:** Entitätsliste + Beziehungsübersicht + ER-Diagramm (Text) + Erweiterungsvorschlag
+tip: |
+  Starte mit den Entitätstypen (Schüler, Lehrer, Fach, Klasse). Dann analysiere Beziehungen für jedes Paar.
+solution: |
+  **Bewertungskriterien:**
+
+  1. Entitäten: Schüler (SchülerNr PK, Name, Geburtsdatum, KlasseID FK), Lehrer (PersonalNr PK, Name, Fachrichtung), Fach (FachID PK, Bezeichnung, StundenProWoche), Klasse (KlassenID PK, Bezeichnung, Schuljahr).
+
+  2. Beziehungen: Schüler–Klasse: n:1. Lehrer–Klasse (Klassenlehrer): 1:1. Lehrer–Fach: m:n. Schüler–Fach: m:n (mit Note als Beziehungsattribut).
+
+  3. m:n-Beziehungen: Lehrer–Fach → Zwischentabelle LehrerFach (LehrerID, FachID). Schüler–Fach → Zwischentabelle Note (SchülerID, FachID, Note).
+
+  4. Diagramm: Rechtecke für alle 4 Entitäten, Verbindungslinien mit Kardinalitäten, Zwischentabellen als Entitäten modelliert.
+
+  5. Erweiterung: Eltern-Entität (ElternID, Name, Telefon) mit 1:n-Beziehung zu Schüler (ein Schüler hat 1–2 Elternteile). Nachricht-Entität (NachrichtID, Inhalt, Datum) mit Beziehungen zu Eltern und Lehrer.
