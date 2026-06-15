@@ -313,37 +313,23 @@ Das Konzept ist dasselbe, die Syntax unterscheidet sich:
 
 ### Bei Interpreter-Sprachen (PHP, Python)
 
-```
-[Quellcode schreiben]
-         │  (z. B. hello.php in Texteditor)
-         ▼
-[Interpreter aufrufen]
-         │  (z. B. php hello.php im Terminal)
-         ▼
-[Direkte Ausführung, Zeile für Zeile]
-         │
-         ▼
-[Ausgabe sichtbar]
+```mermaid
+flowchart TD
+    A["Quellcode schreiben\nz. B. hello.php im Texteditor"] --> B["Interpreter aufrufen\nz. B. php hello.php im Terminal"]
+    B --> C["Direkte Ausführung\nZeile für Zeile"]
+    C --> D(["Ausgabe sichtbar"])
 ```
 
 **Kurzform:** Schreiben → Interpreter starten → Ergebnis sehen
 
 ### Bei Compiler-Sprachen (Java, C#)
 
-```
-[Quellcode schreiben]
-         │  (z. B. HelloWorld.java in IDE)
-         ▼
-[Kompilieren]
-         │  (Java-Compiler erzeugt HelloWorld.class / Bytecode)
-         ▼
-[Linken]
-         │  (Bibliotheken werden eingebunden)
-         ▼
-[Ausführen]
-         │  (JVM / .NET-Runtime führt das Programm aus)
-         ▼
-[Ausgabe sichtbar]
+```mermaid
+flowchart TD
+    A["Quellcode schreiben\nz. B. HelloWorld.java in IDE"] --> B["Kompilieren\nCompiler erzeugt HelloWorld.class / Bytecode"]
+    B --> C["Linken\nBibliotheken werden eingebunden"]
+    C --> D["Ausführen\nJVM / .NET-Runtime führt das Programm aus"]
+    D --> E(["Ausgabe sichtbar"])
 ```
 
 **Kurzform:** Schreiben → Kompilieren → Ausführen → Ergebnis sehen

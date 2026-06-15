@@ -35,8 +35,9 @@
 
 Softwareentwicklung ist kein einmaliger Schreibakt, sondern ein **strukturierter Prozess** mit klar definierten Schritten. Unabhängig vom Vorgehensmodell (Kapitel 4) durchlaufen nahezu alle Softwareprojekte dieselben grundlegenden Phasen:
 
-```
-Anforderungen → Entwurf → Implementierung → Test → Deployment → Betrieb/Wartung
+```mermaid
+flowchart LR
+    A[Anforderungen] --> B[Entwurf] --> C[Implementierung] --> D[Test] --> E[Deployment] --> F["Betrieb /\nWartung"]
 ```
 
 Die Phasen bauen aufeinander auf. Fehler in frühen Phasen – vor allem in der Anforderungsanalyse – sind teuer: Je später ein Fehler entdeckt wird, desto höher ist der Aufwand, ihn zu beheben.

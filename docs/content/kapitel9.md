@@ -67,16 +67,15 @@ Ein **Attribut** beschreibt eine Eigenschaft einer Entität. Im ER-Diagramm werd
 
 **Beispiel – Entitätstyp „Kunde" mit Attributen:**
 
-```
-┌──────────────┐
-│    Kunde     │
-├──────────────┤
-│ KundenID (PK)│  ← Primärschlüssel
-│ Vorname      │
-│ Nachname     │
-│ E-Mail       │
-│ Telefon      │
-└──────────────┘
+```mermaid
+erDiagram
+    KUNDE {
+        int KundenID PK
+        string Vorname
+        string Nachname
+        string Email
+        string Telefon
+    }
 ```
 
 ### Primärschlüssel
@@ -115,8 +114,9 @@ Eine Entität auf der linken Seite ist mit **genau einer** Entität auf der rech
 
 **Beispiel:** Ein Mitarbeiter hat genau **einen** Firmenwagen. Ein Firmenwagen gehört genau **einem** Mitarbeiter.
 
-```
-[Mitarbeiter] ─── 1:1 ─── [Firmenwagen]
+```mermaid
+erDiagram
+    MITARBEITER ||--|| FIRMENWAGEN : "hat"
 ```
 
 **Wann kommt 1:1 vor?** Selten – oft können die Tabellen zusammengeführt werden.
@@ -127,8 +127,9 @@ Eine Entität auf der linken Seite ist mit **mehreren** Entitäten auf der recht
 
 **Beispiel:** Eine Bestellung enthält **mehrere** Bestellpositionen. Jede Bestellposition gehört zu **genau einer** Bestellung.
 
-```
-[Bestellung] ─── 1:n ─── [Bestellposition]
+```mermaid
+erDiagram
+    BESTELLUNG ||--o{ BESTELLPOSITION : "enthält"
 ```
 
 **Das häufigste Muster** in relationalen Datenbanken.
@@ -139,8 +140,9 @@ Eine Entität links ist mit **mehreren** rechts verknüpft – und umgekehrt.
 
 **Beispiel:** Ein Schüler besucht **mehrere** Fächer. Ein Fach wird von **mehreren** Schülern besucht.
 
-```
-[Schüler] ─── m:n ─── [Fach]
+```mermaid
+erDiagram
+    SCHUELER }o--o{ FACH : "besucht"
 ```
 
 **Hinweis:** m:n-Beziehungen müssen bei der Umsetzung in ein relationales Datenbankschema durch eine **Zwischentabelle** (Verknüpfungstabelle) aufgelöst werden.
@@ -173,24 +175,29 @@ Es gibt verschiedene Notationen für ER-Diagramme. Die zwei wichtigsten:
 - Keine gesonderten Attribute
 - Kardinalitäten: Symbolische Notation am Ende der Linien (Krähenfuß = „viele")
 
-```
-Symbole der Crow's-Foot-Notation:
-  |    Genau eins (Pflicht)
-  ||   Genau eins (Pflicht)
-  O|   Null oder eins (optional)
-  <    Viele (1 oder mehr)
-  O<   Null oder viele
-```
+| Symbol | Bedeutung |
+|---|---|
+| `\|\|` | Genau eins (Pflicht) |
+| `o\|` | Null oder eins (optional) |
+| `\|{` | Eins oder viele |
+| `o{` | Null oder viele |
 
 **Beispiel in Crow's-Foot:**
 
-```
-┌───────────┐         ┌──────────────┐
-│  Kunde    │─────────│  Bestellung  │
-│ KundenID  │ 1    *  │  BestellID   │
-│ Name      │         │  Datum       │
-│ E-Mail    │         │  Betrag      │
-└───────────┘         └──────────────┘
+```mermaid
+erDiagram
+    KUNDE {
+        int KundenID PK
+        string Name
+        string Email
+    }
+    BESTELLUNG {
+        int BestellID PK
+        date Datum
+        decimal Betrag
+        int KundenID FK
+    }
+    KUNDE ||--o{ BESTELLUNG : "gibt auf"
 ```
 
 ---
@@ -203,21 +210,41 @@ Symbole der Crow's-Foot-Notation:
 - Jede Position bezieht sich auf genau ein Produkt
 - Produkte gehören zu genau einer Kategorie; eine Kategorie hat mehrere Produkte
 
-```
-┌───────────┐      1:n     ┌──────────────┐     1:n     ┌─────────────────┐
-│  Kunde    │──────────────│  Bestellung  │─────────────│  Bestellposition│
-│ KundenID  │              │  BestellID   │             │  PosID          │
-│ Vorname   │              │  Datum       │             │  Menge          │
-│ Nachname  │              │  Gesamtbetrag│             │  Einzelpreis    │
-│ E-Mail    │              └──────────────┘             └────────┬────────┘
-└───────────┘                                                    │ n:1
-                                                                 │
-                                                        ┌────────┴────────┐
-                           ┌──────────────┐    n:1      │    Produkt      │
-                           │   Kategorie  │─────────────│  ProduktID      │
-                           │  KategID     │             │  Bezeichnung    │
-                           │  Name        │             │  Preis          │
-                           └──────────────┘             └─────────────────┘
+```mermaid
+erDiagram
+    KUNDE {
+        int KundenID PK
+        string Vorname
+        string Nachname
+        string Email
+    }
+    BESTELLUNG {
+        int BestellID PK
+        date Datum
+        decimal Gesamtbetrag
+        int KundenID FK
+    }
+    BESTELLPOSITION {
+        int PosID PK
+        int Menge
+        decimal Einzelpreis
+        int BestellID FK
+        int ProduktID FK
+    }
+    PRODUKT {
+        int ProduktID PK
+        string Bezeichnung
+        decimal Preis
+        int KategID FK
+    }
+    KATEGORIE {
+        int KategID PK
+        string Name
+    }
+    KUNDE ||--o{ BESTELLUNG : "gibt auf"
+    BESTELLUNG ||--o{ BESTELLPOSITION : "enthält"
+    BESTELLPOSITION }o--|| PRODUKT : "betrifft"
+    KATEGORIE ||--o{ PRODUKT : "enthält"
 ```
 
 ---

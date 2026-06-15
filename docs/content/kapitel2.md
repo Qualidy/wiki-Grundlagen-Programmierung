@@ -166,32 +166,14 @@ Refactoring ist kein Feature-Entwicklung und kein Bug-Fix. Es ist eine **Investi
 
 ## 2.7 Entscheidungshilfe: Welche Anpassungsform passt?
 
-```
-Kann das gewünschte Verhalten durch
-Einstellungen im System erreicht werden?
-       │
-      Ja ──► Konfiguration / Parametrisierung
-       │
-      Nein
-       │
-Gibt es dafür einen vorgesehenen
-Customizing-Mechanismus?
-       │
-      Ja ──► Customizing
-       │
-      Nein
-       │
-Gibt es ein fertiges Plug-in oder
-eine geeignete Erweiterung?
-       │
-      Ja ──► Erweiterung / Plug-in
-       │
-      Nein
-       │
-Muss die Lösung von Grund auf
-neu entwickelt werden?
-       │
-      Ja ──► Individualentwicklung
+```mermaid
+flowchart TD
+    A{Kann Konfiguration\ndas gewünschte\nVerhalten erreichen?} -->|Ja| B([Konfiguration /\nParametrisierung])
+    A -->|Nein| C{Gibt es einen\nvorgesehenen\nCustomizing-Mechanismus?}
+    C -->|Ja| D([Customizing])
+    C -->|Nein| E{Gibt es ein\ngeeignetes\nPlug-in / Add-on?}
+    E -->|Ja| F([Erweiterung / Plug-in])
+    E -->|Nein| G([Individualentwicklung])
 ```
 
 ---

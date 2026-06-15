@@ -49,18 +49,13 @@ Kein Vorgehensmodell passt zu jedem Projekt. Die Wahl hängt von Faktoren wie Pr
 
 Das **Wasserfallmodell** ist das älteste und bekannteste Vorgehensmodell. Es wurde in den 1970er-Jahren geprägt und beschreibt die Softwareentwicklung als eine **lineare Abfolge** von Phasen, die – wie Wasser einen Wasserfall hinabfließt – der Reihe nach durchlaufen werden.
 
-```
-Anforderungsanalyse
-       ↓
-     Entwurf
-       ↓
-Implementierung
-       ↓
-      Test
-       ↓
-  Deployment
-       ↓
-    Wartung
+```mermaid
+flowchart TD
+    A[Anforderungsanalyse] --> B[Entwurf]
+    B --> C[Implementierung]
+    C --> D[Test]
+    D --> E[Deployment]
+    E --> F[Wartung]
 ```
 
 Jede Phase muss **abgeschlossen** sein, bevor die nächste beginnt. Am Ende jeder Phase steht ein definiertes Dokument (Meilenstein), das freigegeben wird.
@@ -98,15 +93,16 @@ Das **Spiralmodell** wurde 1986 von Barry Boehm entwickelt. Es reagiert auf die 
 
 Statt einer einmaligen linearen Abfolge durchläuft das Projekt mehrere **Iterationen** (Schleifen / Zyklen). Jede Iteration durchläuft vier Quadranten:
 
-```
-        Ziele & Alternativen
-               festlegen
-                  │
-Risiken bewerten ─┼─ Ergebnis entwickeln
-   & reduzieren   │   & verifizieren
-                  │
-             Nächste Iteration
-               planen
+```mermaid
+flowchart TD
+    A["1. Ziele & Alternativen\nfestlegen"] --> B["2. Risiken bewerten\n& reduzieren"]
+    B --> C["3. Ergebnis entwickeln\n& verifizieren"]
+    C --> D["4. Nächste Iteration\nplanen"]
+    D --> A
+    style A fill:#FFF3CD,stroke:#F8B233
+    style B fill:#FFE0E0,stroke:#CC4444
+    style C fill:#D4EDDA,stroke:#28A745
+    style D fill:#D0E8FF,stroke:#3A7FBD
 ```
 
 **Die vier Quadranten im Detail:**

@@ -117,8 +117,9 @@ Der wesentliche technische Unterschied zwischen Programmiersprachen liegt darin,
 
 Ein **Compiler** übersetzt den gesamten Quellcode **vor der Ausführung** in Maschinencode (oder Bytecode). Das Ergebnis ist eine ausführbare Datei, die ohne den Compiler läuft.
 
-```
-Quellcode → [Compiler] → ausführbare Datei → Ausführung
+```mermaid
+flowchart LR
+    A([Quellcode]) --> B[Compiler] --> C([Ausführbare Datei]) --> D([Ausführung])
 ```
 
 **Vorteile:** Sehr schnell in der Ausführung, Fehler werden vor dem Start erkannt  
@@ -129,8 +130,9 @@ Quellcode → [Compiler] → ausführbare Datei → Ausführung
 
 Ein **Interpreter** liest den Quellcode **Zeile für Zeile** und führt ihn direkt aus – ohne vorherige Kompilierung.
 
-```
-Quellcode → [Interpreter] → direkte Ausführung (Zeile für Zeile)
+```mermaid
+flowchart LR
+    A([Quellcode]) --> B[Interpreter] --> C([Direkte Ausführung\nZeile für Zeile])
 ```
 
 **Vorteile:** Keine Build-Phase, plattformunabhängig, leicht testbar  

@@ -65,17 +65,27 @@ Das **Use-Case-Diagramm** (Anwendungsfalldiagramm) zeigt, **wer** (Akteur) das S
 
 ### Beispiel: Bibliothekssystem
 
-```
-┌─────────────────────────────────────────────────────┐
-│              Bibliothekssystem                      │
-│                                                     │
-│   ( Buch suchen )                                   │
-│   ( Buch ausleihen ) ──<<include>>──► ( Login )     │
-│   ( Buch zurückgeben )                              │
-│   ( Konto verwalten )                               │
-│                                                     │
-└─────────────────────────────────────────────────────┘
-     👤 Leser        👤 Bibliothekarin
+```mermaid
+flowchart LR
+    Leser(["👤 Leser"])
+    Bibliothekarin(["👤 Bibliothekarin"])
+
+    subgraph Bibliothekssystem
+        UC1(["Buch suchen"])
+        UC2(["Buch ausleihen"])
+        UC3(["Buch zurückgeben"])
+        UC4(["Konto verwalten"])
+        UC5(["Login"])
+        UC2 -->|&lt;&lt;include&gt;&gt;| UC5
+    end
+
+    Leser --- UC1
+    Leser --- UC2
+    Leser --- UC3
+    Leser --- UC4
+    Bibliothekarin --- UC1
+    Bibliothekarin --- UC3
+    Bibliothekarin --- UC4
 ```
 
 **Wann einsetzen?** Anforderungsphase – um zu zeigen, welche Funktionen das System bietet und wer sie nutzt.
@@ -101,29 +111,27 @@ Das **Aktivitätsdiagramm** beschreibt den **Ablauf von Aktivitäten** – ähnl
 
 ### Beispiel: Bestellprozess mit Swimlanes
 
-```
-│    Kunde          │     System          │    Lager       │
-├───────────────────┼─────────────────────┼────────────────┤
-│                   │                     │                │
-│  ●                │                     │                │
-│  │                │                     │                │
-│ [Bestellung       │                     │                │
-│  aufgeben]        │                     │                │
-│  │────────────────►                     │                │
-│                   │ [Verfügbarkeit       │                │
-│                   │  prüfen]            │                │
-│                   │  │                  │                │
-│                   │ [Verfügbar?]        │                │
-│                   │  /     \            │                │
-│                   │ Ja      Nein        │                │
-│                   │  │       │          │                │
-│                   │  │    [Absage       │                │
-│                   │  │     senden]──────►Kunde           │
-│                   │  │                  │                │
-│                   │ [Rechnung           │                │
-│                   │  erstellen]─────────►               │
-│                   │                     │[Ware senden]  │
-│  ◎                │                     │               │
+```mermaid
+flowchart TD
+    subgraph Kunde
+        A([●]) --> B[Bestellung aufgeben]
+        H([◎])
+    end
+    subgraph System
+        C{Verfügbar?}
+        D[Rechnung erstellen]
+        E[Absage senden]
+    end
+    subgraph Lager
+        F[Ware senden]
+    end
+
+    B --> C
+    C -->|Ja| D
+    C -->|Nein| E
+    D --> F
+    F --> H
+    E --> H
 ```
 
 **Wann einsetzen?** Wenn Abläufe mit Verzweigungen, Parallelität oder Verantwortlichkeiten modelliert werden sollen.
@@ -136,17 +144,17 @@ Das **Klassendiagramm** ist das zentrale Strukturdiagramm der OOP. Es zeigt, wel
 
 ### Klassen-Notation
 
+```mermaid
+classDiagram
+    class Klasse {
+        -attribut1 : Typ
+        +attribut2 : Typ
+        +methode1() Typ
+        +methode2(x : Typ)
+    }
 ```
-┌──────────────────────┐
-│      Klasse          │  ← Klassenname
-├──────────────────────┤
-│ - attribut1: Typ     │  ← Attribute (- = privat, + = öffentlich)
-│ + attribut2: Typ     │
-├──────────────────────┤
-│ + methode1(): Typ    │  ← Methoden
-│ + methode2(x: Typ)   │
-└──────────────────────┘
-```
+
+_`-` = private, `+` = public, `#` = protected_
 
 ### Sichtbarkeiten
 
@@ -168,25 +176,26 @@ Das **Klassendiagramm** ist das zentrale Strukturdiagramm der OOP. Es zeigt, wel
 
 ### Beispiel: Bibliothekssystem
 
-```
-┌──────────────────┐         ┌──────────────────┐
-│    Buch          │         │    Ausleihe       │
-├──────────────────┤         ├──────────────────┤
-│ - isbn: String   │         │ - datum: Date    │
-│ - titel: String  │         │ - rueckgabe: Date│
-├──────────────────┤ 1    *  ├──────────────────┤
-│ + getISBN()      ├─────────┤ + verlängern()   │
-└──────────────────┘         └────────┬─────────┘
-                                      │ *
-                                      │
-                             ┌────────┴─────────┐
-                             │    Leser          │
-                             ├──────────────────┤
-                             │ - name: String   │
-                             │ - ausweisNr: Int │
-                             ├──────────────────┤
-                             │ + ausleihen()    │
-                             └──────────────────┘
+```mermaid
+classDiagram
+    class Buch {
+        -isbn : String
+        -titel : String
+        +getISBN() String
+        +getTitel() String
+    }
+    class Ausleihe {
+        -datum : Date
+        -rueckgabe : Date
+        +verlängern()
+    }
+    class Leser {
+        -name : String
+        -ausweisNr : Int
+        +ausleihen()
+    }
+    Buch "1" --> "*" Ausleihe : wird ausgeliehen über
+    Ausleihe "*" --> "1" Leser : gehört zu
 ```
 
 **Wann einsetzen?** Entwurfsphase – um die statische Struktur des Systems zu modellieren.
@@ -209,17 +218,19 @@ Das **Sequenzdiagramm** zeigt, wie **Objekte miteinander kommunizieren** – in 
 
 ### Beispiel: Login-Vorgang
 
-```
-  Nutzer        Browser        Server        Datenbank
-    │              │              │               │
-    │──login()────►│              │               │
-    │              │──POST /login►│               │
-    │              │              │──prüfeUser()─►│
-    │              │              │◄──User-Objekt─┤
-    │              │              │               │
-    │              │◄─200 OK──────┤               │
-    │◄─Willkommen──┤              │               │
-    │              │              │               │
+```mermaid
+sequenceDiagram
+    actor N as Nutzer
+    participant B as Browser
+    participant S as Server
+    participant D as Datenbank
+
+    N->>B: login()
+    B->>S: POST /login
+    S->>D: prüfeUser()
+    D-->>S: User-Objekt
+    S-->>B: 200 OK
+    B-->>N: Willkommen
 ```
 
 **Wann einsetzen?** Wenn die zeitliche Reihenfolge von Interaktionen zwischen Objekten dokumentiert werden soll.

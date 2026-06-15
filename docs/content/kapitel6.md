@@ -65,52 +65,42 @@ Der **Programmablaufplan** (kurz PAP, englisch: *Flowchart*) ist eine grafische 
 
 ### Beispiel: Prüfen, ob eine Zahl positiv ist
 
-```
-      [START]
-         │
-   [Zahl einlesen]
-         │
-   Ist Zahl > 0?
-      /       \
-    Ja         Nein
-    │             │
-[„Positiv"    [„Nicht positiv"
-  ausgeben]     ausgeben]
-      \          /
-       \        /
-       [ENDE]
+```mermaid
+flowchart TD
+    A([START]) --> B[/Zahl einlesen/]
+    B --> C{Ist Zahl > 0?}
+    C -->|Ja| D[/„Positiv" ausgeben/]
+    C -->|Nein| E[/„Nicht positiv" ausgeben/]
+    D --> F([ENDE])
+    E --> F
 ```
 
 ### Kontrollstrukturen im PAP
 
 **Sequenz** – Anweisungen werden der Reihe nach ausgeführt:
 
-```
-[Anweisung A] → [Anweisung B] → [Anweisung C]
+```mermaid
+flowchart LR
+    A[Anweisung A] --> B[Anweisung B] --> C[Anweisung C]
 ```
 
 **Selektion (Verzweigung)** – Abhängig von einer Bedingung wird ein Pfad gewählt:
 
-```
-        [Bedingung?]
-           /     \
-         Ja       Nein
-         │           │
-  [Anweisung A]  [Anweisung B]
-         \           /
-          [weiter...]
+```mermaid
+flowchart TD
+    A{Bedingung?} -->|Ja| B[Anweisung A]
+    A -->|Nein| C[Anweisung B]
+    B --> D[weiter ...]
+    C --> D
 ```
 
 **Iteration (Schleife)** – Eine Anweisung wird wiederholt, solange eine Bedingung gilt:
 
-```
-       [Bedingung?]
-          /      \
-        Ja        Nein → [weiter]
-        │
-  [Anweisung]
-        │
-  [zurück zur Bedingung]
+```mermaid
+flowchart TD
+    A{Bedingung?} -->|Ja| B[Anweisung]
+    A -->|Nein| C([weiter ...])
+    B --> A
 ```
 
 **Vorteile des PAP:**
@@ -135,57 +125,60 @@ Ein Struktogramm ist ein **Rechteck**, das in Blöcke unterteilt ist. Jeder Bloc
 
 **Anweisung** – einfaches Rechteck:
 
-```
-┌──────────────────────────┐
-│  Anweisung               │
-└──────────────────────────┘
-```
+<div class="nsd">
+  <div class="nsd-action">Anweisung</div>
+</div>
 
 **Selektion (einfache Verzweigung):**
 
-```
-┌──────────────────────────┐
-│  Bedingung?              │
-├────────────┬─────────────┤
-│  Ja        │  Nein       │
-│  Anweis. A │  Anweis. B  │
-└────────────┴─────────────┘
-```
+<div class="nsd">
+  <div class="nsd-condition">Bedingung?</div>
+  <div class="nsd-branches">
+    <div class="nsd-branch">
+      <div class="nsd-branch-label">Ja</div>
+      <div class="nsd-branch-body">Anweis. A</div>
+    </div>
+    <div class="nsd-branch">
+      <div class="nsd-branch-label">Nein</div>
+      <div class="nsd-branch-body">Anweis. B</div>
+    </div>
+  </div>
+</div>
 
 **Iteration (Schleife mit Vorbedingung – WHILE):**
 
-```
-┌──────────────────────────┐
-│  Solange Bedingung gilt  │
-│ ┌────────────────────────┤
-│ │  Anweisung             │
-└─┴────────────────────────┘
-```
+<div class="nsd">
+  <div class="nsd-while-header">Solange Bedingung gilt</div>
+  <div class="nsd-while-body">
+    <div class="nsd-action">Anweisung</div>
+  </div>
+</div>
 
 **Iteration (Schleife mit Nachbedingung – DO WHILE):**
 
-```
-┌──────────────────────────┐
-│ ┌────────────────────────┤
-│ │  Anweisung             │
-│ └────────────────────────┤
-│  Solange Bedingung gilt  │
-└──────────────────────────┘
-```
+<div class="nsd">
+  <div class="nsd-do-body">
+    <div class="nsd-action">Anweisung</div>
+  </div>
+  <div class="nsd-do-footer">Solange Bedingung gilt</div>
+</div>
 
 ### Beispiel: Prüfen, ob eine Zahl positiv ist
 
-```
-┌─────────────────────────────────────┐
-│  Zahl einlesen                      │
-├─────────────────────────────────────┤
-│  Ist Zahl > 0?                      │
-├──────────────────┬──────────────────┤
-│  Ja              │  Nein            │
-│  „Positiv"       │  „Nicht positiv" │
-│  ausgeben        │  ausgeben        │
-└──────────────────┴──────────────────┘
-```
+<div class="nsd">
+  <div class="nsd-action">Zahl einlesen</div>
+  <div class="nsd-condition">Ist Zahl > 0?</div>
+  <div class="nsd-branches">
+    <div class="nsd-branch">
+      <div class="nsd-branch-label">Ja</div>
+      <div class="nsd-branch-body">„Positiv" ausgeben</div>
+    </div>
+    <div class="nsd-branch">
+      <div class="nsd-branch-label">Nein</div>
+      <div class="nsd-branch-body">„Nicht positiv" ausgeben</div>
+    </div>
+  </div>
+</div>
 
 **Vorteile des Struktogramms:**
 - Erzwingt strukturierte Programmierung (kein GOTO)

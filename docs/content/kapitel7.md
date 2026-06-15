@@ -57,33 +57,24 @@ DFDs werden oft in **Ebenen** aufgebaut:
 
 ### Beispiel: Bestellsystem (Kontextdiagramm)
 
-```
-[Kunde] ──── Bestellung ────► [Bestellsystem] ──── Bestelldaten ────► [Datenbank]
-                                      │
-                                Rechnung
-                                      │
-                                      ▼
-                                  [Kunde]
+```mermaid
+flowchart LR
+    K[Kunde] -->|Bestellung| BS((Bestellsystem))
+    BS -->|Rechnung| K
+    BS -->|Bestelldaten| DB[(Datenbank)]
 ```
 
 ### Beispiel: Bestellsystem (Level 1)
 
-```
-[Kunde] ──Bestellung──► (1. Bestellung
-                            erfassen)
-                              │
-                         Bestelldaten
-                              │
-                              ▼
-                    (2. Verfügbarkeit
-                       prüfen)
-                         /       \
-                  Verfügbar     Nicht verfügbar
-                       │              │
-               (3. Rechnung    (4. Absage
-                 erstellen)      senden)
-                       │              │
-                    [Kunde]        [Kunde]
+```mermaid
+flowchart TD
+    K[Kunde] -->|Bestellung| P1((1. Bestellung\nerfassen))
+    P1 -->|Bestelldaten| P2((2. Verfügbarkeit\nprüfen))
+    P2 -->|verfügbar| P3((3. Rechnung\nerstellen))
+    P2 -->|nicht verfügbar| P4((4. Absage\nsenden))
+    P3 -->|Rechnung| K
+    P4 -->|Absage| K
+    P1 -->|speichern| DB[(Bestell-DB)]
 ```
 
 **Vorteile des DFD:**
@@ -106,19 +97,14 @@ Sie ist besonders nützlich, wenn mehrere Bedingungen gleichzeitig relevant sind
 
 Eine Entscheidungstabelle besteht aus vier Bereichen:
 
-```
-┌─────────────────────────┬────┬────┬────┬────┐
-│ Bedingungen             │ R1 │ R2 │ R3 │ R4 │
-├─────────────────────────┼────┼────┼────┼────┤
-│ Bedingung 1             │ J  │ J  │ N  │ N  │
-│ Bedingung 2             │ J  │ N  │ J  │ N  │
-├─────────────────────────┼────┼────┼────┼────┤
-│ Aktionen                │    │    │    │    │
-├─────────────────────────┼────┼────┼────┼────┤
-│ Aktion 1                │ X  │    │ X  │    │
-│ Aktion 2                │    │ X  │    │ X  │
-└─────────────────────────┴────┴────┴────┴────┘
-```
+| | **R1** | **R2** | **R3** | **R4** |
+|---|:---:|:---:|:---:|:---:|
+| **Bedingungen** | | | | |
+| Bedingung 1 | J | J | N | N |
+| Bedingung 2 | J | N | J | N |
+| **Aktionen** | | | | |
+| Aktion 1 | X | | X | |
+| Aktion 2 | | X | | X |
 
 - **Bedingungsteil (oben):** Liste aller relevanten Bedingungen mit J(a)/N(ein)-Kombinationen
 - **Aktionsteil (unten):** Liste aller möglichen Aktionen; X markiert, welche Aktion ausgeführt wird
@@ -132,20 +118,15 @@ Ein Online-Shop gewährt Rabatt unter folgenden Bedingungen:
 - Ist der Kunde Stammkunde?
 - Beträgt der Bestellwert mehr als 100 €?
 
-```
-┌──────────────────────────────┬────┬────┬────┬────┐
-│ Bedingungen                  │ R1 │ R2 │ R3 │ R4 │
-├──────────────────────────────┼────┼────┼────┼────┤
-│ Kunde ist Stammkunde         │ J  │ J  │ N  │ N  │
-│ Bestellwert > 100 €          │ J  │ N  │ J  │ N  │
-├──────────────────────────────┼────┼────┼────┼────┤
-│ Aktionen                     │    │    │    │    │
-├──────────────────────────────┼────┼────┼────┼────┤
-│ 15 % Rabatt gewähren         │ X  │    │    │    │
-│ 10 % Rabatt gewähren         │    │ X  │ X  │    │
-│ Kein Rabatt                  │    │    │    │ X  │
-└──────────────────────────────┴────┴────┴────┴────┘
-```
+| | **R1** | **R2** | **R3** | **R4** |
+|---|:---:|:---:|:---:|:---:|
+| **Bedingungen** | | | | |
+| Kunde ist Stammkunde | J | J | N | N |
+| Bestellwert > 100 € | J | N | J | N |
+| **Aktionen** | | | | |
+| 15 % Rabatt gewähren | X | | | |
+| 10 % Rabatt gewähren | | X | X | |
+| Kein Rabatt | | | | X |
 
 **Leseweise:** 
 - R1: Stammkunde + Bestellwert > 100 € → 15 % Rabatt

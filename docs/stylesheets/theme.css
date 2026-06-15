@@ -1093,3 +1093,85 @@ h2.section-label::after { display: none !important; }
   color: var(--text-2);
   line-height: 1.6;
 }
+
+/* ── Struktogramm (Nassi-Shneiderman-Diagramm) ────────────── */
+
+.nsd {
+  display: inline-block;
+  border: 2px solid #3D3D3D;
+  font-family: var(--font-code);
+  font-size: 0.82em;
+  min-width: 320px;
+  max-width: 520px;
+  margin: 1rem 0;
+  background: #fff;
+}
+
+.nsd-action {
+  padding: 8px 14px;
+  border-bottom: 1px solid #3D3D3D;
+  min-height: 36px;
+  background: #fff;
+}
+
+.nsd-action:last-child {
+  border-bottom: none;
+}
+
+.nsd-condition {
+  padding: 6px 14px;
+  border-bottom: 2px solid #3D3D3D;
+  background: #f0f0f0;
+  font-weight: 600;
+}
+
+.nsd-branches {
+  display: flex;
+  border-bottom: 1px solid #3D3D3D;
+}
+
+.nsd-branch {
+  flex: 1;
+  border-right: 1px solid #3D3D3D;
+}
+
+.nsd-branch:last-child {
+  border-right: none;
+}
+
+.nsd-branch-label {
+  font-size: 0.8em;
+  color: #555;
+  padding: 2px 10px;
+  border-bottom: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.nsd-branch-body {
+  padding: 6px 10px;
+  min-height: 28px;
+}
+
+.nsd-while-header {
+  padding: 6px 14px;
+  border-bottom: 2px solid #3D3D3D;
+  background: #e8e8e8;
+  font-weight: 600;
+}
+
+.nsd-while-body {
+  margin-left: 18px;
+  border-left: 2px solid #3D3D3D;
+}
+
+.nsd-do-body {
+  margin-left: 18px;
+  border-left: 2px solid #3D3D3D;
+}
+
+.nsd-do-footer {
+  padding: 6px 14px;
+  border-top: 2px solid #3D3D3D;
+  background: #e8e8e8;
+  font-weight: 600;
+}

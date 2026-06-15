@@ -162,24 +162,17 @@ Ohne Abnahmekriterien entstehen endlose Diskussionen darüber, ob das gelieferte
 
 ## 5.7 Typischer Ablauf in der Praxis
 
-```
-Auftraggeber                    Auftragnehmer
-     │                                │
-     ├── Lastenheft erstellen ────────►│
-     │                                │
-     │◄─── Angebot + Pflichtenheft ───┤
-     │                                │
-     ├── Pflichtenheft prüfen ─────────►│
-     │     und freigeben              │
-     │                                │
-     │        [Entwicklung]           │
-     │                                │
-     │◄─── System liefern ────────────┤
-     │                                │
-     ├── Abnahme anhand               │
-     │   der Abnahmekriterien ────────►│
-     │                                │
-     ├── Abnahmeprotokoll ──────────────►│
+```mermaid
+sequenceDiagram
+    actor AG as Auftraggeber
+    actor AN as Auftragnehmer
+    AG->>AN: Lastenheft übermitteln
+    AN-->>AG: Angebot + Pflichtenheft
+    AG->>AN: Pflichtenheft prüfen und freigeben
+    Note over AG,AN: Entwicklung läuft
+    AN-->>AG: System liefern
+    AG->>AN: Abnahme anhand der Abnahmekriterien
+    AG-->>AN: Abnahmeprotokoll unterzeichnen
 ```
 
 ---
