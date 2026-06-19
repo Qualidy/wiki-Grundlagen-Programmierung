@@ -435,6 +435,83 @@ body {
   padding: 1.1em 1.3em !important;
 }
 
+/* ── Syntax-Highlighting (Dark Theme – VS Code Dark+) ─────── */
+
+/* Reset: alle Pygments-Farben auf hellen Standard zurücksetzen */
+.md-typeset .highlight,
+.md-typeset .highlight code,
+.md-typeset .highlight span { color: #D4D4D4; font-style: normal; font-weight: normal; }
+
+/* Keywords (blau) – echo, if, for, while, return, function, class … */
+.md-typeset .highlight .k,
+.md-typeset .highlight .kd,
+.md-typeset .highlight .kn,
+.md-typeset .highlight .kp,
+.md-typeset .highlight .kr,
+.md-typeset .highlight .kt  { color: #569CD6; }
+
+/* Keyword-Konstanten – true, false, null */
+.md-typeset .highlight .kc  { color: #569CD6; }
+
+/* Strings (hellorange) */
+.md-typeset .highlight .s,
+.md-typeset .highlight .s1,
+.md-typeset .highlight .s2,
+.md-typeset .highlight .sb,
+.md-typeset .highlight .sc,
+.md-typeset .highlight .sd,
+.md-typeset .highlight .se,
+.md-typeset .highlight .sh,
+.md-typeset .highlight .si,
+.md-typeset .highlight .sx  { color: #CE9178; }
+
+/* Kommentare (grün, kursiv) */
+.md-typeset .highlight .c,
+.md-typeset .highlight .c1,
+.md-typeset .highlight .cm,
+.md-typeset .highlight .cs  { color: #6A9955; font-style: italic; }
+
+/* PHP-Präprozessor-Tag (<?php, ?>) */
+.md-typeset .highlight .cp  { color: #569CD6; font-style: normal; }
+
+/* Variablennamen ($var in PHP) */
+.md-typeset .highlight .nv  { color: #9CDCFE; }
+
+/* Zahlen */
+.md-typeset .highlight .m,
+.md-typeset .highlight .mi,
+.md-typeset .highlight .mf,
+.md-typeset .highlight .mh,
+.md-typeset .highlight .mo,
+.md-typeset .highlight .mb  { color: #B5CEA8; }
+
+/* Funktionsnamen */
+.md-typeset .highlight .nf  { color: #DCDCAA; }
+
+/* Klassen- / Typnamen */
+.md-typeset .highlight .nc  { color: #4EC9B0; }
+
+/* Eingebaute Bezeichner (built-ins) */
+.md-typeset .highlight .nb,
+.md-typeset .highlight .nx  { color: #9CDCFE; }
+
+/* Operatoren */
+.md-typeset .highlight .o,
+.md-typeset .highlight .ow  { color: #D4D4D4; }
+
+/* Satzzeichen / Klammern */
+.md-typeset .highlight .p   { color: #D4D4D4; }
+
+/* Dekoratoren / Attribute */
+.md-typeset .highlight .nd  { color: #DCDCAA; }
+
+/* Fehler-Token sichtbar machen */
+.md-typeset .highlight .err { color: #F44747; background: transparent; }
+
+/* Zeilennummern */
+.md-typeset .highlight .ln,
+.md-typeset table.highlighttable .linenos pre { color: #555; border-right: 1px solid #333; padding-right: 0.8em; margin-right: 0.8em; }
+
 .md-typeset .md-clipboard {
   color: rgba(255,255,255,0.25) !important;
   transition: color 0.15s;
