@@ -1,0 +1,1444 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../kapitel4/">
+      
+      
+        <link rel="next" href="../kapitel6/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Kapitel 5 – Lasten- und Pflichtenheft - Grundlagen Programmierung</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-5-lasten-und-pflichtenheft" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Grundlagen Programmierung" class="md-header__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Grundlagen Programmierung
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kapitel 5 – Lasten- und Pflichtenheft
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Übersicht
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 1 – Programmiersprachen im Überblick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 2 – Softwareanpassung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 3 – Phasen der Softwareentwicklung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel4/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 4 – Vorgehensmodelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 5 – Lasten- und Pflichtenheft
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel6/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 6 – PAP und Struktogramm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel7/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 7 – Datenflussplan und Entscheidungstabelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel8/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 8 – UML-Diagramme
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel9/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 9 – Entity-Relationship-Modell
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel10/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 10 – Grundlagen der Programmierung
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Grundlagen Programmierung" class="md-nav__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Grundlagen Programmierung
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 1 – Programmiersprachen im Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 2 – Softwareanpassung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 3 – Phasen der Softwareentwicklung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 4 – Vorgehensmodelle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 5 – Lasten- und Pflichtenheft
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 5 – Lasten- und Pflichtenheft
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#was-du-in-diesem-kapitel-lernst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was du in diesem Kapitel lernst
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-gehst-du-vor" class="md-nav__link">
+    <span class="md-ellipsis">
+      So gehst du vor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-einfuhrung-warum-diese-dokumente" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 Einführung: Warum diese Dokumente?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-das-lastenheft" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 Das Lastenheft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-das-pflichtenheft" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 Das Pflichtenheft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-abgrenzung-lastenheft-vs-pflichtenheft" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 Abgrenzung: Lastenheft vs. Pflichtenheft
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-muss-kann-und-nicht-anforderungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 Muss-, Kann- und Nicht-Anforderungen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.5 Muss-, Kann- und Nicht-Anforderungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#muss-anforderungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Muss-Anforderungen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kann-anforderungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kann-Anforderungen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nicht-anforderungen-abgrenzung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nicht-Anforderungen (Abgrenzung)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-abnahmekriterien" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.6 Abnahmekriterien
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57-typischer-ablauf-in-der-praxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.7 Typischer Ablauf in der Praxis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kurzubungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kurzübungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workshop
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 6 – PAP und Struktogramm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 7 – Datenflussplan und Entscheidungstabelle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 8 – UML-Diagramme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 9 – Entity-Relationship-Modell
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 10 – Grundlagen der Programmierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="kapitel-5-lasten-und-pflichtenheft">Kapitel 5 – Lasten- und Pflichtenheft<a class="headerlink" href="#kapitel-5-lasten-und-pflichtenheft" title="Permanent link">&para;</a></h1>
+<div class="kurs-progress">
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step active"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+</div>
+
+<div class="lernziele">
+<h3 id="was-du-in-diesem-kapitel-lernst">Was du in diesem Kapitel lernst<a class="headerlink" href="#was-du-in-diesem-kapitel-lernst" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Was Lastenheft und Pflichtenheft sind und wie sie sich voneinander unterscheiden</li>
+<li>Was Muss-, Kann- und Nicht-Anforderungen bedeuten</li>
+<li>Was Abnahmekriterien sind und warum sie wichtig sind</li>
+<li>Wie beide Dokumente als Brücke zwischen Auftraggeber und Auftragnehmer funktionieren</li>
+</ul>
+</div>
+<hr />
+<h2 id="so-gehst-du-vor">So gehst du vor<a class="headerlink" href="#so-gehst-du-vor" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Lies die Kapitelinhalte und ordne die Konzepte den realen Dokumenten zu.</li>
+<li>Bearbeite die <strong>Kurzübungen</strong> der Reihe nach – von Grundlagen bis Experte.</li>
+<li>Arbeite die <strong>Workshop-Aufgabe</strong> durch. Sie vertieft das Gelernte an einem zusammenhängenden Szenario.</li>
+</ol>
+<hr />
+<h2 id="51-einfuhrung-warum-diese-dokumente">5.1 Einführung: Warum diese Dokumente?<a class="headerlink" href="#51-einfuhrung-warum-diese-dokumente" title="Permanent link">&para;</a></h2>
+<p>Softwareprojekte scheitern häufig nicht an technischen Problemen, sondern an <strong>Missverständnissen</strong>: Der Auftraggeber hatte eine bestimmte Vorstellung, der Auftragnehmer hat etwas anderes gebaut – und niemand hat es rechtzeitig bemerkt.</p>
+<p><strong>Lastenheft</strong> und <strong>Pflichtenheft</strong> sind die wichtigsten Werkzeuge, um solche Missverständnisse zu vermeiden. Sie schaffen Verbindlichkeit, Klarheit und eine gemeinsame Sprache zwischen allen Beteiligten.</p>
+<div class="admonition info">
+<p class="admonition-title">Verbindung zu früheren Modulen</p>
+<p>Lastenheft und Pflichtenheft wurden bereits in den Modulen „IT-Arbeitsplatz" und „Projektplanung" eingeführt. Dieses Kapitel vertieft die Inhalte im Kontext der Softwareentwicklung und ergänzt die Perspektive des Auftragnehmers.</p>
+</div>
+<hr />
+<h2 id="52-das-lastenheft">5.2 Das Lastenheft<a class="headerlink" href="#52-das-lastenheft" title="Permanent link">&para;</a></h2>
+<p>Das <strong>Lastenheft</strong> (englisch: <em>Requirements Document</em> oder <em>Customer Requirements</em>) wird vom <strong>Auftraggeber</strong> erstellt. Es beschreibt aus seiner Sicht, <strong>was</strong> das zu entwickelnde System leisten soll – <strong>ohne</strong> festzulegen, wie es technisch umgesetzt wird.</p>
+<p>Das Lastenheft ist die Grundlage für die Ausschreibung. Mehrere Anbieter können auf Basis desselben Lastenhefts Angebote abgeben.</p>
+<p><strong>Typische Inhalte eines Lastenhefts:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Abschnitt</th>
+<th>Inhalt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ausgangssituation</strong></td>
+<td>Warum wird das Projekt durchgeführt? Welches Problem soll gelöst werden?</td>
+</tr>
+<tr>
+<td><strong>Ziele</strong></td>
+<td>Was soll nach Projektabschluss besser sein?</td>
+</tr>
+<tr>
+<td><strong>Funktionale Anforderungen</strong></td>
+<td>Was soll das System tun? (Funktionen, Workflows)</td>
+</tr>
+<tr>
+<td><strong>Nicht-funktionale Anforderungen</strong></td>
+<td>Wie soll das System sein? (Geschwindigkeit, Sicherheit, Usability)</td>
+</tr>
+<tr>
+<td><strong>Abgrenzung</strong></td>
+<td>Was gehört explizit <em>nicht</em> zum Auftragsumfang?</td>
+</tr>
+<tr>
+<td><strong>Rahmenbedingungen</strong></td>
+<td>Budget, Zeitplan, Schnittstellen zu bestehenden Systemen</td>
+</tr>
+<tr>
+<td><strong>Abnahmekriterien</strong></td>
+<td>Woran erkennt der Auftraggeber, dass das System fertig ist?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wichtige Merkmale:</strong>
+- Formuliert in der Sprache des Auftraggebers (nicht-technisch)
+- Beschreibt das <strong>Was</strong>, nicht das <strong>Wie</strong>
+- Muss vollständig, eindeutig und widerspruchsfrei sein</p>
+<hr />
+<h2 id="53-das-pflichtenheft">5.3 Das Pflichtenheft<a class="headerlink" href="#53-das-pflichtenheft" title="Permanent link">&para;</a></h2>
+<p>Das <strong>Pflichtenheft</strong> (englisch: <em>Functional Specification</em> oder <em>System Specification</em>) wird vom <strong>Auftragnehmer</strong> erstellt – als Antwort auf das Lastenheft. Es beschreibt, <strong>wie</strong> die Anforderungen des Auftraggebers technisch umgesetzt werden sollen.</p>
+<p>Das Pflichtenheft ist die Grundlage des Vertrags. Mit seiner Unterzeichnung verpflichtet sich der Auftragnehmer zur Lieferung des beschriebenen Systems.</p>
+<p><strong>Typische Inhalte eines Pflichtenhefts:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Abschnitt</th>
+<th>Inhalt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Systemübersicht</strong></td>
+<td>Welche Komponenten hat das System?</td>
+</tr>
+<tr>
+<td><strong>Funktionale Spezifikation</strong></td>
+<td>Genaue Beschreibung jeder Funktion</td>
+</tr>
+<tr>
+<td><strong>Technische Architektur</strong></td>
+<td>Welche Technologien, Frameworks, Datenbanken?</td>
+</tr>
+<tr>
+<td><strong>Schnittstellen</strong></td>
+<td>Wie kommuniziert das System mit anderen Systemen?</td>
+</tr>
+<tr>
+<td><strong>Datenbankdesign</strong></td>
+<td>Datenbankstruktur (ER-Modell)</td>
+</tr>
+<tr>
+<td><strong>Benutzeroberfläche</strong></td>
+<td>Wireframes, Beschreibung der UI-Elemente</td>
+</tr>
+<tr>
+<td><strong>Test- und Abnahmeplan</strong></td>
+<td>Wie wird das System abgenommen?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wichtige Merkmale:</strong>
+- Formuliert in der Sprache des Entwicklers (technisch präzise)
+- Beschreibt das <strong>Wie</strong>
+- Dient als Grundlage für die Implementierung</p>
+<hr />
+<h2 id="54-abgrenzung-lastenheft-vs-pflichtenheft">5.4 Abgrenzung: Lastenheft vs. Pflichtenheft<a class="headerlink" href="#54-abgrenzung-lastenheft-vs-pflichtenheft" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Merkmal</th>
+<th>Lastenheft</th>
+<th>Pflichtenheft</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Erstellt von</strong></td>
+<td>Auftraggeber</td>
+<td>Auftragnehmer</td>
+</tr>
+<tr>
+<td><strong>Inhalt</strong></td>
+<td>Was soll das System leisten?</td>
+<td>Wie wird es umgesetzt?</td>
+</tr>
+<tr>
+<td><strong>Sprache</strong></td>
+<td>Fachlich, nicht-technisch</td>
+<td>Technisch, präzise</td>
+</tr>
+<tr>
+<td><strong>Zeitpunkt</strong></td>
+<td>Vor der Ausschreibung</td>
+<td>Nach der Angebotsphase</td>
+</tr>
+<tr>
+<td><strong>Zweck</strong></td>
+<td>Grundlage für Angebote</td>
+<td>Grundlage für Vertrag und Entwicklung</td>
+</tr>
+<tr>
+<td><strong>Perspektive</strong></td>
+<td>Außenperspektive (Nutzer)</td>
+<td>Innenperspektive (System)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Eselsbrücke:</strong> Das Lastenheft beschreibt die <strong>Last</strong> (Aufgabe) des Auftraggebers. Das Pflichtenheft beschreibt die <strong>Pflicht</strong> (Verpflichtung) des Auftragnehmers.</p>
+<hr />
+<h2 id="55-muss-kann-und-nicht-anforderungen">5.5 Muss-, Kann- und Nicht-Anforderungen<a class="headerlink" href="#55-muss-kann-und-nicht-anforderungen" title="Permanent link">&para;</a></h2>
+<p>Anforderungen werden nach ihrer Verbindlichkeit in drei Kategorien eingeteilt:</p>
+<h3 id="muss-anforderungen">Muss-Anforderungen<a class="headerlink" href="#muss-anforderungen" title="Permanent link">&para;</a></h3>
+<p><strong>Muss-Anforderungen</strong> (auch Pflichtanforderungen) sind <strong>unverzichtbar</strong>. Das System gilt als nicht abnahmefähig, wenn auch nur eine Muss-Anforderung nicht erfüllt ist.</p>
+<blockquote>
+<p>„Das System <strong>muss</strong> Benutzern ermöglichen, ihr Passwort selbst zurückzusetzen."</p>
+</blockquote>
+<h3 id="kann-anforderungen">Kann-Anforderungen<a class="headerlink" href="#kann-anforderungen" title="Permanent link">&para;</a></h3>
+<p><strong>Kann-Anforderungen</strong> (auch Wunschanforderungen oder optionale Anforderungen) sind <strong>wünschenswert</strong>, aber nicht zwingend. Werden sie nicht umgesetzt, gilt das System trotzdem als fertig.</p>
+<blockquote>
+<p>„Das System <strong>kann</strong> eine Zwei-Faktor-Authentifizierung per SMS anbieten."</p>
+</blockquote>
+<h3 id="nicht-anforderungen-abgrenzung">Nicht-Anforderungen (Abgrenzung)<a class="headerlink" href="#nicht-anforderungen-abgrenzung" title="Permanent link">&para;</a></h3>
+<p><strong>Nicht-Anforderungen</strong> definieren explizit, was das System <strong>nicht</strong> leisten soll. Dies verhindert Scope-Creep (schleichende Ausweitung des Projektumfangs).</p>
+<blockquote>
+<p>„Das System wird <strong>keine</strong> mobile App bereitstellen. Die Weboberfläche muss jedoch auf mobilen Geräten nutzbar sein."</p>
+</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Eindeutige Formulierung ist entscheidend</p>
+<p>Vage Formulierungen wie „Das System soll schnell sein" oder „Die Oberfläche soll modern wirken" sind unbrauchbar. Gute Anforderungen sind <strong>messbar und prüfbar</strong>: „Das System muss die Suchanfrage in unter 2 Sekunden beantworten."</p>
+</div>
+<hr />
+<h2 id="56-abnahmekriterien">5.6 Abnahmekriterien<a class="headerlink" href="#56-abnahmekriterien" title="Permanent link">&para;</a></h2>
+<p><strong>Abnahmekriterien</strong> definieren, wann ein Projekt als erfolgreich abgeschlossen gilt. Sie sind konkret, messbar und aus den Anforderungen abgeleitet.</p>
+<p>Ohne Abnahmekriterien entstehen endlose Diskussionen darüber, ob das gelieferte System den Erwartungen entspricht. Mit klar definierten Kriterien ist die Abnahme ein objektiv prüfbarer Vorgang.</p>
+<p><strong>Eigenschaften guter Abnahmekriterien:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Messbar</strong></td>
+<td>„Der Login-Vorgang dauert maximal 1,5 Sekunden"</td>
+</tr>
+<tr>
+<td><strong>Eindeutig</strong></td>
+<td>„Das System exportiert Daten im CSV-Format (UTF-8, Semikolon-getrennt)"</td>
+</tr>
+<tr>
+<td><strong>Vollständig</strong></td>
+<td>Alle Muss-Anforderungen haben zugehörige Abnahmekriterien</td>
+</tr>
+<tr>
+<td><strong>Testbar</strong></td>
+<td>Ein Testfall kann direkt aus dem Kriterium abgeleitet werden</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel – Abnahmekriterien für eine Login-Funktion:</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Anforderung</th>
+<th>Abnahmekriterium</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Benutzer können sich einloggen</td>
+<td>Login mit gültigen Zugangsdaten führt zur Startseite</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Falsche Passwörter werden abgewiesen</td>
+<td>Nach 3 Fehlversuchen wird das Konto für 15 Minuten gesperrt</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Passwort zurücksetzen</td>
+<td>Passwort-Reset-Link wird an die hinterlegte E-Mail gesendet (≤ 1 Minute)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="57-typischer-ablauf-in-der-praxis">5.7 Typischer Ablauf in der Praxis<a class="headerlink" href="#57-typischer-ablauf-in-der-praxis" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>sequenceDiagram
+    actor AG as Auftraggeber
+    actor AN as Auftragnehmer
+    AG-&gt;&gt;AN: Lastenheft übermitteln
+    AN--&gt;&gt;AG: Angebot + Pflichtenheft
+    AG-&gt;&gt;AN: Pflichtenheft prüfen und freigeben
+    Note over AG,AN: Entwicklung läuft
+    AN--&gt;&gt;AG: System liefern
+    AG-&gt;&gt;AN: Abnahme anhand der Abnahmekriterien
+    AG--&gt;&gt;AN: Abnahmeprotokoll unterzeichnen</code></pre>
+<hr />
+<h2 id="kurzubungen">Kurzübungen<a class="headerlink" href="#kurzubungen" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--1">Grundlagen</span> Lastenheft vs. Pflichtenheft</summary>
+<p>Beantworte die folgenden Fragen:</p>
+<ol>
+<li>
+<p>Wer erstellt das Lastenheft – Auftraggeber oder Auftragnehmer?</p>
+</li>
+<li>
+<p>Wer erstellt das Pflichtenheft – Auftraggeber oder Auftragnehmer?</p>
+</li>
+<li>
+<p>Was beschreibt das Lastenheft – das „Was" oder das „Wie"?</p>
+</li>
+<li>
+<p>Ordne die folgenden Aussagen dem richtigen Dokument zu:</p>
+</li>
+<li>„Das System wird mit PHP 8.2 und einer MySQL-Datenbank umgesetzt."</li>
+<li>„Die Software muss es ermöglichen, Rechnungen als PDF zu exportieren."</li>
+<li>„Die Benutzeroberfläche wird mit dem Framework Bootstrap realisiert."</li>
+<li>
+<p>„Das System soll mindestens 500 gleichzeitige Nutzer unterstützen."</p>
+</li>
+<li>
+<p>Was ist die <strong>Eselsbrücke</strong> für Lasten- und Pflichtenheft (aus dem Kapitel)?</p>
+</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<p>Denke an die Perspektive: Der Auftraggeber beschreibt sein Problem, der Auftragnehmer beschreibt seine Lösung.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li>
+<p><strong>Auftraggeber</strong></p>
+</li>
+<li>
+<p><strong>Auftragnehmer</strong></p>
+</li>
+<li>
+<p>Das <strong>„Was"</strong> – was soll das System leisten?</p>
+</li>
+</ol>
+<p>4.
+- „PHP 8.2 und MySQL" → <strong>Pflichtenheft</strong> (technische Umsetzung)
+- „Rechnungen als PDF exportieren" → <strong>Lastenheft</strong> (Funktion, die gefordert wird)
+- „Bootstrap-Framework" → <strong>Pflichtenheft</strong> (technische Entscheidung)
+- „500 gleichzeitige Nutzer" → <strong>Lastenheft</strong> (nicht-funktionale Anforderung)</p>
+<ol>
+<li>Das Lastenheft beschreibt die <strong>Last</strong> (Aufgabe) des Auftraggebers. Das Pflichtenheft beschreibt die <strong>Pflicht</strong> (Verpflichtung) des Auftragnehmers.</li>
+</ol>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--2">Fortgeschritten</span> Muss- und Kann-Anforderungen formulieren</summary>
+<p>Das Unternehmen „FitNow GmbH" möchte eine App für Fitnesskursbuchungen entwickeln. Du hast folgende Informationen gesammelt:</p>
+<ul>
+<li>Nutzer sollen sich registrieren und einloggen können (<strong>unverzichtbar</strong>)</li>
+<li>Kurse sollen nach Datum gefiltert werden können (<strong>unverzichtbar</strong>)</li>
+<li>Eine Wunschliste für Lieblingskurse wäre schön (<strong>wünschenswert</strong>)</li>
+<li>Push-Benachrichtigungen bei neuen Kursen wären ein nettes Feature (<strong>wünschenswert</strong>)</li>
+<li>Eine iOS-App wird <strong>nicht</strong> entwickelt (nur Android und Web)</li>
+<li>Die App muss DSGVO-konform sein (<strong>unverzichtbar</strong>)</li>
+</ul>
+<p><strong>Aufgabe:</strong></p>
+<ol>
+<li>
+<p>Formuliere aus jeder Information eine korrekte Anforderung (vollständiger Satz) und kennzeichne sie als <strong>Muss</strong>, <strong>Kann</strong> oder <strong>Nicht-Anforderung</strong>.</p>
+</li>
+<li>
+<p>Warum ist die letzte Information (iOS-App) eine <strong>Nicht-Anforderung</strong> und kein Kann?</p>
+</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<p>Achte auf die Formulierung: Muss-Anforderungen enthalten „muss", Kann-Anforderungen „kann" oder „sollte".</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p>1.
+- „Das System <strong>muss</strong> es Nutzern ermöglichen, sich zu registrieren und einzuloggen." → Muss
+- „Das System <strong>muss</strong> Kurse nach Datum filterbar anzeigen." → Muss
+- „Das System <strong>kann</strong> eine Wunschliste für Lieblingskurse anbieten." → Kann
+- „Das System <strong>kann</strong> Push-Benachrichtigungen bei neuen Kursen versenden." → Kann
+- „Das System wird <strong>keine</strong> iOS-App bereitstellen." → Nicht-Anforderung
+- „Das System <strong>muss</strong> die Anforderungen der DSGVO erfüllen." → Muss</p>
+<ol>
+<li>Eine Nicht-Anforderung grenzt den Umfang explizit ab – sie verhindert Missverständnisse. Wenn jemand später fragt „Wann kommt die iOS-App?", zeigt die Nicht-Anforderung, dass dies nie geplant war. Ein „Kann" würde suggerieren, es könnte optional später kommen.</li>
+</ol>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--3">Experte</span> Abnahmekriterien bewerten und formulieren</summary>
+<p>Bewerte die folgenden Abnahmekriterien: Sind sie gut formuliert (messbar, eindeutig, testbar)? Falls nicht, formuliere sie besser.</p>
+<ol>
+<li>„Die Software soll schnell sein."</li>
+<li>„Der Login-Vorgang muss in unter 2 Sekunden abgeschlossen sein."</li>
+<li>„Die Oberfläche soll modern und ansprechend aussehen."</li>
+<li>„Das System muss alle gespeicherten Dateien täglich sichern."</li>
+<li>„Bei mehr als 5 Fehlversuchen beim Login soll das Konto gesperrt werden."</li>
+<li>„Das System muss gut performen."</li>
+</ol>
+<p>Formuliere anschließend <strong>zwei eigene Abnahmekriterien</strong> für eine Funktion deiner Wahl (z. B. Passwort zurücksetzen, Produkt in Warenkorb legen, Rechnung als PDF exportieren).</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Ein gutes Abnahmekriterium kann direkt in einen Testfall umgewandelt werden: „Gib X ein → erwarte Y."</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li>❌ Schlecht – nicht messbar. Besser: „Jede Suchanfrage muss in unter 3 Sekunden ein Ergebnis liefern."</li>
+<li>✅ Gut – messbar und testbar.</li>
+<li>❌ Schlecht – subjektiv. Besser: „Die Oberfläche entspricht dem in Anhang A definierten Corporate Design."</li>
+<li>✅ Gut – eindeutig und testbar (wann, was wird gesichert).</li>
+<li>✅ Gut – eindeutig, testbar, Grenzwert klar.</li>
+<li>❌ Schlecht – vage. Besser: „Das System soll unter Normallast (100 gleichzeitige Nutzer) eine Antwortzeit von unter 1 Sekunde erreichen."</li>
+</ol>
+<p>Beispielhafte Eigene Abnahmekriterien (Passwort zurücksetzen):
+- „Wenn ein Nutzer seinen Benutzernamen eingibt und auf ‚Passwort zurücksetzen' klickt, erhält er innerhalb von 2 Minuten eine E-Mail mit einem Reset-Link."
+- „Der Reset-Link ist genau 24 Stunden gültig. Nach Ablauf erscheint eine Fehlermeldung."</p>
+</details>
+</details>
+<hr />
+<h2 id="workshop">Workshop<a class="headerlink" href="#workshop" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--4">Workshop</span> Lastenheft erstellen – Buchungsplattform</summary>
+<p><strong>Szenario:</strong> Ein Fitnessstudio-Verbund mit 5 Standorten möchte eine neue Online-Buchungsplattform für Kurse. Du wirst als Analyst beauftragt, das Lastenheft zu erstellen.</p>
+<p><strong>Ausgangsinformationen (aus einem Interview mit der Geschäftsführerin):</strong></p>
+<blockquote>
+<p>„Unsere Mitglieder sollen Kurse online buchen können, ohne uns anzurufen. Sie sollen sehen, welche Kurse es gibt und wann. Buchungen sollen stornierbar sein. Für uns als Studio wäre es wichtig, Auslastungsberichte zu bekommen. Datenschutz ist uns sehr wichtig. Wir wollen keine eigene App bauen – nur eine Webseite."</p>
+</blockquote>
+<hr />
+<p><strong>Aufgaben:</strong></p>
+<ol>
+<li>Erstelle ein strukturiertes <strong>Lastenheft</strong> mit folgenden Abschnitten:</li>
+<li>Ausgangssituation (2–3 Sätze)</li>
+<li>Ziele (3–5 Punkte)</li>
+<li>Funktionale Anforderungen: mindestens 5 Muss- und 2 Kann-Anforderungen</li>
+<li>Nicht-Anforderungen: mindestens 2</li>
+<li>
+<p>Abnahmekriterien: mindestens 3</p>
+</li>
+<li>
+<p>Formuliere <strong>zwei Fragen</strong>, die du der Geschäftsführerin noch stellen würdest, bevor das Lastenheft finalisiert wird.</p>
+</li>
+<li>
+<p>Erkläre in 2–3 Sätzen, warum es wichtig ist, im Lastenheft Nicht-Anforderungen explizit zu formulieren.</p>
+</li>
+</ol>
+<p><strong>Deliverables:</strong> Strukturiertes Lastenheft (kann als Tabelle oder Fließtext verfasst werden)</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Halte das Lastenheft in der Sprache des Auftraggebers – kein technisches Jargon. Beschreibe nur das WAS, nicht das WIE.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p><strong>Bewertungskriterien:</strong></p>
+<ol>
+<li>Lastenheft enthält:</li>
+<li>Ausgangssituation erklärt das Problem</li>
+<li>Ziele messbar oder zumindest klar formuliert</li>
+<li>5+ Muss-Anforderungen (Kursübersicht, Buchung, Stornierung, Login, Auslastungsberichte, DSGVO)</li>
+<li>2+ Kann-Anforderungen (z. B. Erinnerungs-E-Mail, Bewertungsfunktion)</li>
+<li>Nicht-Anforderungen: keine mobile App, keine Bezahlfunktion (falls nicht erwähnt)</li>
+<li>
+<p>Abnahmekriterien: messbar und testbar</p>
+</li>
+<li>
+<p>Mögliche Fragen: „Müssen Zahlungen online abgewickelt werden?" / „Sollen Mitglieder Kurshistorie einsehen können?" / „Wer verwaltet die Kursdaten?"</p>
+</li>
+<li>
+<p>Nicht-Anforderungen verhindern Scope Creep und klären Erwartungen. Ohne sie könnte der Auftragnehmer z. B. eine App anbieten, die nicht gewünscht ist – und dennoch in Rechnung stellen.</p>
+</li>
+</ol>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../kapitel4/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Kapitel 4 – Vorgehensmodelle">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 4 – Vorgehensmodelle
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../kapitel6/" class="md-footer__link md-footer__link--next" aria-label="Next: Kapitel 6 – PAP und Struktogramm">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 6 – PAP und Struktogramm
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "navigation.prune", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

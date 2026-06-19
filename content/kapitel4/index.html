@@ -1,0 +1,1408 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../kapitel3/">
+      
+      
+        <link rel="next" href="../kapitel5/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Kapitel 4 – Vorgehensmodelle - Grundlagen Programmierung</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-4-vorgehensmodelle" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Grundlagen Programmierung" class="md-header__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Grundlagen Programmierung
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kapitel 4 – Vorgehensmodelle
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Übersicht
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 1 – Programmiersprachen im Überblick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 2 – Softwareanpassung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 3 – Phasen der Softwareentwicklung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 4 – Vorgehensmodelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel5/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 5 – Lasten- und Pflichtenheft
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel6/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 6 – PAP und Struktogramm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel7/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 7 – Datenflussplan und Entscheidungstabelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel8/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 8 – UML-Diagramme
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel9/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 9 – Entity-Relationship-Modell
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel10/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 10 – Grundlagen der Programmierung
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Grundlagen Programmierung" class="md-nav__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Grundlagen Programmierung
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 1 – Programmiersprachen im Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 2 – Softwareanpassung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 3 – Phasen der Softwareentwicklung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 4 – Vorgehensmodelle
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 4 – Vorgehensmodelle
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#was-du-in-diesem-kapitel-lernst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was du in diesem Kapitel lernst
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-gehst-du-vor" class="md-nav__link">
+    <span class="md-ellipsis">
+      So gehst du vor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-was-ist-ein-vorgehensmodell" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Was ist ein Vorgehensmodell?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-das-wasserfallmodell" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Das Wasserfallmodell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-das-spiralmodell" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Das Spiralmodell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-vergleich-wasserfall-vs-spiralmodell" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 Vergleich: Wasserfall vs. Spiralmodell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-wann-welches-modell" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Wann welches Modell?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kurzubungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kurzübungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workshop
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 5 – Lasten- und Pflichtenheft
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 6 – PAP und Struktogramm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 7 – Datenflussplan und Entscheidungstabelle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 8 – UML-Diagramme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 9 – Entity-Relationship-Modell
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 10 – Grundlagen der Programmierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="kapitel-4-vorgehensmodelle">Kapitel 4 – Vorgehensmodelle<a class="headerlink" href="#kapitel-4-vorgehensmodelle" title="Permanent link">&para;</a></h1>
+<div class="kurs-progress">
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step active"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+</div>
+
+<div class="lernziele">
+<h3 id="was-du-in-diesem-kapitel-lernst">Was du in diesem Kapitel lernst<a class="headerlink" href="#was-du-in-diesem-kapitel-lernst" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Was ein Vorgehensmodell ist und wozu es dient</li>
+<li>Wie das Wasserfallmodell aufgebaut ist und wann es geeignet ist</li>
+<li>Wie das Spiralmodell funktioniert und welche Risikomanagement-Idee dahintersteckt</li>
+<li>Wie beide Modelle hinsichtlich Risikosteuerung, Feedback-Schleifen und Planbarkeit verglichen werden können</li>
+</ul>
+</div>
+<hr />
+<h2 id="so-gehst-du-vor">So gehst du vor<a class="headerlink" href="#so-gehst-du-vor" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Lies die Kapitelinhalte und vergleiche beide Modelle aktiv.</li>
+<li>Bearbeite die <strong>Kurzübungen</strong> der Reihe nach – von Grundlagen bis Experte.</li>
+<li>Arbeite die <strong>Workshop-Aufgabe</strong> durch. Sie vertieft das Gelernte an einem zusammenhängenden Szenario.</li>
+</ol>
+<hr />
+<h2 id="41-was-ist-ein-vorgehensmodell">4.1 Was ist ein Vorgehensmodell?<a class="headerlink" href="#41-was-ist-ein-vorgehensmodell" title="Permanent link">&para;</a></h2>
+<p>Ein <strong>Vorgehensmodell</strong> (auch Prozessmodell) beschreibt, in welcher Reihenfolge und nach welchen Regeln die Phasen der Softwareentwicklung durchlaufen werden. Es gibt damit Antworten auf Fragen wie:</p>
+<ul>
+<li>Wann werden Anforderungen erhoben – einmal zu Beginn oder kontinuierlich?</li>
+<li>Wann werden Zwischenergebnisse dem Kunden gezeigt?</li>
+<li>Wie wird mit Änderungen an den Anforderungen umgegangen?</li>
+<li>Wann und wie wird getestet?</li>
+</ul>
+<p>Kein Vorgehensmodell passt zu jedem Projekt. Die Wahl hängt von Faktoren wie Projektgröße, Änderungsrisiko, Kundennähe und verfügbaren Ressourcen ab.</p>
+<hr />
+<h2 id="42-das-wasserfallmodell">4.2 Das Wasserfallmodell<a class="headerlink" href="#42-das-wasserfallmodell" title="Permanent link">&para;</a></h2>
+<p>Das <strong>Wasserfallmodell</strong> ist das älteste und bekannteste Vorgehensmodell. Es wurde in den 1970er-Jahren geprägt und beschreibt die Softwareentwicklung als eine <strong>lineare Abfolge</strong> von Phasen, die – wie Wasser einen Wasserfall hinabfließt – der Reihe nach durchlaufen werden.</p>
+<pre class="mermaid"><code>flowchart TD
+    A[Anforderungsanalyse] --&gt; B[Entwurf]
+    B --&gt; C[Implementierung]
+    C --&gt; D[Test]
+    D --&gt; E[Deployment]
+    E --&gt; F[Wartung]</code></pre>
+<p>Jede Phase muss <strong>abgeschlossen</strong> sein, bevor die nächste beginnt. Am Ende jeder Phase steht ein definiertes Dokument (Meilenstein), das freigegeben wird.</p>
+<p><strong>Stärken des Wasserfallmodells:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stärke</th>
+<th>Erklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planbarkeit</td>
+<td>Zeitplan, Budget und Umfang sind früh festgelegt</td>
+</tr>
+<tr>
+<td>Klare Dokumentation</td>
+<td>Jede Phase erzeugt definierte Dokumente</td>
+</tr>
+<tr>
+<td>Einfache Steuerung</td>
+<td>Klare Meilensteine erleichtern das Projektmanagement</td>
+</tr>
+<tr>
+<td>Geeignet für feste Anforderungen</td>
+<td>Wenn sich Anforderungen kaum ändern, ist der Plan stabil</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Schwächen des Wasserfallmodells:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Schwäche</th>
+<th>Erklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Späteres Feedback</td>
+<td>Kunde sieht lauffähige Software erst sehr spät</td>
+</tr>
+<tr>
+<td>Änderungsresistenz</td>
+<td>Nachträgliche Anforderungsänderungen sind teuer</td>
+</tr>
+<tr>
+<td>Fehler pflanzen sich fort</td>
+<td>Ein Fehler in der Analysephase wirkt sich auf alle Folgestufen aus</td>
+</tr>
+<tr>
+<td>Realitätsfern</td>
+<td>In der Praxis sind Anforderungen selten vollständig stabil</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wann eignet sich das Wasserfallmodell?</strong></p>
+<ul>
+<li>Klar definierte, stabile Anforderungen</li>
+<li>Sicherheitskritische Systeme (Luft- und Raumfahrt, Medizintechnik)</li>
+<li>Projekte mit festen Vertragsbestandteilen und staatlicher Regulierung</li>
+<li>Erfahrungswissen über ähnliche Projekte ist vorhanden</li>
+</ul>
+<hr />
+<h2 id="43-das-spiralmodell">4.3 Das Spiralmodell<a class="headerlink" href="#43-das-spiralmodell" title="Permanent link">&para;</a></h2>
+<p>Das <strong>Spiralmodell</strong> wurde 1986 von Barry Boehm entwickelt. Es reagiert auf die zentrale Schwäche des Wasserfallmodells: <strong>Risikomanagement wird zur zentralen Aufgabe</strong> des Entwicklungsprozesses.</p>
+<p>Statt einer einmaligen linearen Abfolge durchläuft das Projekt mehrere <strong>Iterationen</strong> (Schleifen / Zyklen). Jede Iteration durchläuft vier Quadranten:</p>
+<pre class="mermaid"><code>flowchart TD
+    A["1. Ziele &amp; Alternativen\nfestlegen"] --&gt; B["2. Risiken bewerten\n&amp; reduzieren"]
+    B --&gt; C["3. Ergebnis entwickeln\n&amp; verifizieren"]
+    C --&gt; D["4. Nächste Iteration\nplanen"]
+    D --&gt; A
+    style A fill:#FFF3CD,stroke:#F8B233
+    style B fill:#FFE0E0,stroke:#CC4444
+    style C fill:#D4EDDA,stroke:#28A745
+    style D fill:#D0E8FF,stroke:#3A7FBD</code></pre>
+<p><strong>Die vier Quadranten im Detail:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Quadrant</th>
+<th>Aktivitäten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Ziele &amp; Alternativen</strong></td>
+<td>Was soll in dieser Iteration erreicht werden? Welche Alternativen gibt es?</td>
+</tr>
+<tr>
+<td><strong>2. Risiken bewerten</strong></td>
+<td>Welche Risiken bestehen? Prototypen erstellen, um Unsicherheiten zu reduzieren</td>
+</tr>
+<tr>
+<td><strong>3. Ergebnis entwickeln</strong></td>
+<td>Iterationsziel umsetzen (Entwurf, Code, Test)</td>
+</tr>
+<tr>
+<td><strong>4. Nächste Iteration planen</strong></td>
+<td>Überprüfung des Ergebnisses, Planung des nächsten Zyklus</td>
+</tr>
+</tbody>
+</table>
+<p>Mit jeder Iteration rückt die Software dem fertigen Produkt näher. Gleichzeitig sinkt das Risiko, da Unsicherheiten in frühen Zyklen durch Prototypen und Reviews reduziert werden.</p>
+<p><strong>Stärken des Spiralmodells:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stärke</th>
+<th>Erklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Explizites Risikomanagement</td>
+<td>Risiken werden in jeder Iteration bewertet und reduziert</td>
+</tr>
+<tr>
+<td>Frühes Feedback</td>
+<td>Prototypen und Zwischenergebnisse zeigen Stakeholdern früh etwas Handfestes</td>
+</tr>
+<tr>
+<td>Flexibel bei Änderungen</td>
+<td>Neue Anforderungen können in der nächsten Iteration aufgegriffen werden</td>
+</tr>
+<tr>
+<td>Skalierbar</td>
+<td>Geeignet für große, komplexe Projekte</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Schwächen des Spiralmodells:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Schwäche</th>
+<th>Erklärung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hoher Aufwand</td>
+<td>Kontinuierliche Risikoanalysen und Iterationsplanung erfordern Expertise</td>
+</tr>
+<tr>
+<td>Schwierig zu vertraglich fassen</td>
+<td>Kein fester Scope zu Beginn erschwert Festpreisverträge</td>
+</tr>
+<tr>
+<td>Kann teuer werden</td>
+<td>Viele Iterationen bedeuten viele Überprüfungsrunden</td>
+</tr>
+<tr>
+<td>Weniger geeignet für kleine Projekte</td>
+<td>Overhead lohnt sich erst ab einer bestimmten Komplexität</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="44-vergleich-wasserfall-vs-spiralmodell">4.4 Vergleich: Wasserfall vs. Spiralmodell<a class="headerlink" href="#44-vergleich-wasserfall-vs-spiralmodell" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Wasserfallmodell</th>
+<th>Spiralmodell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Struktur</strong></td>
+<td>Linear, einmalig</td>
+<td>Iterativ, zyklisch</td>
+</tr>
+<tr>
+<td><strong>Feedback-Schleifen</strong></td>
+<td>Eingeschränkt (meist erst nach Fertigstellung)</td>
+<td>Eingebaut – in jeder Iteration</td>
+</tr>
+<tr>
+<td><strong>Risikosteuerung</strong></td>
+<td>Gering – Risiken werden kaum explizit behandelt</td>
+<td>Hoch – Risiken sind zentrales Thema</td>
+</tr>
+<tr>
+<td><strong>Planbarkeit</strong></td>
+<td>Hoch – Budget und Zeit früh definiert</td>
+<td>Mittel – Gesamtumfang wächst iterativ</td>
+</tr>
+<tr>
+<td><strong>Änderbarkeit</strong></td>
+<td>Gering – Änderungen sind kostspielig</td>
+<td>Hoch – Änderungen fließen in nächste Iteration</td>
+</tr>
+<tr>
+<td><strong>Dokumentation</strong></td>
+<td>Umfangreiche Phasendokumentation</td>
+<td>Dokumentation pro Iteration</td>
+</tr>
+<tr>
+<td><strong>Eignung</strong></td>
+<td>Stabile Anforderungen, regulierte Umgebungen</td>
+<td>Komplexe, risikobehaftete Projekte</td>
+</tr>
+<tr>
+<td><strong>Kundenbeteiligung</strong></td>
+<td>Zu Beginn und am Ende</td>
+<td>Kontinuierlich in jeder Iteration</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Agile Methoden als Weiterentwicklung</p>
+<p>Moderne agile Vorgehensmodelle (Scrum, Kanban, XP) bauen auf der Idee des Spiralmodells auf: kurze Iterationen, kontinuierliches Feedback, explizites Risikomanagement. Sie werden im Rahmen dieses Kurses nur überblicksartig erwähnt; eine Vertiefung erfolgt in späteren Modulen.</p>
+</div>
+<hr />
+<h2 id="45-wann-welches-modell">4.5 Wann welches Modell?<a class="headerlink" href="#45-wann-welches-modell" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Szenario</th>
+<th>Empfehlung</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entwicklung eines Röntgengerätes (Medizintechnik)</td>
+<td>Wasserfall</td>
+<td>Feste Normen, stabile Anforderungen, Zertifizierung erforderlich</td>
+</tr>
+<tr>
+<td>Neue Unternehmens-App mit unklaren Anforderungen</td>
+<td>Spiralmodell / agil</td>
+<td>Anforderungen entwickeln sich, frühes Feedback wichtig</td>
+</tr>
+<tr>
+<td>Erstellung einer Behördendatenbank nach Ausschreibung</td>
+<td>Wasserfall</td>
+<td>Fester Vertrag, definierter Scope</td>
+</tr>
+<tr>
+<td>E-Commerce-Plattform für einen Start-up</td>
+<td>Spiralmodell / agil</td>
+<td>Markt ändert sich schnell, Prototyping wichtig</td>
+</tr>
+<tr>
+<td>Einmalige Datenmigrationsaufgabe</td>
+<td>Wasserfall</td>
+<td>Klar definiertes Ziel, einmaliger Prozess</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="kurzubungen">Kurzübungen<a class="headerlink" href="#kurzubungen" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--1">Grundlagen</span> Wasserfallmodell beschreiben</summary>
+<p>Beantworte die folgenden Fragen zum Wasserfallmodell:</p>
+<ol>
+<li>
+<p>Nenne die sechs Phasen des Wasserfallmodells in der richtigen Reihenfolge.</p>
+</li>
+<li>
+<p>Was bedeutet es, dass das Wasserfallmodell „linear" ist?</p>
+</li>
+<li>
+<p>Nenne zwei Vorteile des Wasserfallmodells.</p>
+</li>
+<li>
+<p>Nenne zwei Nachteile des Wasserfallmodells.</p>
+</li>
+<li>
+<p>Für welche Art von Projekten eignet sich das Wasserfallmodell besonders gut?</p>
+</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<p>Die Phasen des Wasserfallmodells entsprechen denen, die du in Kapitel 3 kennengelernt hast – in einer festen Reihenfolge ohne Rückkehr.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li>
+<p>Anforderungsanalyse → Entwurf → Implementierung → Test → Deployment → Wartung</p>
+</li>
+<li>
+<p>Linear bedeutet: Jede Phase wird vollständig abgeschlossen, bevor die nächste beginnt. Es gibt keine Rückkopplung oder Iteration.</p>
+</li>
+<li>
+<p>Vorteile: Hohe Planbarkeit (Budget und Zeitplan früh bekannt), klare Dokumentation durch definierte Meilensteine.</p>
+</li>
+<li>
+<p>Nachteile: Kunde sieht das fertige Produkt erst spät; nachträgliche Anforderungsänderungen sind teuer.</p>
+</li>
+<li>
+<p>Geeignet für: Projekte mit stabilen, klar definierten Anforderungen – z. B. sicherheitskritische Systeme (Medizin, Luft- und Raumfahrt) oder Projekte mit fest vereinbartem Vertragsumfang.</p>
+</li>
+</ol>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--2">Fortgeschritten</span> Spiralmodell erklären</summary>
+<p>Das Spiralmodell besteht aus vier Quadranten, die in jeder Iteration durchlaufen werden.</p>
+<ol>
+<li>
+<p>Nenne die vier Quadranten des Spiralmodells.</p>
+</li>
+<li>
+<p>Was ist der zentrale Gedanke des Spiralmodells, der es vom Wasserfallmodell unterscheidet?</p>
+</li>
+<li>
+<p>Was ist ein Prototyp im Kontext des Spiralmodells – und wozu dient er?</p>
+</li>
+<li>
+<p>Erkläre: Was bedeutet es, dass das Spiralmodell „iterativ" ist?</p>
+</li>
+<li>
+<p>Warum eignet sich das Spiralmodell <strong>nicht</strong> für alle Projekte? Nenne einen konkreten Grund.</p>
+</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<p>Der zentrale Unterschied liegt in der Behandlung von Risiken – das Spiralmodell macht Risikomanagement zur Hauptaufgabe.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li>
+<p>(1) Ziele &amp; Alternativen festlegen, (2) Risiken bewerten &amp; reduzieren, (3) Ergebnis entwickeln &amp; verifizieren, (4) Nächste Iteration planen.</p>
+</li>
+<li>
+<p>Im Spiralmodell ist <strong>Risikomanagement</strong> das zentrale Prinzip. Risiken werden in jeder Iteration explizit analysiert und durch Prototypen oder Reviews reduziert – das Wasserfallmodell berücksichtigt Risiken kaum systematisch.</p>
+</li>
+<li>
+<p>Ein Prototyp ist ein frühes, vereinfachtes Modell eines Teilbereichs. Er dient dazu, Unsicherheiten zu klären (z. B. „Ist die Technologie geeignet?") und frühes Feedback zu erhalten, bevor in teure Entwicklung investiert wird.</p>
+</li>
+<li>
+<p>Iterativ bedeutet: Der Entwicklungsprozess wird mehrfach (in Zyklen) wiederholt. In jedem Zyklus wird das Produkt um einen weiteren Bereich erweitert oder verfeinert.</p>
+</li>
+<li>
+<p>Nicht für alle Projekte: Der Overhead durch kontinuierliche Risikoanalysen und Iterationsplanung lohnt sich erst ab einer bestimmten Projektgröße. Für kleine, klar definierte Projekte ist er ineffizient.</p>
+</li>
+</ol>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--3">Experte</span> Vorgehensmodell für Szenarien wählen</summary>
+<p>Für die folgenden Projekte soll das geeignetere Vorgehensmodell (Wasserfall oder Spiralmodell) empfohlen werden. Begründe deine Wahl jeweils anhand von: Risikosteuerung, Feedback-Schleifen und Planbarkeit.</p>
+<p><strong>Projekt A:</strong> Eine Bundesbehörde lässt eine neue Steuerverwaltungssoftware entwickeln. Die gesetzlichen Anforderungen sind vollständig definiert. Ein fixer Abnahme-Termin (18 Monate) und Festpreis sind vertraglich festgelegt.</p>
+<p><strong>Projekt B:</strong> Ein Start-up entwickelt eine neue App für personalisierte Ernährungsempfehlungen. Die Zielgruppe und die genauen Funktionen sind noch nicht klar – man möchte schnell Feedback von ersten Nutzern.</p>
+<p><strong>Projekt C:</strong> Eine Produktionslinie eines Automobilherstellers soll mit neuer Steuerungssoftware ausgestattet werden. Die Anforderungen sind detailliert, aber es gibt unbekannte technische Risiken bei der Integration mit der Maschinensteuerung.</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Denke an die drei Vergleichskriterien: Wie stark variieren die Anforderungen? Wie wichtig ist frühes Feedback? Wie stark muss der Zeitplan planbar sein?</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p><strong>Projekt A:</strong> Wasserfallmodell. Anforderungen sind stabil, Vertrag ist fix. Hohe Planbarkeit wichtig. Risiken sind gering, da Anforderungen vollständig bekannt.</p>
+<p><strong>Projekt B:</strong> Spiralmodell (oder agil). Anforderungen sind unklar, frühes Nutzerfeedback entscheidend. Iteratives Vorgehen reduziert das Risiko, am Markt vorbeizuentwickeln.</p>
+<p><strong>Projekt C:</strong> Spiralmodell. Trotz klarer Anforderungen bestehen technische Risiken (Integration). Prototypen und frühe Tests reduzieren das Risiko. Feedback-Schleifen ermöglichen Kurskorrektur bei unerwarteten Integrationsproblemen.</p>
+</details>
+</details>
+<hr />
+<h2 id="workshop">Workshop<a class="headerlink" href="#workshop" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--4">Workshop</span> Vorgehensmodell-Vergleich und Projektsimulation</summary>
+<p><strong>Szenario:</strong> Du wirst als IT-Projektleiter bei einem mittelständischen Logistikunternehmen eingesetzt. Das Unternehmen möchte sein Warenwirtschaftssystem durch ein neues System ersetzen. Es gibt zwei Meinungslager:</p>
+<ul>
+<li><strong>Fraktion A (Geschäftsführer):</strong> „Wir brauchen Planungssicherheit. Ich will am Tag 1 wissen, was das Projekt kostet und wann es fertig ist."</li>
+<li><strong>Fraktion B (IT-Leiter):</strong> „Die Anforderungen werden sich während des Projekts ändern. Wir sollten flexibel bleiben und früh zeigen, was wir haben."</li>
+</ul>
+<p>Das Projekt: Ca. 2 Jahre Laufzeit, 15 Mitarbeiter im Team, ca. 200 beteiligte Endanwender, Schnittstellen zu 4 Drittsystemen.</p>
+<hr />
+<p><strong>Aufgaben:</strong></p>
+<ol>
+<li>
+<p>Analysiere, welche Argumente für Wasserfall und welche für das Spiralmodell sprechen. Erstelle eine Tabelle mit je 3 Pro-Argumenten pro Modell für dieses spezifische Projekt.</p>
+</li>
+<li>
+<p>Welches Modell würdest du empfehlen und warum? Gehe explizit auf Risikosteuerung, Feedback und Planbarkeit ein.</p>
+</li>
+<li>
+<p>Erkläre, wie du Fraktion A (Planungssicherheit) und Fraktion B (Flexibilität) mit deiner Empfehlung überzeugen würdest. Formuliere je eine kurze Ansprache (2–3 Sätze).</p>
+</li>
+<li>
+<p>Beschreibe, welche Artefakte du in der ersten Projektphase (Monat 1–3) erstellen würdest und warum.</p>
+</li>
+</ol>
+<p><strong>Deliverables:</strong> Pro/Contra-Tabelle + Empfehlung + zwei kurze Ansprachen + Artefaktliste</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Es gibt hier keine eindeutig „richtige" Antwort – entscheidend ist die Qualität der Begründung.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p><strong>Bewertungskriterien:</strong></p>
+<ol>
+<li>
+<p>Pro Wasserfall: Budgetplanbarkeit, fester Vertragsrahmen möglich, klare Meilensteine für Geschäftsführer. Pro Spiral: Schnittstellenrisiken klärbar, frühes Feedback von 200 Endanwendern, Anforderungsänderungen einfließbar.</p>
+</li>
+<li>
+<p>Empfehlung: Spiralmodell (oder hybrides Vorgehen) – begründet mit Komplexität, 4 Drittsystemen, 200 Endanwendern (hohes Feedbackbedarf), unklarem Anforderungsumfang.</p>
+</li>
+<li>
+<p>An Fraktion A: „Das Spiralmodell gibt uns in jeder Iteration feste Deliverables und Meilensteine. Das Budget pro Phase ist planbar, und wir reduzieren das Risiko teurer Überraschungen am Ende."
+   An Fraktion B: „Jede Iteration endet mit einem nutzbaren Teilprodukt, das Endanwender testen können. Änderungsanforderungen fließen geordnet in die nächste Iteration ein."</p>
+</li>
+<li>
+<p>Artefakte Monat 1–3: Lastenheft (Anforderungserhebung), Risikoanalyse, Kontextdiagramm (Schnittstellen), erster Prototyp eines zentralen Workflows.</p>
+</li>
+</ol>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../kapitel3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Kapitel 3 – Phasen der Softwareentwicklung">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 3 – Phasen der Softwareentwicklung
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../kapitel5/" class="md-footer__link md-footer__link--next" aria-label="Next: Kapitel 5 – Lasten- und Pflichtenheft">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 5 – Lasten- und Pflichtenheft
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "navigation.prune", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1396 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../kapitel2/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Kapitel 1 – Programmiersprachen im Überblick - Grundlagen Programmierung</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-1-programmiersprachen-im-uberblick" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Grundlagen Programmierung" class="md-header__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Grundlagen Programmierung
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kapitel 1 – Programmiersprachen im Überblick
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Übersicht
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 1 – Programmiersprachen im Überblick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 2 – Softwareanpassung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 3 – Phasen der Softwareentwicklung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel4/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 4 – Vorgehensmodelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel5/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 5 – Lasten- und Pflichtenheft
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel6/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 6 – PAP und Struktogramm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel7/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 7 – Datenflussplan und Entscheidungstabelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel8/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 8 – UML-Diagramme
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel9/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 9 – Entity-Relationship-Modell
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel10/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 10 – Grundlagen der Programmierung
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Grundlagen Programmierung" class="md-nav__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Grundlagen Programmierung
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 1 – Programmiersprachen im Überblick
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 1 – Programmiersprachen im Überblick
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#was-du-in-diesem-kapitel-lernst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was du in diesem Kapitel lernst
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-gehst-du-vor" class="md-nav__link">
+    <span class="md-ellipsis">
+      So gehst du vor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-was-ist-eine-programmiersprache" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Was ist eine Programmiersprache?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-programmierparadigmen" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Programmierparadigmen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 Programmierparadigmen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imperatives-paradigma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imperatives Paradigma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objektorientiertes-paradigma-oop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objektorientiertes Paradigma (OOP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funktionales-paradigma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funktionales Paradigma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skriptbasiertes-paradigma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skriptbasiertes Paradigma
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-einsatzszenarien" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Einsatzszenarien
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-compiler-vs-interpreter" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 Compiler vs. Interpreter
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 Compiler vs. Interpreter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compiler-sprachen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compiler-Sprachen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpreter-sprachen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interpreter-Sprachen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hybride-ansatze" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hybride Ansätze
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kurzubungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kurzübungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workshop
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 2 – Softwareanpassung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 3 – Phasen der Softwareentwicklung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 4 – Vorgehensmodelle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 5 – Lasten- und Pflichtenheft
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 6 – PAP und Struktogramm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 7 – Datenflussplan und Entscheidungstabelle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 8 – UML-Diagramme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 9 – Entity-Relationship-Modell
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 10 – Grundlagen der Programmierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="kapitel-1-programmiersprachen-im-uberblick">Kapitel 1 – Programmiersprachen im Überblick<a class="headerlink" href="#kapitel-1-programmiersprachen-im-uberblick" title="Permanent link">&para;</a></h1>
+<div class="kurs-progress">
+  <div class="step active"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+</div>
+
+<div class="lernziele">
+<h3 id="was-du-in-diesem-kapitel-lernst">Was du in diesem Kapitel lernst<a class="headerlink" href="#was-du-in-diesem-kapitel-lernst" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Was Programmiersprachen sind und wozu sie dienen</li>
+<li>Wie Programmiersprachen nach Paradigmen unterschieden werden (imperativ, objektorientiert, funktional, skriptbasiert)</li>
+<li>Welche typischen Einsatzszenarien es gibt</li>
+<li>Was der Unterschied zwischen Compiler- und Interpreter-Sprachen ist</li>
+</ul>
+</div>
+<hr />
+<h2 id="so-gehst-du-vor">So gehst du vor<a class="headerlink" href="#so-gehst-du-vor" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Lies die Kapitelinhalte und präge dir die Kernbegriffe ein.</li>
+<li>Bearbeite die <strong>Kurzübungen</strong> der Reihe nach – von Grundlagen bis Experte.</li>
+<li>Arbeite die <strong>Workshop-Aufgabe</strong> durch. Sie vertieft das Gelernte an einem zusammenhängenden Szenario.</li>
+</ol>
+<hr />
+<h2 id="11-was-ist-eine-programmiersprache">1.1 Was ist eine Programmiersprache?<a class="headerlink" href="#11-was-ist-eine-programmiersprache" title="Permanent link">&para;</a></h2>
+<p>Eine <strong>Programmiersprache</strong> ist eine formale Sprache, mit der Menschen einem Computer Anweisungen erteilen können. Computer selbst verstehen nur Maschinencode – Folgen von Nullen und Einsen. Programmiersprachen dienen als Brücke: Der Mensch schreibt lesbaren Quellcode, der anschließend in Maschinencode übersetzt wird.</p>
+<p>Jede Programmiersprache besitzt eine <strong>Syntax</strong> (Grammatikregeln) und eine <strong>Semantik</strong> (Bedeutung der Anweisungen). Wer eine Programmiersprache beherrscht, kann damit Probleme in eine Abfolge präziser Anweisungen zerlegen – das nennt man <strong>algorithmisches Denken</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Warum so viele Sprachen?</p>
+<p>Es gibt heute über 700 aktiv genutzte Programmiersprachen. Jede entstand, weil bestehende Sprachen für bestimmte Anwendungsfälle ungeeignet waren – zu langsam, zu komplex, zu fehleranfällig oder einfach nicht vorhanden.</p>
+</div>
+<hr />
+<h2 id="12-programmierparadigmen">1.2 Programmierparadigmen<a class="headerlink" href="#12-programmierparadigmen" title="Permanent link">&para;</a></h2>
+<p>Ein <strong>Paradigma</strong> ist eine grundlegende Denkweise, nach der ein Programm aufgebaut wird. Die wichtigsten Paradigmen im Überblick:</p>
+<h3 id="imperatives-paradigma">Imperatives Paradigma<a class="headerlink" href="#imperatives-paradigma" title="Permanent link">&para;</a></h3>
+<p>Das Programm beschreibt <strong>wie</strong> etwas getan werden soll – Schritt für Schritt, in einer festen Reihenfolge. Der Programmablauf wird durch Anweisungen, Schleifen und Bedingungen gesteuert.</p>
+<p><strong>Beispiele:</strong> C, Pascal, frühe Versionen von BASIC</p>
+<p><strong>Typischer Einsatz:</strong> Systemnahe Programmierung, Mikrocontroller, Algorithmen</p>
+<h3 id="objektorientiertes-paradigma-oop">Objektorientiertes Paradigma (OOP)<a class="headerlink" href="#objektorientiertes-paradigma-oop" title="Permanent link">&para;</a></h3>
+<p>Das Programm wird als Zusammenspiel von <strong>Objekten</strong> modelliert. Jedes Objekt hat Eigenschaften (Attribute) und Fähigkeiten (Methoden). Objekte kommunizieren miteinander über Nachrichten (Methodenaufrufe).</p>
+<p><strong>Beispiele:</strong> Java, C#, Python, PHP (ab Version 5), Ruby</p>
+<p><strong>Typischer Einsatz:</strong> Unternehmensanwendungen, Desktop-Software, Web-Backends</p>
+<table>
+<thead>
+<tr>
+<th>Konzept</th>
+<th>Erklärung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Klasse</td>
+<td>Bauplan für Objekte</td>
+<td><code>Klasse Auto</code></td>
+</tr>
+<tr>
+<td>Objekt</td>
+<td>Konkretes Exemplar einer Klasse</td>
+<td><code>meinAuto</code></td>
+</tr>
+<tr>
+<td>Attribut</td>
+<td>Eigenschaft eines Objekts</td>
+<td><code>Farbe = rot</code></td>
+</tr>
+<tr>
+<td>Methode</td>
+<td>Funktion, die zu einem Objekt gehört</td>
+<td><code>fahren()</code></td>
+</tr>
+<tr>
+<td>Vererbung</td>
+<td>Eine Klasse übernimmt Eigenschaften einer anderen</td>
+<td><code>Elektroauto</code> erbt von <code>Auto</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="funktionales-paradigma">Funktionales Paradigma<a class="headerlink" href="#funktionales-paradigma" title="Permanent link">&para;</a></h3>
+<p>Das Programm besteht aus <strong>mathematischen Funktionen</strong>, die Eingaben auf Ausgaben abbilden. Es gibt keine Zustände und keine Seiteneffekte – eine Funktion liefert bei gleicher Eingabe immer dasselbe Ergebnis.</p>
+<p><strong>Beispiele:</strong> Haskell, Erlang, Elixir; funktionale Elemente auch in JavaScript, Python, Scala</p>
+<p><strong>Typischer Einsatz:</strong> Datenverarbeitung, parallele Berechnungen, kritische Systeme</p>
+<h3 id="skriptbasiertes-paradigma">Skriptbasiertes Paradigma<a class="headerlink" href="#skriptbasiertes-paradigma" title="Permanent link">&para;</a></h3>
+<p>Skriptsprachen sind darauf ausgelegt, <strong>bestehende Systeme zu steuern oder zu automatisieren</strong>. Sie werden meist nicht kompiliert, sondern direkt ausgeführt. Oft werden sie in Kombination mit anderen Sprachen eingesetzt.</p>
+<p><strong>Beispiele:</strong> PHP, JavaScript, Python, Bash, PowerShell</p>
+<p><strong>Typischer Einsatz:</strong> Webentwicklung, Systemautomatisierung, Dateiverarbeitung, Glue-Code</p>
+<div class="admonition tip">
+<p class="admonition-title">Paradigmen schließen sich nicht aus</p>
+<p>Viele moderne Sprachen unterstützen mehrere Paradigmen. PHP z. B. ist skriptbasiert und gleichzeitig objektorientiert. Python wird imperativ, objektorientiert und funktional eingesetzt.</p>
+</div>
+<hr />
+<h2 id="13-einsatzszenarien">1.3 Einsatzszenarien<a class="headerlink" href="#13-einsatzszenarien" title="Permanent link">&para;</a></h2>
+<p>Welche Sprache wählt man für welches Projekt? Eine Orientierung:</p>
+<table>
+<thead>
+<tr>
+<th>Einsatzbereich</th>
+<th>Typische Sprachen</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Webentwicklung (Frontend)</td>
+<td>JavaScript, TypeScript</td>
+<td>Laufen direkt im Browser</td>
+</tr>
+<tr>
+<td>Webentwicklung (Backend)</td>
+<td>PHP, Python, Java, Node.js</td>
+<td>Serverseitige Logik, Datenbankzugriff</td>
+</tr>
+<tr>
+<td>Mobile Apps</td>
+<td>Swift (iOS), Kotlin (Android), Flutter</td>
+<td>Native Performance oder plattformübergreifend</td>
+</tr>
+<tr>
+<td>Desktop-Software</td>
+<td>C#, Java, C++</td>
+<td>Zugriff auf Betriebssystem-Ressourcen</td>
+</tr>
+<tr>
+<td>Datenwissenschaft / KI</td>
+<td>Python, R</td>
+<td>Umfangreiche Bibliotheken (NumPy, pandas, TensorFlow)</td>
+</tr>
+<tr>
+<td>Systemsoftware / Treiber</td>
+<td>C, C++, Rust</td>
+<td>Direkter Hardwarezugriff, maximale Performance</td>
+</tr>
+<tr>
+<td>Automatisierung / Scripting</td>
+<td>Bash, PowerShell, Python</td>
+<td>Schnelle Ausführung, kein Build-Schritt nötig</td>
+</tr>
+<tr>
+<td>Datenbanken</td>
+<td>SQL</td>
+<td>Deklarative Abfrage- und Manipulation von Daten</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="14-compiler-vs-interpreter">1.4 Compiler vs. Interpreter<a class="headerlink" href="#14-compiler-vs-interpreter" title="Permanent link">&para;</a></h2>
+<p>Der wesentliche technische Unterschied zwischen Programmiersprachen liegt darin, <strong>wie Quellcode ausgeführt wird</strong>.</p>
+<h3 id="compiler-sprachen">Compiler-Sprachen<a class="headerlink" href="#compiler-sprachen" title="Permanent link">&para;</a></h3>
+<p>Ein <strong>Compiler</strong> übersetzt den gesamten Quellcode <strong>vor der Ausführung</strong> in Maschinencode (oder Bytecode). Das Ergebnis ist eine ausführbare Datei, die ohne den Compiler läuft.</p>
+<pre class="mermaid"><code>flowchart LR
+    A([Quellcode]) --&gt; B[Compiler] --&gt; C([Ausführbare Datei]) --&gt; D([Ausführung])</code></pre>
+<p><strong>Vorteile:</strong> Sehr schnell in der Ausführung, Fehler werden vor dem Start erkannt<br />
+<strong>Nachteile:</strong> Übersetzungsschritt nötig, für jede Plattform neu compilieren<br />
+<strong>Beispiele:</strong> C, C++, Rust, Go, Java (zu Bytecode), C#</p>
+<h3 id="interpreter-sprachen">Interpreter-Sprachen<a class="headerlink" href="#interpreter-sprachen" title="Permanent link">&para;</a></h3>
+<p>Ein <strong>Interpreter</strong> liest den Quellcode <strong>Zeile für Zeile</strong> und führt ihn direkt aus – ohne vorherige Kompilierung.</p>
+<pre class="mermaid"><code>flowchart LR
+    A([Quellcode]) --&gt; B[Interpreter] --&gt; C([Direkte Ausführung\nZeile für Zeile])</code></pre>
+<p><strong>Vorteile:</strong> Keine Build-Phase, plattformunabhängig, leicht testbar<br />
+<strong>Nachteile:</strong> Langsamer, Fehler treten erst zur Laufzeit auf<br />
+<strong>Beispiele:</strong> PHP, Python, JavaScript (im Browser), Ruby, Bash</p>
+<h3 id="hybride-ansatze">Hybride Ansätze<a class="headerlink" href="#hybride-ansatze" title="Permanent link">&para;</a></h3>
+<p>Manche Sprachen kombinieren beide Ansätze:</p>
+<ul>
+<li><strong>Java</strong> compiliert zu Bytecode, der dann von der Java Virtual Machine (JVM) interpretiert wird</li>
+<li><strong>Python</strong> compiliert intern zu <code>.pyc</code>-Bytecode, bevor der Interpreter diesen ausführt</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Merkmal</th>
+<th>Compiler</th>
+<th>Interpreter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Übersetzungszeitpunkt</td>
+<td>Vor der Ausführung</td>
+<td>Zur Laufzeit</td>
+</tr>
+<tr>
+<td>Ausführungsgeschwindigkeit</td>
+<td>Schneller</td>
+<td>Langsamer</td>
+</tr>
+<tr>
+<td>Fehlerkennung</td>
+<td>Beim Kompilieren</td>
+<td>Erst bei Ausführung</td>
+</tr>
+<tr>
+<td>Typische Sprachen</td>
+<td>C, C++, Rust, Go</td>
+<td>PHP, Python, JavaScript</td>
+</tr>
+<tr>
+<td>Build-Schritt nötig?</td>
+<td>Ja</td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Fehlerzeitpunkt ist prüfungsrelevant</p>
+<p>Ein häufiger Prüfungspunkt: Bei Compiler-Sprachen werden Syntaxfehler <strong>vor</strong> der Ausführung erkannt. Bei Interpreter-Sprachen <strong>erst beim Ausführen</strong> der betreffenden Zeile.</p>
+</div>
+<hr />
+<h2 id="kurzubungen">Kurzübungen<a class="headerlink" href="#kurzubungen" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--1">Grundlagen</span> Paradigmen zuordnen</summary>
+<p>Ordne die folgenden Programmiersprachen dem passenden Paradigma zu.</p>
+<p><strong>Programmiersprachen:</strong> Java, PHP, Haskell, C, JavaScript, Python</p>
+<p>Erstelle eine Tabelle mit den Spalten:
+- Sprache
+- Paradigma (imperativ / objektorientiert / funktional / skriptbasiert)
+- Typisches Einsatzszenario (1 Satz)</p>
+<p>Hinweis: Manche Sprachen unterstützen mehrere Paradigmen – wähle das dominante oder nenne beide.</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Denke daran: Skriptsprachen dienen oft zur Steuerung und Automatisierung. Funktionale Sprachen betonen Seiteneffektfreiheit. OOP dreht sich um Klassen und Objekte.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p>Mögliche Lösung:</p>
+<table>
+<thead>
+<tr>
+<th>Sprache</th>
+<th>Paradigma</th>
+<th>Einsatzszenario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Java</td>
+<td>Objektorientiert</td>
+<td>Unternehmensanwendungen, Android-Apps</td>
+</tr>
+<tr>
+<td>PHP</td>
+<td>Skriptbasiert + objektorientiert</td>
+<td>Webentwicklung (Serverseitig)</td>
+</tr>
+<tr>
+<td>Haskell</td>
+<td>Funktional</td>
+<td>Wissenschaftliche Berechnungen, kritische Systeme</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Imperativ</td>
+<td>Systemsoftware, Betriebssysteme, Treiber</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>Skriptbasiert + objektorientiert</td>
+<td>Webentwicklung (Frontend, auch Backend)</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>Imperativ + OOP + funktional</td>
+<td>Datenwissenschaft, KI, Skripting</td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--2">Fortgeschritten</span> Compiler oder Interpreter?</summary>
+<p>Beantworte die folgenden Fragen zu Compiler- und Interpretersprachen:</p>
+<ol>
+<li>
+<p>Ein Entwickler hat ein Python-Skript geschrieben. Er führt es aus – und erhält eine Fehlermeldung in Zeile 15. Die Zeilen 1–14 wurden bereits ausgeführt. Um welchen Sprachtyp handelt es sich? Begründe kurz.</p>
+</li>
+<li>
+<p>Ein anderer Entwickler hat ein Java-Programm geschrieben. Beim ersten Ausführungsversuch meldet das System: „Compilation error in line 8: missing semicolon". Das Programm wurde noch nicht gestartet. Um welchen Sprachtyp handelt es sich? Begründe kurz.</p>
+</li>
+<li>
+<p>Erkläre in 2–3 Sätzen: Warum sind Compiler-Sprachen oft schneller in der Ausführung als Interpreter-Sprachen?</p>
+</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<p>Der entscheidende Hinweis: Wann tritt der Fehler auf – vor oder während der Ausführung?</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li>
+<p><strong>Interpreter-Sprache</strong> (Python). Der Interpreter führt Zeile für Zeile aus und stoppt erst beim Fehler. Zeilen 1–14 wurden bereits ausgeführt, was typisch für Interpreter ist.</p>
+</li>
+<li>
+<p><strong>Compiler-Sprache</strong> (Java). Der Compiler prüft den gesamten Code vor der Ausführung. Der Fehler tritt schon beim Kompilierungsvorgang auf – das Programm läuft noch gar nicht.</p>
+</li>
+<li>
+<p>Compiler übersetzen den Quellcode einmalig in optimierten Maschinencode, bevor das Programm startet. Interpreter müssen jede Zeile zur Laufzeit lesen, parsen und ausführen – dieser Overhead macht sie langsamer. Zudem können Compiler Optimierungen vornehmen, die zur Laufzeit nicht mehr möglich wären.</p>
+</li>
+</ol>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--3">Experte</span> Sprachauswahl begründen</summary>
+<p>Du bist IT-Berater. Für die folgenden Projekte soll eine geeignete Programmiersprache empfohlen werden. Begründe deine Wahl jeweils mit dem Paradigma, dem Einsatzszenario und mindestens einem konkreten Vorteil.</p>
+<p><strong>Projekt A:</strong> Eine Webseite für eine kleine Bäckerei soll erstellt werden. Sie zeigt Produkte, Öffnungszeiten und ein Kontaktformular. Das Budget ist gering, der Entwickler hat wenig Erfahrung.</p>
+<p><strong>Projekt B:</strong> Ein Unternehmen möchte eine komplexe Warenwirtschaftssoftware entwickeln, die über Jahre gepflegt und von mehreren Teams erweitert werden soll.</p>
+<p><strong>Projekt C:</strong> Ein Datenwissenschaftler soll große Datensätze analysieren und maschinelle Lernmodelle trainieren.</p>
+<p><strong>Projekt D:</strong> Ein Firmware-Entwickler soll die Software für einen eingebetteten Mikrocontroller schreiben. Der Speicher ist auf 64 KB begrenzt.</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Denke an: Einstiegsfreundlichkeit, Wartbarkeit bei großen Projekten, verfügbare Bibliotheken und Hardware-Nähe.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p><strong>Projekt A:</strong> PHP oder Python. Beide sind Einstiegsfreundlich, schnell einsetzbar und für serverseitige Webentwicklung optimiert. Kein Build-Schritt nötig, viele fertige CMS (WordPress = PHP).</p>
+<p><strong>Projekt B:</strong> Java oder C#. Objektorientiert, streng typisiert, gut für große Teams und langlebige Codebasen. Compiler prüft Fehler früh; umfangreiche Frameworks verfügbar (Spring, .NET).</p>
+<p><strong>Projekt C:</strong> Python. Umfangreichste Bibliotheken für Datenwissenschaft (NumPy, pandas, scikit-learn, TensorFlow). Schnelle Iteration durch Interpreter; interaktive Notebooks (Jupyter).</p>
+<p><strong>Projekt D:</strong> C oder C++. Imperative, hardwarenahe Sprachen mit direktem Speicherzugriff. Sehr effizienter Maschinencode, geringer Overhead – ideal für ressourcenbeschränkte Systeme.</p>
+</details>
+</details>
+<hr />
+<h2 id="workshop">Workshop<a class="headerlink" href="#workshop" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--4">Workshop</span> Programmiersprachen – Gesamtanalyse</summary>
+<p><strong>Szenario:</strong> Du wirst als Junior-Berater in ein mittelständisches Unternehmen (200 Mitarbeiter) eingesetzt. Das Unternehmen möchte seine IT-Landschaft modernisieren und stellt dir folgende Situation vor:</p>
+<ul>
+<li><strong>Bestandssystem A:</strong> Eine Lagerverwaltungssoftware in COBOL aus den 1980er-Jahren. Wenige Mitarbeiter kennen die Sprache noch.</li>
+<li><strong>Geplantes Projekt B:</strong> Eine neue webbasierte Bestellplattform für Großkunden (Frontend + Backend + Datenbankanbindung).</li>
+<li><strong>Geplantes Projekt C:</strong> Automatisierung von wiederkehrenden Datenexporten (tägliche CSV-Extraktion aus der Datenbank).</li>
+</ul>
+<hr />
+<p><strong>Aufgabe (in Gruppenarbeit oder allein):</strong></p>
+<ol>
+<li>
+<p>Recherchiere kurz: Was ist COBOL? Welchem Paradigma entspricht es?</p>
+</li>
+<li>
+<p>Für Projekt B: Empfehle eine Frontend-Sprache und eine Backend-Sprache. Begründe beide Entscheidungen je mit Paradigma und Einsatzszenario (ca. 3–4 Sätze je Sprache).</p>
+</li>
+<li>
+<p>Für Projekt C: Welche Sprache würdest du empfehlen? Begründe kurz.</p>
+</li>
+<li>
+<p>Diskutiere: Was sind die Risiken, wenn Bestandssystem A einfach weiterläuft und nicht modernisiert wird? Nenne mindestens 3 Risiken.</p>
+</li>
+<li>
+<p>Fasse deine Empfehlungen in einem kurzen „Technologie-Memo" (max. 15 Sätze) zusammen, das du dem Geschäftsführer übergeben könntest.</p>
+</li>
+</ol>
+<p><strong>Deliverables:</strong> Technologie-Memo (schriftlich oder als Stichpunktliste)</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Tipp für die Gruppenarbeit: Teilt die Aufgaben auf – eine Person übernimmt die COBOL-Recherche, andere formulieren die Empfehlungen, eine Person schreibt das Memo.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p><strong>Bewertungskriterien:</strong></p>
+<ol>
+<li>
+<p>COBOL = imperativ, prozedurale Geschäftslogik, Stapelverarbeitung – entstanden in den 1950/60ern.</p>
+</li>
+<li>
+<p>Frontend: JavaScript / TypeScript (Browserstandard, reaktive UIs). Backend: Java, PHP, Node.js oder Python – jeweils gut begründete Wahl akzeptabel.</p>
+</li>
+<li>
+<p>Projekt C: Python oder Bash/PowerShell – einfach, schnell zu schreiben, gute CSV/Datenbankbibliotheken.</p>
+</li>
+<li>
+<p>Risiken: Kein Personal mehr vorhanden (Wissensverlust), keine modernen Libraries/Security-Updates, schwere Integration mit neuen Systemen, steigende Wartungskosten.</p>
+</li>
+<li>
+<p>Memo: Strukturierte Empfehlung mit Begründungen – vollständige Punkte 1–4 abgedeckt.</p>
+</li>
+</ol>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Übersicht">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Übersicht
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../kapitel2/" class="md-footer__link md-footer__link--next" aria-label="Next: Kapitel 2 – Softwareanpassung">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 2 – Softwareanpassung
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "navigation.prune", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

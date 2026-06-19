@@ -1,0 +1,1646 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../kapitel7/">
+      
+      
+        <link rel="next" href="../kapitel9/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Kapitel 8 – UML-Diagramme - Grundlagen Programmierung</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-8-uml-diagramme-im-uberblick" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Grundlagen Programmierung" class="md-header__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Grundlagen Programmierung
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kapitel 8 – UML-Diagramme
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Übersicht
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 1 – Programmiersprachen im Überblick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 2 – Softwareanpassung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 3 – Phasen der Softwareentwicklung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel4/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 4 – Vorgehensmodelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel5/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 5 – Lasten- und Pflichtenheft
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel6/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 6 – PAP und Struktogramm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel7/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 7 – Datenflussplan und Entscheidungstabelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 8 – UML-Diagramme
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel9/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 9 – Entity-Relationship-Modell
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel10/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 10 – Grundlagen der Programmierung
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Grundlagen Programmierung" class="md-nav__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Grundlagen Programmierung
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 1 – Programmiersprachen im Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 2 – Softwareanpassung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 3 – Phasen der Softwareentwicklung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 4 – Vorgehensmodelle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 5 – Lasten- und Pflichtenheft
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 6 – PAP und Struktogramm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 7 – Datenflussplan und Entscheidungstabelle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 8 – UML-Diagramme
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 8 – UML-Diagramme
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#was-du-in-diesem-kapitel-lernst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was du in diesem Kapitel lernst
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-gehst-du-vor" class="md-nav__link">
+    <span class="md-ellipsis">
+      So gehst du vor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#81-was-ist-uml" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 Was ist UML?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-use-case-diagramm" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 Use-Case-Diagramm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.2 Use-Case-Diagramm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elemente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elemente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-bibliothekssystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel: Bibliothekssystem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83-aktivitatsdiagramm" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 Aktivitätsdiagramm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.3 Aktivitätsdiagramm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elemente_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elemente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-bestellprozess-mit-swimlanes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel: Bestellprozess mit Swimlanes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#84-klassendiagramm" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4 Klassendiagramm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.4 Klassendiagramm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#klassen-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Klassen-Notation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sichtbarkeiten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sichtbarkeiten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beziehungstypen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beziehungstypen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-bibliothekssystem_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel: Bibliothekssystem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#85-sequenzdiagramm" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.5 Sequenzdiagramm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.5 Sequenzdiagramm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elemente_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elemente
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-login-vorgang" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel: Login-Vorgang
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#86-welches-diagramm-wann" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.6 Welches Diagramm wann?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kurzubungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kurzübungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workshop
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 9 – Entity-Relationship-Modell
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 10 – Grundlagen der Programmierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="kapitel-8-uml-diagramme-im-uberblick">Kapitel 8 – UML-Diagramme im Überblick<a class="headerlink" href="#kapitel-8-uml-diagramme-im-uberblick" title="Permanent link">&para;</a></h1>
+<div class="kurs-progress">
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step active"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+</div>
+
+<div class="lernziele">
+<h3 id="was-du-in-diesem-kapitel-lernst">Was du in diesem Kapitel lernst<a class="headerlink" href="#was-du-in-diesem-kapitel-lernst" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Was UML ist und warum es als Standard existiert</li>
+<li>Welche vier Diagrammarten zentral sind: Use-Case-, Aktivitäts-, Klassen- und Sequenzdiagramm</li>
+<li>Wie du die Grundelemente jedes Diagrammtyps erkennst und liest</li>
+<li>Wie du für eine konkrete Aufgabe die passende UML-Darstellungsform auswählst</li>
+</ul>
+</div>
+<hr />
+<h2 id="so-gehst-du-vor">So gehst du vor<a class="headerlink" href="#so-gehst-du-vor" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Lies die Kapitelinhalte und achte auf die Symbole und deren Bedeutung.</li>
+<li>Bearbeite die <strong>Kurzübungen</strong> der Reihe nach – von Grundlagen bis Experte.</li>
+<li>Arbeite die <strong>Workshop-Aufgabe</strong> durch. Sie vertieft das Gelernte an einem zusammenhängenden Szenario.</li>
+</ol>
+<hr />
+<h2 id="81-was-ist-uml">8.1 Was ist UML?<a class="headerlink" href="#81-was-ist-uml" title="Permanent link">&para;</a></h2>
+<p><strong>UML</strong> (Unified Modeling Language) ist eine standardisierte grafische Sprache zur Modellierung von Software-Systemen. Sie wurde in den 1990er-Jahren von Grady Booch, Ivar Jacobson und James Rumbaugh entwickelt und ist heute ein ISO-Standard (ISO/IEC 19505).</p>
+<p>UML ist <strong>sprachunabhängig</strong>: Ein UML-Diagramm beschreibt, was ein System tut oder wie es strukturiert ist – unabhängig davon, ob es in Java, PHP, C# oder einer anderen Sprache implementiert wird.</p>
+<p><strong>Warum UML?</strong>
+- Einheitliche Notation für Entwickler, Analysten und Manager
+- Kommunikation über Systemstrukturen ohne Quellcode
+- Dokumentation, die auch nach Jahren noch verständlich ist
+- Grundlage für automatische Code-Generierung (in fortgeschrittenen Werkzeugen)</p>
+<p>UML umfasst über 13 Diagrammtypen. In der Praxis und in IHK-Prüfungen sind vier besonders wichtig.</p>
+<hr />
+<h2 id="82-use-case-diagramm">8.2 Use-Case-Diagramm<a class="headerlink" href="#82-use-case-diagramm" title="Permanent link">&para;</a></h2>
+<p>Das <strong>Use-Case-Diagramm</strong> (Anwendungsfalldiagramm) zeigt, <strong>wer</strong> (Akteur) das System <strong>wozu</strong> (Anwendungsfall) nutzt. Es beschreibt das System aus der Außenperspektive.</p>
+<h3 id="elemente">Elemente<a class="headerlink" href="#elemente" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Symbol</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Systemgrenze</strong></td>
+<td>Rechteck</td>
+<td>Grenze des modellierten Systems</td>
+</tr>
+<tr>
+<td><strong>Akteur</strong></td>
+<td>Strichmännchen</td>
+<td>Person oder System, das mit dem System interagiert</td>
+</tr>
+<tr>
+<td><strong>Anwendungsfall</strong></td>
+<td>Ellipse</td>
+<td>Eine Funktion, die das System dem Akteur bietet</td>
+</tr>
+<tr>
+<td><strong>Assoziation</strong></td>
+<td>Linie</td>
+<td>Akteur nutzt einen Anwendungsfall</td>
+</tr>
+<tr>
+<td><strong>Include</strong></td>
+<td>gestrichelte Pfeillinie <code>&lt;&lt;include&gt;&gt;</code></td>
+<td>AF enthält zwingend einen anderen AF</td>
+</tr>
+<tr>
+<td><strong>Extend</strong></td>
+<td>gestrichelte Pfeillinie <code>&lt;&lt;extend&gt;&gt;</code></td>
+<td>AF erweitert optional einen anderen AF</td>
+</tr>
+</tbody>
+</table>
+<h3 id="beispiel-bibliothekssystem">Beispiel: Bibliothekssystem<a class="headerlink" href="#beispiel-bibliothekssystem" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Leser(["👤 Leser"])
+    Bibliothekarin(["👤 Bibliothekarin"])
+
+    subgraph Bibliothekssystem
+        UC1(["Buch suchen"])
+        UC2(["Buch ausleihen"])
+        UC3(["Buch zurückgeben"])
+        UC4(["Konto verwalten"])
+        UC5(["Login"])
+        UC2 --&gt;|&amp;lt;&amp;lt;include&amp;gt;&amp;gt;| UC5
+    end
+
+    Leser --- UC1
+    Leser --- UC2
+    Leser --- UC3
+    Leser --- UC4
+    Bibliothekarin --- UC1
+    Bibliothekarin --- UC3
+    Bibliothekarin --- UC4</code></pre>
+<p><strong>Wann einsetzen?</strong> Anforderungsphase – um zu zeigen, welche Funktionen das System bietet und wer sie nutzt.</p>
+<hr />
+<h2 id="83-aktivitatsdiagramm">8.3 Aktivitätsdiagramm<a class="headerlink" href="#83-aktivitatsdiagramm" title="Permanent link">&para;</a></h2>
+<p>Das <strong>Aktivitätsdiagramm</strong> beschreibt den <strong>Ablauf von Aktivitäten</strong> – ähnlich einem PAP, aber mächtiger. Es kann Parallelverarbeitung, Verantwortlichkeitsbereiche (Swimlanes) und komplexe Verzweigungen darstellen.</p>
+<h3 id="elemente_1">Elemente<a class="headerlink" href="#elemente_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Symbol</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Startknoten</strong></td>
+<td>Ausgefüllter Kreis</td>
+<td>Beginn des Ablaufs</td>
+</tr>
+<tr>
+<td><strong>Endknoten</strong></td>
+<td>Kreis mit Ring</td>
+<td>Ende des Ablaufs</td>
+</tr>
+<tr>
+<td><strong>Aktion</strong></td>
+<td>Abgerundetes Rechteck</td>
+<td>Eine ausführbare Aktivität</td>
+</tr>
+<tr>
+<td><strong>Entscheidungsknoten</strong></td>
+<td>Raute</td>
+<td>Verzweigung (Bedingung)</td>
+</tr>
+<tr>
+<td><strong>Zusammenführung</strong></td>
+<td>Raute</td>
+<td>Mehrere Pfade laufen zusammen</td>
+</tr>
+<tr>
+<td><strong>Gabelung</strong></td>
+<td>Dicke waagrechte Linie</td>
+<td>Start paralleler Aktivitäten</td>
+</tr>
+<tr>
+<td><strong>Verbindung</strong></td>
+<td>Dicke waagrechte Linie</td>
+<td>Synchronisation paralleler Aktivitäten</td>
+</tr>
+<tr>
+<td><strong>Swimlane</strong></td>
+<td>Vertikal/horizontal geteilte Bereiche</td>
+<td>Verantwortlichkeit (wer führt aus?)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="beispiel-bestellprozess-mit-swimlanes">Beispiel: Bestellprozess mit Swimlanes<a class="headerlink" href="#beispiel-bestellprozess-mit-swimlanes" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Kunde
+        A([●]) --&gt; B[Bestellung aufgeben]
+        H([◎])
+    end
+    subgraph System
+        C{Verfügbar?}
+        D[Rechnung erstellen]
+        E[Absage senden]
+    end
+    subgraph Lager
+        F[Ware senden]
+    end
+
+    B --&gt; C
+    C --&gt;|Ja| D
+    C --&gt;|Nein| E
+    D --&gt; F
+    F --&gt; H
+    E --&gt; H</code></pre>
+<p><strong>Wann einsetzen?</strong> Wenn Abläufe mit Verzweigungen, Parallelität oder Verantwortlichkeiten modelliert werden sollen.</p>
+<hr />
+<h2 id="84-klassendiagramm">8.4 Klassendiagramm<a class="headerlink" href="#84-klassendiagramm" title="Permanent link">&para;</a></h2>
+<p>Das <strong>Klassendiagramm</strong> ist das zentrale Strukturdiagramm der OOP. Es zeigt, welche <strong>Klassen</strong> ein System enthält, welche <strong>Attribute und Methoden</strong> sie haben und wie sie miteinander <strong>in Beziehung</strong> stehen.</p>
+<h3 id="klassen-notation">Klassen-Notation<a class="headerlink" href="#klassen-notation" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>classDiagram
+    class Klasse {
+        -attribut1 : Typ
+        +attribut2 : Typ
+        +methode1() Typ
+        +methode2(x : Typ)
+    }</code></pre>
+<p><em><code>-</code> = private, <code>+</code> = public, <code>#</code> = protected</em></p>
+<h3 id="sichtbarkeiten">Sichtbarkeiten<a class="headerlink" href="#sichtbarkeiten" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Zeichen</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>public – von überall zugreifbar</td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>private – nur innerhalb der Klasse</td>
+</tr>
+<tr>
+<td><code>#</code></td>
+<td>protected – innerhalb der Klasse und Unterklassen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="beziehungstypen">Beziehungstypen<a class="headerlink" href="#beziehungstypen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Beziehung</th>
+<th>Symbol</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Assoziation</strong></td>
+<td>Linie</td>
+<td>Klassen kennen sich</td>
+</tr>
+<tr>
+<td><strong>Vererbung</strong></td>
+<td>Pfeil mit offenem Dreieck</td>
+<td>„ist ein" – Unterklasse erbt von Oberklasse</td>
+</tr>
+<tr>
+<td><strong>Komposition</strong></td>
+<td>Ausgefüllte Raute + Linie</td>
+<td>„besteht aus" – Teil kann ohne Ganzes nicht existieren</td>
+</tr>
+<tr>
+<td><strong>Aggregation</strong></td>
+<td>Offene Raute + Linie</td>
+<td>„enthält" – Teil kann ohne Ganzes existieren</td>
+</tr>
+<tr>
+<td><strong>Abhängigkeit</strong></td>
+<td>Gestrichelter Pfeil</td>
+<td>Eine Klasse nutzt eine andere kurzfristig</td>
+</tr>
+</tbody>
+</table>
+<h3 id="beispiel-bibliothekssystem_1">Beispiel: Bibliothekssystem<a class="headerlink" href="#beispiel-bibliothekssystem_1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>classDiagram
+    class Buch {
+        -isbn : String
+        -titel : String
+        +getISBN() String
+        +getTitel() String
+    }
+    class Ausleihe {
+        -datum : Date
+        -rueckgabe : Date
+        +verlängern()
+    }
+    class Leser {
+        -name : String
+        -ausweisNr : Int
+        +ausleihen()
+    }
+    Buch "1" --&gt; "*" Ausleihe : wird ausgeliehen über
+    Ausleihe "*" --&gt; "1" Leser : gehört zu</code></pre>
+<p><strong>Wann einsetzen?</strong> Entwurfsphase – um die statische Struktur des Systems zu modellieren.</p>
+<hr />
+<h2 id="85-sequenzdiagramm">8.5 Sequenzdiagramm<a class="headerlink" href="#85-sequenzdiagramm" title="Permanent link">&para;</a></h2>
+<p>Das <strong>Sequenzdiagramm</strong> zeigt, wie <strong>Objekte miteinander kommunizieren</strong> – in welcher Reihenfolge Nachrichten (Methodenaufrufe) ausgetauscht werden. Es modelliert das dynamische Verhalten bei einem konkreten Ablauf.</p>
+<h3 id="elemente_2">Elemente<a class="headerlink" href="#elemente_2" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Symbol</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Akteur / Objekt</strong></td>
+<td>Rechteck oben, gestrichelte Linie nach unten</td>
+<td>Teilnehmer am Ablauf</td>
+</tr>
+<tr>
+<td><strong>Lebenslinie</strong></td>
+<td>Senkrechte gestrichelte Linie</td>
+<td>Zeitachse des Objekts</td>
+</tr>
+<tr>
+<td><strong>Aktivierungsbalken</strong></td>
+<td>Schmales Rechteck auf Lebenslinie</td>
+<td>Objekt ist aktiv</td>
+</tr>
+<tr>
+<td><strong>Nachricht</strong></td>
+<td>Pfeil</td>
+<td>Methodenaufruf oder Rückgabe</td>
+</tr>
+<tr>
+<td><strong>Rückgabe</strong></td>
+<td>Gestrichelter Pfeil</td>
+<td>Antwort auf eine Nachricht</td>
+</tr>
+</tbody>
+</table>
+<h3 id="beispiel-login-vorgang">Beispiel: Login-Vorgang<a class="headerlink" href="#beispiel-login-vorgang" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>sequenceDiagram
+    actor N as Nutzer
+    participant B as Browser
+    participant S as Server
+    participant D as Datenbank
+
+    N-&gt;&gt;B: login()
+    B-&gt;&gt;S: POST /login
+    S-&gt;&gt;D: prüfeUser()
+    D--&gt;&gt;S: User-Objekt
+    S--&gt;&gt;B: 200 OK
+    B--&gt;&gt;N: Willkommen</code></pre>
+<p><strong>Wann einsetzen?</strong> Wenn die zeitliche Reihenfolge von Interaktionen zwischen Objekten dokumentiert werden soll.</p>
+<hr />
+<h2 id="86-welches-diagramm-wann">8.6 Welches Diagramm wann?<a class="headerlink" href="#86-welches-diagramm-wann" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Frage / Situation</th>
+<th>Diagramm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Welche Funktionen bietet das System? Wer nutzt sie?</td>
+<td>Use-Case-Diagramm</td>
+</tr>
+<tr>
+<td>Wie läuft ein Prozess ab? (mit Verzweigungen, Swimlanes)</td>
+<td>Aktivitätsdiagramm</td>
+</tr>
+<tr>
+<td>Welche Klassen gibt es? Wie sind sie strukturiert?</td>
+<td>Klassendiagramm</td>
+</tr>
+<tr>
+<td>Wie kommunizieren Objekte in einem konkreten Ablauf?</td>
+<td>Sequenzdiagramm</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="kurzubungen">Kurzübungen<a class="headerlink" href="#kurzubungen" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--1">Grundlagen</span> UML-Diagrammarten zuordnen</summary>
+<p>Ordne die folgenden Fragen dem passenden UML-Diagramm zu:</p>
+<p><strong>Diagramm-Optionen:</strong> Use-Case-Diagramm · Aktivitätsdiagramm · Klassendiagramm · Sequenzdiagramm</p>
+<p><strong>Fragen:</strong>
+1. Welche Klassen gibt es im System, welche Attribute haben sie und wie stehen sie zueinander?
+2. Wer nutzt das System und welche Funktionen stehen den Nutzern zur Verfügung?
+3. In welcher Reihenfolge rufen Objekte Methoden aufeinander auf?
+4. Wie läuft ein Geschäftsprozess ab – mit Verzweigungen und wer ist jeweils verantwortlich?
+5. Eine Fachabteilung möchte sehen, welche Aktionen das System dem Buchhalter ermöglicht.
+6. Ein Entwickler möchte dokumentieren, wie Browser, Server und Datenbank beim Login miteinander kommunizieren.</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Merke: Use Case = Wer nutzt Was · Aktivität = Ablauf + Rollen · Klasse = Struktur · Sequenz = Zeitliche Kommunikation</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li><strong>Klassendiagramm</strong></li>
+<li><strong>Use-Case-Diagramm</strong></li>
+<li><strong>Sequenzdiagramm</strong></li>
+<li><strong>Aktivitätsdiagramm</strong></li>
+<li><strong>Use-Case-Diagramm</strong> (Akteur = Buchhalter, Anwendungsfälle = Aktionen)</li>
+<li><strong>Sequenzdiagramm</strong> (zeitliche Abfolge der Kommunikation zwischen Browser, Server, Datenbank)</li>
+</ol>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--2">Fortgeschritten</span> Klassendiagramm lesen</summary>
+<p>Betrachte das folgende Klassendiagramm einer vereinfachten Bibliotheksverwaltung:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>┌──────────────────┐         ┌──────────────────┐
+│    Buch          │         │    Ausleihe       │
+├──────────────────┤         ├──────────────────┤
+│ - isbn: String   │    *    │ - ausleihDatum   │
+│ - titel: String  ├─────────┤ - rueckgabeDatum │
+│ - autor: String  │ 1       ├──────────────────┤
+├──────────────────┤         │ + verlängern()   │
+│ + getISBN()      │         └────────┬─────────┘
+│ + getTitel()     │                  │ *
+└──────────────────┘                  │
+                                      │ 1
+                             ┌────────┴─────────┐
+                             │    Leser          │
+                             ├──────────────────┤
+                             │ - name: String   │
+                             │ - ausweisNr: Int │
+                             ├──────────────────┤
+                             │ + ausleihen()    │
+                             │ + zurückgeben()  │
+                             └──────────────────┘
+</code></pre></div></td></tr></table></div>
+<p><strong>Aufgaben:</strong></p>
+<ol>
+<li>Nenne alle drei Klassen und ihre Attribute.</li>
+<li>Was bedeutet das <code>-</code> vor den Attributen? Was würde <code>+</code> bedeuten?</li>
+<li>Was bedeutet die <code>1</code> und die <code>*</code> an den Verbindungslinien?</li>
+<li>Kann ein Buch mehreren Lesern gleichzeitig ausgeliehen sein? Begründe anhand des Diagramms.</li>
+<li>Welche Methode hat ein <code>Leser</code>-Objekt? Was könnte <code>ausleihen()</code> intern tun?</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<p>Die Zahlen an den Linien sind Kardinalitäten – wie viele Objekte der einen Klasse mit wie vielen der anderen verknüpft sind.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li>
+<p><strong>Buch</strong>: isbn, titel, autor. <strong>Ausleihe</strong>: ausleihDatum, rueckgabeDatum. <strong>Leser</strong>: name, ausweisNr.</p>
+</li>
+<li>
+<p><code>-</code> = private (nur innerhalb der Klasse zugreifbar). <code>+</code> = public (von außen zugreifbar).</p>
+</li>
+<li>
+<p><code>1</code> = genau ein Objekt. <code>*</code> = null oder mehr Objekte. Ein Buch kann mit mehreren Ausleihen verknüpft sein (1 Buch → * Ausleihen, z. B. über die Zeit). Ein Leser kann mehrere Ausleihen haben.</p>
+</li>
+<li>
+<p>Das Diagramm zeigt <code>1 Buch – * Ausleihen</code>, was für Ausleihen über die <strong>Zeit</strong> gilt (Buchhistorie). Ob gleichzeitige Ausleihe möglich ist, hängt von der Implementierungslogik ab – das Diagramm lässt es offen.</p>
+</li>
+<li>
+<p>Methoden: <code>ausleihen()</code> und <code>zurückgeben()</code>. <code>ausleihen()</code> könnte intern ein neues <code>Ausleihe</code>-Objekt erzeugen, das Datum setzen und den Buchbestand aktualisieren.</p>
+</li>
+</ol>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--3">Experte</span> Use-Case-Diagramm analysieren</summary>
+<p>Betrachte das folgende Use-Case-Diagramm für ein Online-Banking-System:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>┌────────────────────────────────────────────────────┐
+│                Online-Banking-System               │
+│                                                    │
+│   ( Konto ansehen )                               │
+│   ( Überweisung durchführen ) ──&lt;&lt;include&gt;&gt;──► ( Login )
+│   ( Dauerauftrag einrichten ) ──&lt;&lt;include&gt;&gt;──► ( Login )
+│   ( Kontoauszug herunterladen )                   │
+│   ( Passwort ändern ) ──&lt;&lt;include&gt;&gt;──► ( Login )  │
+│                                                    │
+└────────────────────────────────────────────────────┘
+      👤 Kunde          👤 Bank-Administrator
+</code></pre></div></td></tr></table></div>
+<p>Der Bank-Administrator hat Zugriff auf: Konto ansehen, Kontoauszug herunterladen.
+Der Kunde hat Zugriff auf alle Funktionen.</p>
+<p><strong>Aufgaben:</strong></p>
+<ol>
+<li>Erkläre in eigenen Worten, was <code>&lt;&lt;include&gt;&gt;</code> bedeutet.</li>
+<li>Warum ist Login als <code>&lt;&lt;include&gt;&gt;</code>-Beziehung und nicht als eigenständiger Anwendungsfall (ohne Pfeil) modelliert?</li>
+<li>Gibt es eine Funktion, die beide Akteure nutzen können? Welche?</li>
+<li>Ergänze: Welcher neue Anwendungsfall wäre sinnvoll – und für welchen Akteur?</li>
+<li>Was ist der Unterschied zwischen <code>&lt;&lt;include&gt;&gt;</code> und <code>&lt;&lt;extend&gt;&gt;</code>?</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<p>&lt;<include>&gt; = wird immer ausgeführt (verpflichtend). &lt;<extend>&gt; = wird nur unter bestimmten Bedingungen ausgeführt (optional).</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li>
+<p><code>&lt;&lt;include&gt;&gt;</code> bedeutet, dass der aufrufende Anwendungsfall zwingend den eingebundenen AF enthält. Immer wenn eine Überweisung stattfindet, muss der Nutzer eingeloggt sein (Login wird immer ausgeführt).</p>
+</li>
+<li>
+<p>Login ist keine eigenständige nützliche Funktion für den Nutzer – er bucht keine „Logins". Es ist eine Voraussetzung für andere Funktionen. Deshalb wird es als <code>&lt;&lt;include&gt;&gt;</code> modelliert.</p>
+</li>
+<li>
+<p><strong>Konto ansehen</strong> und <strong>Kontoauszug herunterladen</strong> (beide Akteure haben Zugriff darauf).</p>
+</li>
+<li>
+<p>Beispiele: „Zwei-Faktor-Authentifizierung einrichten" (Kunde), „Kontosperrung veranlassen" (Administrator).</p>
+</li>
+<li>
+<p><code>&lt;&lt;include&gt;&gt;</code> = immer ausgeführt, verpflichtend. <code>&lt;&lt;extend&gt;&gt;</code> = optional, nur unter bestimmten Bedingungen. Beispiel: „Tipp anzeigen" könnte bei „Login" als <code>&lt;&lt;extend&gt;&gt;</code> modelliert sein – wird nur beim ersten Login angezeigt.</p>
+</li>
+</ol>
+</details>
+</details>
+<hr />
+<h2 id="workshop">Workshop<a class="headerlink" href="#workshop" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--4">Workshop</span> UML-Diagramme für ein Fallbeispiel</summary>
+<p><strong>Szenario:</strong> Eine Arztpraxis möchte ihre Terminverwaltung digitalisieren. Du wirst beauftragt, drei UML-Diagramme zu erstellen.</p>
+<p><strong>Informationen:</strong>
+- Patienten können Termine online buchen, absagen oder verschieben
+- Ärzte und Sprechstundenhilfen können Termine einsehen und bestätigen
+- Sprechstundenhilfe legt neue Patienten an
+- Jeder Patient hat: Name, Geburtsdatum, Krankenkasse, Patientennummer
+- Jeder Termin hat: Datum, Uhrzeit, Arzt, Patient, Status (gebucht/bestätigt/abgesagt)
+- Beim Buchen eines Termins: Patient wählt Arzt → System prüft Verfügbarkeit → Bei Verfügbarkeit: Termin wird angelegt und Bestätigungs-E-Mail versendet → Bei Nicht-Verfügbarkeit: Alternativzeiten werden vorgeschlagen</p>
+<hr />
+<p><strong>Aufgaben:</strong></p>
+<ol>
+<li>
+<p>Erstelle ein <strong>Use-Case-Diagramm</strong> (Textbeschreibung): Welche Akteure gibt es? Welche Anwendungsfälle? Gibt es <code>&lt;&lt;include&gt;&gt;</code>-Beziehungen?</p>
+</li>
+<li>
+<p>Erstelle ein <strong>Klassendiagramm</strong> (Textbeschreibung): Klassen, Attribute, Methoden und Beziehungen (mit Kardinalitäten).</p>
+</li>
+<li>
+<p>Beschreibe ein <strong>Sequenzdiagramm</strong> für den Buchungsvorgang: Wer kommuniziert mit wem? In welcher Reihenfolge?</p>
+</li>
+<li>
+<p>Welches Diagramm würde ein Auftraggeber zuerst sehen wollen? Begründe.</p>
+</li>
+</ol>
+<p><strong>Deliverables:</strong> Drei Diagrammbeschreibungen + Begründung</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Beginne mit dem Use-Case-Diagramm – es ist die Außenperspektive und zeigt, worum es geht. Dann Klassendiagramm für die Struktur, dann Sequenz für einen konkreten Ablauf.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p><strong>Bewertungskriterien:</strong></p>
+<ol>
+<li>
+<p>Use-Case: Akteure: Patient, Arzt, Sprechstundenhilfe. AFs: Termin buchen/absagen/verschieben/bestätigen/einsehen, Patient anlegen. Login als &lt;<include>&gt; bei Aktionen sinnvoll.</p>
+</li>
+<li>
+<p>Klassen: Patient (name, geb, krankenkasse, patientennr), Termin (datum, uhrzeit, status), Arzt (name, fachrichtung). Beziehungen: Patient 1:n Termin, Arzt 1:n Termin. Methoden: Termin.bestätigen(), Patient.anlegen().</p>
+</li>
+<li>
+<p>Sequenzdiagramm: Patient → System: Termin anfragen. System → DB: Verfügbarkeit prüfen. DB → System: Ergebnis. System → Patient: Bestätigung/Alternativzeiten. System → E-Mail-Server: Bestätigungsmail senden.</p>
+</li>
+<li>
+<p><strong>Use-Case-Diagramm</strong> – zeigt dem Auftraggeber auf einem Blick, wer das System nutzt und was es können soll. Kein technisches Vorwissen nötig.</p>
+</li>
+</ol>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../kapitel7/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Kapitel 7 – Datenflussplan und Entscheidungstabelle">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 7 – Datenflussplan und Entscheidungstabelle
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../kapitel9/" class="md-footer__link md-footer__link--next" aria-label="Next: Kapitel 9 – Entity-Relationship-Modell">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 9 – Entity-Relationship-Modell
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "navigation.prune", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1517 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../kapitel6/">
+      
+      
+        <link rel="next" href="../kapitel8/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Kapitel 7 – Datenflussplan und Entscheidungstabelle - Grundlagen Programmierung</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-7-datenflussplan-und-entscheidungstabelle" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Grundlagen Programmierung" class="md-header__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Grundlagen Programmierung
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kapitel 7 – Datenflussplan und Entscheidungstabelle
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Übersicht
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 1 – Programmiersprachen im Überblick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 2 – Softwareanpassung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 3 – Phasen der Softwareentwicklung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel4/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 4 – Vorgehensmodelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel5/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 5 – Lasten- und Pflichtenheft
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel6/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 6 – PAP und Struktogramm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 7 – Datenflussplan und Entscheidungstabelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel8/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 8 – UML-Diagramme
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel9/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 9 – Entity-Relationship-Modell
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel10/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 10 – Grundlagen der Programmierung
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Grundlagen Programmierung" class="md-nav__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Grundlagen Programmierung
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 1 – Programmiersprachen im Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 2 – Softwareanpassung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 3 – Phasen der Softwareentwicklung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 4 – Vorgehensmodelle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 5 – Lasten- und Pflichtenheft
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 6 – PAP und Struktogramm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 7 – Datenflussplan und Entscheidungstabelle
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 7 – Datenflussplan und Entscheidungstabelle
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#was-du-in-diesem-kapitel-lernst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was du in diesem Kapitel lernst
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-gehst-du-vor" class="md-nav__link">
+    <span class="md-ellipsis">
+      So gehst du vor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#71-datenflussplan-dfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 Datenflussplan (DFD)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 Datenflussplan (DFD)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dfd-symbole" class="md-nav__link">
+    <span class="md-ellipsis">
+      DFD-Symbole
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ebenen-eines-dfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ebenen eines DFD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-bestellsystem-kontextdiagramm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel: Bestellsystem (Kontextdiagramm)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-bestellsystem-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel: Bestellsystem (Level 1)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-entscheidungstabelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 Entscheidungstabelle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Entscheidungstabelle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aufbau-einer-entscheidungstabelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aufbau einer Entscheidungstabelle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-rabattberechnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel: Rabattberechnung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vollstandigkeit-und-redundanz-prufen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vollständigkeit und Redundanz prüfen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-wann-welches-modell" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 Wann welches Modell?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-ausblick-uml-aktivitatsdiagramm" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 Ausblick: UML-Aktivitätsdiagramm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kurzubungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kurzübungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workshop
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 8 – UML-Diagramme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 9 – Entity-Relationship-Modell
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 10 – Grundlagen der Programmierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="kapitel-7-datenflussplan-und-entscheidungstabelle">Kapitel 7 – Datenflussplan und Entscheidungstabelle<a class="headerlink" href="#kapitel-7-datenflussplan-und-entscheidungstabelle" title="Permanent link">&para;</a></h1>
+<div class="kurs-progress">
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step active"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+</div>
+
+<div class="lernziele">
+<h3 id="was-du-in-diesem-kapitel-lernst">Was du in diesem Kapitel lernst<a class="headerlink" href="#was-du-in-diesem-kapitel-lernst" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Was ein Datenflussplan ist und welche Symbole er verwendet</li>
+<li>Wie eine Entscheidungstabelle aufgebaut ist und wann sie besonders nützlich ist</li>
+<li>Wie du für eine gegebene Aufgabe die passende Modellierungsform wählst</li>
+<li>Was ein UML-Aktivitätsdiagramm ist – als Ausblick auf aktuelle Prüfungsthemen</li>
+</ul>
+</div>
+<hr />
+<h2 id="so-gehst-du-vor">So gehst du vor<a class="headerlink" href="#so-gehst-du-vor" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Lies die Kapitelinhalte und arbeite die Beispiele aktiv durch.</li>
+<li>Bearbeite die <strong>Kurzübungen</strong> der Reihe nach – von Grundlagen bis Experte.</li>
+<li>Arbeite die <strong>Workshop-Aufgabe</strong> durch. Sie vertieft das Gelernte an einem zusammenhängenden Szenario.</li>
+</ol>
+<hr />
+<h2 id="71-datenflussplan-dfd">7.1 Datenflussplan (DFD)<a class="headerlink" href="#71-datenflussplan-dfd" title="Permanent link">&para;</a></h2>
+<p>Der <strong>Datenflussplan</strong> (auch Datenflussprogramm, DFP; englisch: <em>Data Flow Diagram</em>, DFD) modelliert, wie <strong>Daten durch ein System fließen</strong> – nicht den Ablauf von Anweisungen, sondern die <strong>Transformation von Daten</strong>.</p>
+<p>Ein DFD beantwortet die Fragen: Woher kommen die Daten? Was passiert mit ihnen? Wohin gehen sie?</p>
+<h3 id="dfd-symbole">DFD-Symbole<a class="headerlink" href="#dfd-symbole" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Symbol (Form)</th>
+<th>Name</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kreis / Blase</td>
+<td>Prozess</td>
+<td>Eine Verarbeitung, die Daten transformiert</td>
+</tr>
+<tr>
+<td>Pfeil</td>
+<td>Datenfluss</td>
+<td>Bewegung von Daten zwischen Elementen</td>
+</tr>
+<tr>
+<td>Rechteck</td>
+<td>Externe Einheit</td>
+<td>Quelle oder Senke von Daten (außerhalb des Systems)</td>
+</tr>
+<tr>
+<td>Offenes Rechteck / Strich</td>
+<td>Datenspeicher</td>
+<td>Stelle, wo Daten dauerhaft gespeichert werden</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ebenen-eines-dfd">Ebenen eines DFD<a class="headerlink" href="#ebenen-eines-dfd" title="Permanent link">&para;</a></h3>
+<p>DFDs werden oft in <strong>Ebenen</strong> aufgebaut:</p>
+<ul>
+<li><strong>Kontextdiagramm (Level 0):</strong> Zeigt das Gesamtsystem als eine einzige Blase und alle externen Einheiten</li>
+<li><strong>Level 1:</strong> Zerlegt das System in Hauptprozesse</li>
+<li><strong>Level 2:</strong> Verfeinert einzelne Prozesse weiter</li>
+</ul>
+<h3 id="beispiel-bestellsystem-kontextdiagramm">Beispiel: Bestellsystem (Kontextdiagramm)<a class="headerlink" href="#beispiel-bestellsystem-kontextdiagramm" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    K[Kunde] --&gt;|Bestellung| BS((Bestellsystem))
+    BS --&gt;|Rechnung| K
+    BS --&gt;|Bestelldaten| DB[(Datenbank)]</code></pre>
+<h3 id="beispiel-bestellsystem-level-1">Beispiel: Bestellsystem (Level 1)<a class="headerlink" href="#beispiel-bestellsystem-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    K[Kunde] --&gt;|Bestellung| P1((1. Bestellung\nerfassen))
+    P1 --&gt;|Bestelldaten| P2((2. Verfügbarkeit\nprüfen))
+    P2 --&gt;|verfügbar| P3((3. Rechnung\nerstellen))
+    P2 --&gt;|nicht verfügbar| P4((4. Absage\nsenden))
+    P3 --&gt;|Rechnung| K
+    P4 --&gt;|Absage| K
+    P1 --&gt;|speichern| DB[(Bestell-DB)]</code></pre>
+<p><strong>Vorteile des DFD:</strong>
+- Fokus auf Daten, nicht auf Anweisungen
+- Gut geeignet für Systemanalyse und Anforderungserhebung
+- Leicht von Nicht-Technikern verstanden</p>
+<p><strong>Abgrenzung zum PAP:</strong>
+Der PAP beschreibt den <strong>Ablauf von Anweisungen</strong> (Was tut das Programm?). Das DFD beschreibt den <strong>Fluss von Daten</strong> (Wohin fließen die Daten?).</p>
+<hr />
+<h2 id="72-entscheidungstabelle">7.2 Entscheidungstabelle<a class="headerlink" href="#72-entscheidungstabelle" title="Permanent link">&para;</a></h2>
+<p>Eine <strong>Entscheidungstabelle</strong> ist eine tabellarische Methode, um komplexe <strong>Kombinationen von Bedingungen und Aktionen</strong> vollständig und übersichtlich darzustellen.</p>
+<p>Sie ist besonders nützlich, wenn mehrere Bedingungen gleichzeitig relevant sind und viele mögliche Kombinationen berücksichtigt werden müssen.</p>
+<h3 id="aufbau-einer-entscheidungstabelle">Aufbau einer Entscheidungstabelle<a class="headerlink" href="#aufbau-einer-entscheidungstabelle" title="Permanent link">&para;</a></h3>
+<p>Eine Entscheidungstabelle besteht aus vier Bereichen:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: center;"><strong>R1</strong></th>
+<th style="text-align: center;"><strong>R2</strong></th>
+<th style="text-align: center;"><strong>R3</strong></th>
+<th style="text-align: center;"><strong>R4</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bedingungen</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Bedingung 1</td>
+<td style="text-align: center;">J</td>
+<td style="text-align: center;">J</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">N</td>
+</tr>
+<tr>
+<td>Bedingung 2</td>
+<td style="text-align: center;">J</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">J</td>
+<td style="text-align: center;">N</td>
+</tr>
+<tr>
+<td><strong>Aktionen</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Aktion 1</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Aktion 2</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Bedingungsteil (oben):</strong> Liste aller relevanten Bedingungen mit J(a)/N(ein)-Kombinationen</li>
+<li><strong>Aktionsteil (unten):</strong> Liste aller möglichen Aktionen; X markiert, welche Aktion ausgeführt wird</li>
+<li><strong>Regelspalten (R1, R2…):</strong> Jede Spalte ist eine mögliche Kombination (Regel)</li>
+</ul>
+<p>Die maximale Anzahl an Regeln bei n Bedingungen beträgt <span class="arithmatex">\(2^n\)</span>.</p>
+<h3 id="beispiel-rabattberechnung">Beispiel: Rabattberechnung<a class="headerlink" href="#beispiel-rabattberechnung" title="Permanent link">&para;</a></h3>
+<p>Ein Online-Shop gewährt Rabatt unter folgenden Bedingungen:
+- Ist der Kunde Stammkunde?
+- Beträgt der Bestellwert mehr als 100 €?</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: center;"><strong>R1</strong></th>
+<th style="text-align: center;"><strong>R2</strong></th>
+<th style="text-align: center;"><strong>R3</strong></th>
+<th style="text-align: center;"><strong>R4</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bedingungen</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Kunde ist Stammkunde</td>
+<td style="text-align: center;">J</td>
+<td style="text-align: center;">J</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">N</td>
+</tr>
+<tr>
+<td>Bestellwert &gt; 100 €</td>
+<td style="text-align: center;">J</td>
+<td style="text-align: center;">N</td>
+<td style="text-align: center;">J</td>
+<td style="text-align: center;">N</td>
+</tr>
+<tr>
+<td><strong>Aktionen</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>15 % Rabatt gewähren</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>10 % Rabatt gewähren</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>Kein Rabatt</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Leseweise:</strong> 
+- R1: Stammkunde + Bestellwert &gt; 100 € → 15 % Rabatt
+- R2: Stammkunde + Bestellwert ≤ 100 € → 10 % Rabatt
+- R3: Kein Stammkunde + Bestellwert &gt; 100 € → 10 % Rabatt
+- R4: Kein Stammkunde + Bestellwert ≤ 100 € → Kein Rabatt</p>
+<h3 id="vollstandigkeit-und-redundanz-prufen">Vollständigkeit und Redundanz prüfen<a class="headerlink" href="#vollstandigkeit-und-redundanz-prufen" title="Permanent link">&para;</a></h3>
+<p>Eine gute Entscheidungstabelle ist:
+- <strong>Vollständig:</strong> Alle möglichen Kombinationen sind abgedeckt
+- <strong>Widerspruchsfrei:</strong> Keine Kombination führt zu zwei verschiedenen Aktionen
+- <strong>Redundanzfrei:</strong> Keine zwei Regeln sind identisch</p>
+<p><strong>Vorteile der Entscheidungstabelle:</strong>
+- Vollständige Abdeckung aller Fälle sichtbar
+- Leicht testbar (jede Regel = ein Testfall)
+- Unabhängig von Programmiersprachen
+- Kompakt bei vielen Bedingungen</p>
+<hr />
+<h2 id="73-wann-welches-modell">7.3 Wann welches Modell?<a class="headerlink" href="#73-wann-welches-modell" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Empfohlenes Modell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ablauf eines Algorithmus darstellen</td>
+<td>PAP oder Struktogramm</td>
+</tr>
+<tr>
+<td>Datenfluss in einem System zeigen</td>
+<td>Datenflussplan (DFD)</td>
+</tr>
+<tr>
+<td>Viele Bedingungskombinationen vollständig abbilden</td>
+<td>Entscheidungstabelle</td>
+</tr>
+<tr>
+<td>Prozessabläufe in UML modellieren</td>
+<td>Aktivitätsdiagramm (Kapitel 8)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="74-ausblick-uml-aktivitatsdiagramm">7.4 Ausblick: UML-Aktivitätsdiagramm<a class="headerlink" href="#74-ausblick-uml-aktivitatsdiagramm" title="Permanent link">&para;</a></h2>
+<p>Das <strong>UML-Aktivitätsdiagramm</strong> ist die modernere und prüfungsrelevantere Alternative zum PAP. Es folgt dem UML-Standard (Kapitel 8) und wird in der IT-Praxis und in IHK-Prüfungen bevorzugt eingesetzt.</p>
+<p>Die <strong>Grundidee</strong> ist dieselbe wie beim PAP – Abläufe und Verzweigungen grafisch darstellen – aber die Notation ist mächtiger:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>PAP-Entsprechung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ausgefüllter Kreis</td>
+<td>START</td>
+</tr>
+<tr>
+<td>Kreis mit Ring</td>
+<td>ENDE</td>
+</tr>
+<tr>
+<td>Abgerundetes Rechteck</td>
+<td>Anweisung (Aktion)</td>
+</tr>
+<tr>
+<td>Raute</td>
+<td>Entscheidung (gleich wie PAP)</td>
+</tr>
+<tr>
+<td>Dicke waagrechte Linie</td>
+<td>Parallelverarbeitung (Gabel/Zusammenführung)</td>
+</tr>
+</tbody>
+</table>
+<p>Der wesentliche Zusatz gegenüber dem PAP sind <strong>Swimlanes</strong> (Verantwortlichkeitsbereiche) und <strong>Parallelität</strong> – beides wird in Kapitel 8 vertieft.</p>
+<hr />
+<h2 id="kurzubungen">Kurzübungen<a class="headerlink" href="#kurzubungen" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--1">Grundlagen</span> Entscheidungstabelle lesen</summary>
+<p>Lies die folgende Entscheidungstabelle und beantworte die Fragen:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>┌──────────────────────────────┬────┬────┬────┬────┐
+│ Bedingungen                  │ R1 │ R2 │ R3 │ R4 │
+├──────────────────────────────┼────┼────┼────┼────┤
+│ Mitglied im Club             │ J  │ J  │ N  │ N  │
+│ Bestellung &gt; 50 €            │ J  │ N  │ J  │ N  │
+├──────────────────────────────┼────┼────┼────┼────┤
+│ Aktionen                     │    │    │    │    │
+├──────────────────────────────┼────┼────┼────┼────┤
+│ 20 % Rabatt                  │ X  │    │    │    │
+│ 10 % Rabatt                  │    │ X  │ X  │    │
+│ Kein Rabatt                  │    │    │    │ X  │
+└──────────────────────────────┴────┴────┴────┴────┘
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Was passiert bei Regel R2? Beschreibe die Bedingungen und die Aktion.</li>
+<li>Ein Kunde ist kein Clubmitglied und bestellt für 75 €. Welche Regel gilt? Wie viel Rabatt bekommt er?</li>
+<li>Wie viele mögliche Kombinationen gibt es insgesamt (Formel und Ergebnis)?</li>
+<li>Ist diese Tabelle vollständig? Begründe kurz.</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<p>Die Anzahl möglicher Kombinationen bei n Bedingungen beträgt 2^n.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li>
+<p>R2: Mitglied im Club (Ja) + Bestellung ≤ 50 € (Nein) → 10 % Rabatt</p>
+</li>
+<li>
+<p>Kein Mitglied (N) + Bestellung &gt; 50 € (J) → Regel <strong>R3</strong> → <strong>10 % Rabatt</strong></p>
+</li>
+<li>
+<p>2 Bedingungen → 2² = <strong>4 mögliche Kombinationen</strong>. Alle 4 sind in der Tabelle vorhanden.</p>
+</li>
+<li>
+<p><strong>Ja, vollständig</strong> – alle 4 möglichen Kombinationen sind durch R1–R4 abgedeckt.</p>
+</li>
+</ol>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--2">Fortgeschritten</span> Entscheidungstabelle erstellen</summary>
+<p>Erstelle eine vollständige Entscheidungstabelle für das folgende Szenario:</p>
+<p><strong>Versandkostenregelung eines Online-Shops:</strong>
+- Wenn der Bestellwert ≥ 50 € <strong>und</strong> der Kunde ein Premium-Mitglied ist → versandkostenfrei
+- Wenn der Bestellwert ≥ 50 € <strong>und</strong> der Kunde kein Premium-Mitglied ist → 2,99 € Versand
+- Wenn der Bestellwert &lt; 50 € <strong>und</strong> der Kunde ein Premium-Mitglied ist → 1,99 € Versand
+- Wenn der Bestellwert &lt; 50 € <strong>und</strong> der Kunde kein Premium-Mitglied ist → 4,99 € Versand</p>
+<p><strong>Aufgaben:</strong>
+1. Erstelle die vollständige Entscheidungstabelle (Bedingungsteil + Aktionsteil).
+2. Wie viele Regeln hat die Tabelle? Begründe mit der Formel.
+3. Welcher Regel entspricht ein Kunde, der 35 € bestellt und kein Mitglied ist?</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Beginne mit den Bedingungen: Bestellwert ≥ 50 € (J/N) und Premium-Mitglied (J/N). Dann ergeben sich 4 Kombinationen.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p>1.
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>┌──────────────────────────────┬────┬────┬────┬────┐
+│ Bedingungen                  │ R1 │ R2 │ R3 │ R4 │
+├──────────────────────────────┼────┼────┼────┼────┤
+│ Bestellwert ≥ 50 €           │ J  │ J  │ N  │ N  │
+│ Premium-Mitglied             │ J  │ N  │ J  │ N  │
+├──────────────────────────────┼────┼────┼────┼────┤
+│ Aktionen                     │    │    │    │    │
+├──────────────────────────────┼────┼────┼────┼────┤
+│ Versandkostenfrei            │ X  │    │    │    │
+│ 2,99 € Versand               │    │ X  │    │    │
+│ 1,99 € Versand               │    │    │ X  │    │
+│ 4,99 € Versand               │    │    │    │ X  │
+└──────────────────────────────┴────┴────┴────┴────┘
+</code></pre></div></td></tr></table></div></p>
+<ol>
+<li>
+<p>2 Bedingungen → 2² = <strong>4 Regeln</strong></p>
+</li>
+<li>
+<p>Bestellwert &lt; 50 € (N) + kein Mitglied (N) → <strong>R4</strong> → <strong>4,99 € Versand</strong></p>
+</li>
+</ol>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--3">Experte</span> Modellierungsform wählen</summary>
+<p>Für die folgenden Situationen soll die geeignetste Modellierungsform gewählt werden. Begründe jeweils deine Wahl in 2–3 Sätzen.</p>
+<p><strong>Optionen:</strong> PAP · Struktogramm · Datenflussplan (DFD) · Entscheidungstabelle · UML-Aktivitätsdiagramm</p>
+<p><strong>Situation 1:</strong> Eine Fachabteilung möchte verstehen, wie Kundendaten durch ihr CRM-System fließen: Wo kommen sie her? Welche Prozesse verarbeiten sie? Wo werden sie gespeichert?</p>
+<p><strong>Situation 2:</strong> Ein Entwickler möchte die Logik einer Rabattfunktion dokumentieren, die von drei Bedingungen abhängt (Kundenstatus, Produktkategorie, Bestellmenge). Alle Kombinationen sollen lückenlos abgedeckt sein.</p>
+<p><strong>Situation 3:</strong> Ein Projektmanager möchte den Prozess einer Urlaubsantragsbearbeitung visualisieren: Mitarbeiter stellt Antrag → Vorgesetzter genehmigt oder lehnt ab → HR verarbeitet die Entscheidung. Der Fokus liegt auf Verantwortlichkeiten.</p>
+<p><strong>Situation 4:</strong> Ein Schüler soll lernen, wie eine einfache WHILE-Schleife funktioniert. Er soll ein Diagramm zeichnen, das die Grundstruktur klarmacht.</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Denke an den Zweck jeder Methode: DFD = Datenfluss, Entscheidungstabelle = Kombinationen, Aktivitätsdiagramm = Verantwortlichkeiten/Swimlanes, PAP/Struktogramm = Algorithmen.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li>
+<p><strong>Datenflussplan (DFD)</strong> – Zeigt, woher Daten kommen, wie sie verarbeitet werden und wo sie gespeichert werden. Ideal für Systemanalyse und Anforderungsklärung.</p>
+</li>
+<li>
+<p><strong>Entscheidungstabelle</strong> – Drei Bedingungen ergeben 2³ = 8 Kombinationen. Die Tabelle stellt sicher, dass keine Kombination vergessen wird und jede Regel eindeutig ist.</p>
+</li>
+<li>
+<p><strong>UML-Aktivitätsdiagramm mit Swimlanes</strong> – Swimlanes trennen die Verantwortlichkeitsbereiche (Mitarbeiter, Vorgesetzter, HR) visuell. Ideal für teamübergreifende Prozesse.</p>
+</li>
+<li>
+<p><strong>PAP oder Struktogramm</strong> – Beide eignen sich für Lernzwecke bei einfachen Algorithmen. Der PAP ist intuitiver für Einsteiger; das Struktogramm verdeutlicht die Struktur der Schleife als verschachtelten Block.</p>
+</li>
+</ol>
+</details>
+</details>
+<hr />
+<h2 id="workshop">Workshop<a class="headerlink" href="#workshop" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--4">Workshop</span> Versandprozess vollständig modellieren</summary>
+<p><strong>Szenario:</strong> Ein Online-Shop hat folgenden Versandprozess:</p>
+<ol>
+<li>Kunde gibt Bestellung auf</li>
+<li>System prüft Lagerbestand: Wenn nicht vorhanden → Lieferant wird benachrichtigt, Bestellung wartet</li>
+<li>Wenn Ware verfügbar: Lagermitarbeiter packt die Bestellung</li>
+<li>Versandabteilung wählt Versanddienstleister (Bestellwert ≥ 100 € → DHL Express, sonst → Standardversand)</li>
+<li>Tracking-E-Mail wird an Kunden gesendet</li>
+<li>Lieferung erfolgt</li>
+</ol>
+<hr />
+<p><strong>Aufgaben:</strong></p>
+<ol>
+<li>
+<p>Erstelle eine <strong>Entscheidungstabelle</strong> für die Versandart-Entscheidung (Schritt 4). Ergänze eine dritte Bedingung sinnvoll (eigene Wahl).</p>
+</li>
+<li>
+<p>Beschreibe, wie ein <strong>DFD (Level 1)</strong> für diesen Prozess aussehen würde. Nenne mindestens 3 Prozessknoten, 2 externe Einheiten und 1 Datenspeicher.</p>
+</li>
+<li>
+<p>Erstelle ein <strong>UML-Aktivitätsdiagramm</strong> (Textdarstellung) mit 3 Swimlanes: Kunde, System/Lager, Versandabteilung.</p>
+</li>
+<li>
+<p>Welche der drei Modellierungsformen (Entscheidungstabelle, DFD, Aktivitätsdiagramm) liefert welche Information? Erstelle eine Vergleichstabelle mit den Spalten: Methode | Fokus | Stärke | Typischer Einsatz.</p>
+</li>
+</ol>
+<p><strong>Deliverables:</strong> Entscheidungstabelle + DFD-Beschreibung + Aktivitätsdiagramm (Text) + Vergleichstabelle</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Für das Aktivitätsdiagramm: Weise jede Aktivität einer Swimlane zu. Übergaben zwischen Swimlanes sind Nachrichten/Ergebnisse.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p><strong>Bewertungskriterien:</strong></p>
+<ol>
+<li>
+<p>Entscheidungstabelle: min. 3 Bedingungen (z. B. Bestellwert ≥ 100 €, Express-Mitglied, Auslandslieferung) → 2³ = 8 Regeln, plausible Aktionen.</p>
+</li>
+<li>
+<p>DFD: Externe Einheiten: Kunde, Lieferant. Prozesse: Bestellung erfassen, Lagerbestand prüfen, Versand vorbereiten. Datenspeicher: Lagerbestand-DB / Bestelldatenbank.</p>
+</li>
+<li>
+<p>Aktivitätsdiagramm: Swimlane Kunde (Bestellung aufgeben, Tracking erhalten), Swimlane System/Lager (Bestand prüfen, Lieferant benachrichtigen, Packen), Swimlane Versand (Dienstleister wählen, Versenden).</p>
+</li>
+<li>
+<p>Vergleichstabelle:
+   | Methode | Fokus | Stärke | Typischer Einsatz |
+   |---|---|---|---|
+   | Entscheidungstabelle | Regeln/Bedingungen | Vollständigkeit | Regelbasierte Logik |
+   | DFD | Datenfluss | Systemüberblick | Analysephase |
+   | Aktivitätsdiagramm | Prozessablauf + Rollen | Verantwortlichkeiten | Entwurf, Doku |</p>
+</li>
+</ol>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../kapitel6/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Kapitel 6 – PAP und Struktogramm">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 6 – PAP und Struktogramm
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../kapitel8/" class="md-footer__link md-footer__link--next" aria-label="Next: Kapitel 8 – UML-Diagramme">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 8 – UML-Diagramme
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "navigation.prune", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

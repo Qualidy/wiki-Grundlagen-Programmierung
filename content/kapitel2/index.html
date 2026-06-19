@@ -1,0 +1,1328 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../kapitel1/">
+      
+      
+        <link rel="next" href="../kapitel3/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Kapitel 2 – Softwareanpassung - Grundlagen Programmierung</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-2-arten-der-softwareanpassung" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Grundlagen Programmierung" class="md-header__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Grundlagen Programmierung
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kapitel 2 – Softwareanpassung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Übersicht
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 1 – Programmiersprachen im Überblick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 2 – Softwareanpassung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 3 – Phasen der Softwareentwicklung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel4/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 4 – Vorgehensmodelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel5/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 5 – Lasten- und Pflichtenheft
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel6/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 6 – PAP und Struktogramm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel7/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 7 – Datenflussplan und Entscheidungstabelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel8/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 8 – UML-Diagramme
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel9/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 9 – Entity-Relationship-Modell
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel10/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 10 – Grundlagen der Programmierung
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Grundlagen Programmierung" class="md-nav__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Grundlagen Programmierung
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 1 – Programmiersprachen im Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 2 – Softwareanpassung
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 2 – Softwareanpassung
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#was-du-in-diesem-kapitel-lernst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was du in diesem Kapitel lernst
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-gehst-du-vor" class="md-nav__link">
+    <span class="md-ellipsis">
+      So gehst du vor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-warum-software-angepasst-werden-muss" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Warum Software angepasst werden muss
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-konfiguration-und-parametrisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Konfiguration und Parametrisierung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-customizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Customizing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-erweiterungen-und-plug-ins" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Erweiterungen und Plug-ins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-individualentwicklung" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Individualentwicklung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-refactoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 Refactoring
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-entscheidungshilfe-welche-anpassungsform-passt" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 Entscheidungshilfe: Welche Anpassungsform passt?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kurzubungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kurzübungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workshop
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 3 – Phasen der Softwareentwicklung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 4 – Vorgehensmodelle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 5 – Lasten- und Pflichtenheft
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 6 – PAP und Struktogramm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 7 – Datenflussplan und Entscheidungstabelle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 8 – UML-Diagramme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 9 – Entity-Relationship-Modell
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 10 – Grundlagen der Programmierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="kapitel-2-arten-der-softwareanpassung">Kapitel 2 – Arten der Softwareanpassung<a class="headerlink" href="#kapitel-2-arten-der-softwareanpassung" title="Permanent link">&para;</a></h1>
+<div class="kurs-progress">
+  <div class="step done"></div>
+  <div class="step active"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+  <div class="step"></div>
+</div>
+
+<div class="lernziele">
+<h3 id="was-du-in-diesem-kapitel-lernst">Was du in diesem Kapitel lernst<a class="headerlink" href="#was-du-in-diesem-kapitel-lernst" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Welche fünf Arten der Softwareanpassung es gibt</li>
+<li>Was der Unterschied zwischen Konfiguration, Customizing, Erweiterungen, Individualentwicklung und Refactoring ist</li>
+<li>Wie du für einfache Szenarien die geeignete Anpassungsform bestimmst</li>
+</ul>
+</div>
+<hr />
+<h2 id="so-gehst-du-vor">So gehst du vor<a class="headerlink" href="#so-gehst-du-vor" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Lies die Kapitelinhalte und präge dir die fünf Anpassungsarten ein.</li>
+<li>Bearbeite die <strong>Kurzübungen</strong> der Reihe nach – von Grundlagen bis Experte.</li>
+<li>Arbeite die <strong>Workshop-Aufgabe</strong> durch. Sie vertieft das Gelernte an einem zusammenhängenden Szenario.</li>
+</ol>
+<hr />
+<h2 id="21-warum-software-angepasst-werden-muss">2.1 Warum Software angepasst werden muss<a class="headerlink" href="#21-warum-software-angepasst-werden-muss" title="Permanent link">&para;</a></h2>
+<p>Fertige Software deckt selten alle Anforderungen eines Unternehmens ab. Zwischen dem, was ein Standardprodukt bietet, und dem, was ein Unternehmen benötigt, klafft fast immer eine Lücke. Diese Lücke muss geschlossen werden – auf die wirtschaftlichste und technisch sinnvollste Art.</p>
+<p>Die Wahl der richtigen Anpassungsform ist keine rein technische, sondern vor allem eine <strong>wirtschaftliche Entscheidung</strong>: Wie viel Aufwand ist gerechtfertigt? Welche Risiken entstehen? Wie wartbar ist das Ergebnis?</p>
+<hr />
+<h2 id="22-konfiguration-und-parametrisierung">2.2 Konfiguration und Parametrisierung<a class="headerlink" href="#22-konfiguration-und-parametrisierung" title="Permanent link">&para;</a></h2>
+<p><strong>Konfiguration</strong> ist die einfachste Form der Anpassung. Die Software selbst wird nicht verändert – stattdessen werden <strong>Einstellungen</strong> geändert, die das Verhalten steuern. Jede Software sieht solche Anpassungspunkte explizit vor.</p>
+<p><strong>Parametrisierung</strong> ist ein Sonderfall: Bestimmte Werte (Parameter) werden beim Start oder in Konfigurationsdateien übergeben und beeinflussen den Ablauf des Programms.</p>
+<p><strong>Typische Beispiele:</strong>
+- Sprache und Region eines Betriebssystems einstellen
+- E-Mail-Server-Adresse in einem CRM-System hinterlegen
+- Mehrwertsteuersatz in einer Buchhaltungssoftware konfigurieren
+- Benutzerrechte und Rollen in einem ERP-System vergeben</p>
+<p><strong>Merkmale:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Merkmal</th>
+<th>Ausprägung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aufwand</td>
+<td>Gering</td>
+</tr>
+<tr>
+<td>Risiko</td>
+<td>Sehr gering</td>
+</tr>
+<tr>
+<td>Reversibilität</td>
+<td>Hoch (einfach rückgängig machbar)</td>
+</tr>
+<tr>
+<td>Technische Kenntnisse</td>
+<td>Keine Programmierung nötig</td>
+</tr>
+<tr>
+<td>Wartung</td>
+<td>Unproblematisch (Hersteller-Updates möglich)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Immer zuerst prüfen</p>
+<p>Bevor teurere Anpassungsformen gewählt werden, sollte geprüft werden, ob das gewünschte Verhalten bereits durch Konfiguration erreichbar ist.</p>
+</div>
+<hr />
+<h2 id="23-customizing">2.3 Customizing<a class="headerlink" href="#23-customizing" title="Permanent link">&para;</a></h2>
+<p><strong>Customizing</strong> geht einen Schritt weiter als Konfiguration. Hier werden <strong>vorgesehene Anpassungsmechanismen</strong> des Systems genutzt, um Prozesse, Oberflächen oder Workflows gezielt auf die Bedürfnisse des Unternehmens zuzuschneiden – ohne den Kern der Software zu verändern.</p>
+<p>Bekannte Beispiele sind ERP-Systeme wie SAP oder Microsoft Dynamics, die umfangreiche Customizing-Möglichkeiten bieten: Formulare anpassen, Felder hinzufügen, Prozessschritte ändern.</p>
+<p><strong>Typische Beispiele:</strong>
+- Bestellworkflow in einem ERP-System an interne Genehmigungsstufen anpassen
+- Benutzeroberfläche eines CRM auf relevante Felder reduzieren
+- Berichte und Auswertungen auf das Corporate Design anpassen</p>
+<p><strong>Abgrenzung zur Konfiguration:</strong> Beim Customizing werden oft tabellarische Einträge in internen Customizing-Tabellen vorgenommen oder grafische Tools genutzt – es handelt sich also um strukturierte, aber umfangreichere Einstellungen.</p>
+<p><strong>Merkmale:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Merkmal</th>
+<th>Ausprägung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aufwand</td>
+<td>Mittel</td>
+</tr>
+<tr>
+<td>Risiko</td>
+<td>Gering bis mittel</td>
+</tr>
+<tr>
+<td>Reversibilität</td>
+<td>Mittel</td>
+</tr>
+<tr>
+<td>Technische Kenntnisse</td>
+<td>Systemkenntnis nötig, keine Programmierung</td>
+</tr>
+<tr>
+<td>Wartung</td>
+<td>Ggf. Anpassungen bei Systemupdates nötig</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="24-erweiterungen-und-plug-ins">2.4 Erweiterungen und Plug-ins<a class="headerlink" href="#24-erweiterungen-und-plug-ins" title="Permanent link">&para;</a></h2>
+<p>Wenn die vorhandenen Anpassungsmechanismen nicht ausreichen, können <strong>Erweiterungen</strong> (auch Add-ons, Module oder Plug-ins genannt) eingesetzt werden. Diese werden in die bestehende Software integriert und ergänzen deren Funktionsumfang.</p>
+<p>Erweiterungen können <strong>von Drittanbietern</strong> bezogen oder <strong>selbst entwickelt</strong> werden. Viele Plattformen (CMS, Shops, IDEs) haben einen eigenen Marktplatz für Erweiterungen.</p>
+<p><strong>Typische Beispiele:</strong>
+- WordPress-Plugin für SEO-Analyse installieren
+- Browser-Erweiterung für Passwort-Manager
+- VSCode-Extension für Python-Entwicklung
+- Shopify-App für Buchungskalender</p>
+<p><strong>Merkmale:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Merkmal</th>
+<th>Ausprägung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aufwand</td>
+<td>Mittel (bei fertigen Plug-ins) bis hoch (bei Eigenentwicklung)</td>
+</tr>
+<tr>
+<td>Risiko</td>
+<td>Mittel – Qualität und Sicherheit des Plug-ins beachten</td>
+</tr>
+<tr>
+<td>Reversibilität</td>
+<td>Mittel</td>
+</tr>
+<tr>
+<td>Technische Kenntnisse</td>
+<td>Installation/Konfiguration bis Programmierung</td>
+</tr>
+<tr>
+<td>Wartung</td>
+<td>Abhängigkeit vom Plug-in-Hersteller</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Sicherheitsrisiken bei Drittanbieter-Erweiterungen</p>
+<p>Jedes Plug-in eines externen Anbieters ist ein potenzielles Sicherheitsrisiko. Es sollte geprüft werden, ob der Anbieter vertrauenswürdig ist und das Plug-in regelmäßig gepflegt wird.</p>
+</div>
+<hr />
+<h2 id="25-individualentwicklung">2.5 Individualentwicklung<a class="headerlink" href="#25-individualentwicklung" title="Permanent link">&para;</a></h2>
+<p><strong>Individualentwicklung</strong> (auch Neuentwicklung oder Eigenentwicklung) bedeutet, dass Software von Grund auf oder als eigenständiges Modul neu entwickelt wird – maßgeschneidert für die spezifischen Anforderungen.</p>
+<p>Diese Form kommt zum Einsatz, wenn kein Standardprodukt die Anforderungen erfüllt oder wenn die Integration in bestehende Systeme so komplex ist, dass eine Eigenentwicklung wirtschaftlich sinnvoller ist.</p>
+<p><strong>Typische Beispiele:</strong>
+- Entwicklung einer unternehmenseigenen Produktionsverwaltungssoftware
+- Maßgeschneiderte Web-App für einen spezifischen Geschäftsprozess
+- Integration zweier Systeme über eine selbst entwickelte Schnittstelle (API)</p>
+<p><strong>Merkmale:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Merkmal</th>
+<th>Ausprägung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aufwand</td>
+<td>Hoch bis sehr hoch</td>
+</tr>
+<tr>
+<td>Risiko</td>
+<td>Hoch (Projektrisiken, Budgetüberschreitungen)</td>
+</tr>
+<tr>
+<td>Reversibilität</td>
+<td>Gering – hohe Wechselkosten</td>
+</tr>
+<tr>
+<td>Technische Kenntnisse</td>
+<td>Vollständige Entwicklung nötig</td>
+</tr>
+<tr>
+<td>Wartung</td>
+<td>Vollständige Eigenverantwortung</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="26-refactoring">2.6 Refactoring<a class="headerlink" href="#26-refactoring" title="Permanent link">&para;</a></h2>
+<p><strong>Refactoring</strong> ist eine besondere Anpassungsform: Dabei wird bestehender Quellcode <strong>strukturell verbessert</strong>, ohne das äußerliche Verhalten der Software zu ändern. Das Programm tut nach dem Refactoring dasselbe wie vorher – nur der interne Aufbau ist sauberer, lesbarer und wartbarer.</p>
+<p>Refactoring ist kein Feature-Entwicklung und kein Bug-Fix. Es ist eine <strong>Investition in die Codequalität</strong>, die zukünftige Änderungen erleichtert.</p>
+<p><strong>Typische Maßnahmen:</strong>
+- Lange Funktionen in kleinere, benannte Funktionen aufteilen
+- Doppelten Code (Duplikate) in eine gemeinsame Funktion auslagern
+- Variablen und Funktionen besser benennen
+- Komplexe Bedingungen vereinfachen</p>
+<p><strong>Merkmale:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Merkmal</th>
+<th>Ausprägung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Äußeres Verhalten</td>
+<td>Unverändert</td>
+</tr>
+<tr>
+<td>Ziel</td>
+<td>Verbesserte Codequalität, Wartbarkeit</td>
+</tr>
+<tr>
+<td>Wann?</td>
+<td>Regelmäßig, meist vor neuen Features oder nach Fertigstellung</td>
+</tr>
+<tr>
+<td>Risiko</td>
+<td>Gering, wenn gute Tests vorhanden</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="27-entscheidungshilfe-welche-anpassungsform-passt">2.7 Entscheidungshilfe: Welche Anpassungsform passt?<a class="headerlink" href="#27-entscheidungshilfe-welche-anpassungsform-passt" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart TD
+    A{Kann Konfiguration\ndas gewünschte\nVerhalten erreichen?} --&gt;|Ja| B([Konfiguration /\nParametrisierung])
+    A --&gt;|Nein| C{Gibt es einen\nvorgesehenen\nCustomizing-Mechanismus?}
+    C --&gt;|Ja| D([Customizing])
+    C --&gt;|Nein| E{Gibt es ein\ngeeignetes\nPlug-in / Add-on?}
+    E --&gt;|Ja| F([Erweiterung / Plug-in])
+    E --&gt;|Nein| G([Individualentwicklung])</code></pre>
+<hr />
+<h2 id="kurzubungen">Kurzübungen<a class="headerlink" href="#kurzubungen" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--1">Grundlagen</span> Anpassungsart erkennen</summary>
+<p>Ordne die folgenden Situationen der jeweils passenden Anpassungsart zu:
+Konfiguration · Customizing · Erweiterung/Plug-in · Individualentwicklung · Refactoring</p>
+<ol>
+<li>Eine Firma ändert in ihrer E-Mail-Software die Signaturvorlage für alle Mitarbeiter.</li>
+<li>Ein Online-Shop installiert ein kostenloses Plugin für die Bewertungsfunktion.</li>
+<li>Ein Unternehmen lässt eine spezielle Software für seine einzigartige Produktionslinie entwickeln – es gibt kein vergleichbares Produkt auf dem Markt.</li>
+<li>Ein ERP-System wird so eingestellt, dass der Bestellprozess drei statt zwei Genehmigungsstufen hat.</li>
+<li>Ein Entwickler überarbeitet eine 500-Zeilen-Funktion in drei kleinere, besser benannte Funktionen. Das Verhalten ändert sich nicht.</li>
+<li>In einer Buchhaltungssoftware wird der Mehrwertsteuersatz von 19 % auf 7 % für bestimmte Produktgruppen gesetzt.</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<p>Frage dich bei jeder Situation: Wird die Software selbst verändert? Wird neuer Code geschrieben? Oder werden nur Einstellungen geändert?</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li><strong>Konfiguration</strong> – Einstellung innerhalb der Software (keine Programmierung nötig)</li>
+<li><strong>Erweiterung / Plug-in</strong> – Ein fertiges Add-on wird installiert</li>
+<li><strong>Individualentwicklung</strong> – Keine Standardlösung verfügbar, vollständige Neuentwicklung</li>
+<li><strong>Customizing</strong> – Vorgesehener Anpassungsmechanismus im ERP-System genutzt</li>
+<li><strong>Refactoring</strong> – Strukturverbesserung ohne Verhaltensänderung</li>
+<li><strong>Konfiguration / Parametrisierung</strong> – Wert in Einstellungen hinterlegt</li>
+</ol>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--2">Fortgeschritten</span> Anpassungsform entscheiden</summary>
+<p>Für die folgenden Szenarien soll die wirtschaftlich sinnvollste Anpassungsform gewählt werden. Begründe deine Entscheidung jeweils in 2–3 Sätzen.</p>
+<p><strong>Szenario 1:</strong> Ein kleines Handwerksunternehmen möchte Rechnungen digital verschicken. Es nutzt bereits eine weit verbreitete Buchhaltungssoftware. Ein Kollege hat gehört, dass es dafür ein kostenfreies Add-on gibt.</p>
+<p><strong>Szenario 2:</strong> Ein Krankenhaus benötigt eine Software, die Patientendaten mit einer sehr spezifischen medizinischen Gerätesteuerung verknüpft. Es gibt kein Produkt auf dem Markt, das beide Systeme verbindet.</p>
+<p><strong>Szenario 3:</strong> Eine Software, die seit 10 Jahren im Einsatz ist, funktioniert korrekt, aber neue Entwickler brauchen Monate, um den unstrukturierten Code zu verstehen. Es gibt viele Bugs.</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Denke an die Kosten-Nutzen-Abwägung: Was ist der günstigste Weg zum Ziel?</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p><strong>Szenario 1:</strong> Erweiterung/Plug-in. Das gewünschte Verhalten kann durch ein bereits existierendes Add-on erreicht werden. Individualentwicklung wäre unverhältnismäßig teuer, da die Funktion nicht unternehmenseinzigartig ist.</p>
+<p><strong>Szenario 2:</strong> Individualentwicklung. Die Anforderung ist hochspezifisch und kann nicht durch ein Standardprodukt abgedeckt werden. Eine Schnittstelle (API) oder ein eigenständiges Integrationsmodul muss entwickelt werden.</p>
+<p><strong>Szenario 3:</strong> Refactoring. Die Software funktioniert – es geht nicht darum, neue Funktionen zu ergänzen, sondern die interne Struktur zu verbessern. Dies senkt die Wartungskosten und reduziert zukünftige Fehler.</p>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--3">Experte</span> Risiken und Grenzen der Anpassungsarten</summary>
+<p>Analysiere die folgenden Aussagen und entscheide, ob sie korrekt sind. Falls nicht, korrigiere sie und begründe deine Korrektur.</p>
+<p><strong>Aussage 1:</strong> „Konfiguration ist immer die beste Wahl, weil sie am günstigsten ist."</p>
+<p><strong>Aussage 2:</strong> „Refactoring ist das Gleiche wie Bug-Fixing. Beide beheben Fehler im Code."</p>
+<p><strong>Aussage 3:</strong> „Wenn ein Unternehmen ein Plug-in von einem unbekannten Anbieter installiert, trägt es kein besonderes Risiko, weil das Plug-in ja vom Hersteller geprüft wurde."</p>
+<p><strong>Aussage 4:</strong> „Individualentwicklung ist immer teurer als Customizing."</p>
+<p>Beantworte anschließend: Welche Anpassungsform ist deiner Meinung nach am schwierigsten rückgängig zu machen? Begründe.</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Achte auf absolute Aussagen wie „immer" oder „nie" – sie sind im IT-Kontext meist zu vereinfachend.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p><strong>Aussage 1:</strong> Falsch. Konfiguration ist nur sinnvoll, wenn das gewünschte Verhalten durch vorhandene Einstellungen erreichbar ist. Wenn nicht, führt das Beharren auf Konfiguration zum Scheitern des Projekts.</p>
+<p><strong>Aussage 2:</strong> Falsch. Refactoring verändert das Verhalten der Software <em>nicht</em> – es verbessert nur die innere Struktur. Bug-Fixing behebt konkrete Fehler und ändert das Verhalten an einer fehlerhaften Stelle.</p>
+<p><strong>Aussage 3:</strong> Falsch. Drittanbieter-Plug-ins sind ein Sicherheitsrisiko. Sie haben möglicherweise Zugriff auf Systemdaten und werden nicht zwingend vom Plattformbetreiber sicherheitsgeprüft. Der Anbieter kann das Plug-in auch einstellen.</p>
+<p><strong>Aussage 4:</strong> Falsch. In manchen Fällen ist Individualentwicklung günstiger als Customizing – z. B. wenn die Anpassung in einem komplexen ERP sehr aufwändig ist oder wenn das Customizing langfristig hohe Wartungskosten erzeugt.</p>
+<p><strong>Schwierigste Rückgängigmachung:</strong> Individualentwicklung. Es entsteht proprietärer Code mit hohen Wechselkosten. Auch Customizing kann schwer zurückrollbar sein, wenn es tief in Systemtabellen eingreift.</p>
+</details>
+</details>
+<hr />
+<h2 id="workshop">Workshop<a class="headerlink" href="#workshop" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--4">Workshop</span> Softwareanpassung im Unternehmen – Beratungsauftrag</summary>
+<p><strong>Szenario:</strong> Die Firma „TechBau GmbH" (Bauplanung, 80 Mitarbeiter) wendet sich an dich mit folgender Situation:</p>
+<blockquote>
+<p>„Wir nutzen seit 5 Jahren eine Standard-Projektplanungssoftware (SaaS). Leider fehlen uns drei Funktionen: (1) Eine automatische Verknüpfung unserer Kundendatenbank mit der Projektübersicht, (2) ein wöchentlicher PDF-Bericht für die Geschäftsleitung und (3) eine Ampelfunktion, die überfällige Projekte rot markiert. Der Anbieter bietet ein offizielles API an. Außerdem haben wir intern festgestellt, dass unser IT-Mitarbeiter in den letzten 3 Jahren Hilfsskripte geschrieben hat, die kaum noch jemand versteht."</p>
+</blockquote>
+<hr />
+<p><strong>Aufgaben:</strong></p>
+<ol>
+<li>
+<p>Analysiere die drei fehlenden Funktionen. Welche Anpassungsform würdest du für jede empfehlen? Begründe je Funktion.</p>
+</li>
+<li>
+<p>Was empfiehlst du für die „Hilfsskripte"? Welche Anpassungsform und welches Risiko besteht, wenn nichts unternommen wird?</p>
+</li>
+<li>
+<p>Erstelle eine Priorisierungstabelle: Ordne alle vier Handlungsfelder nach Dringlichkeit (1 = höchste Priorität) und begründe die Reihenfolge.</p>
+</li>
+<li>
+<p>Verfasse einen kurzen Beratungsbrief (max. 10 Sätze) an die Geschäftsführung, in dem du deine Empfehlungen zusammenfasst.</p>
+</li>
+</ol>
+<p><strong>Deliverables:</strong> Analysetabelle + Priorisierung + Beratungsbrief</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Ein API (Application Programming Interface) ist eine Schnittstelle, über die externe Programme auf Daten und Funktionen eines Systems zugreifen können. Das ist ein wichtiger Hinweis für die Anpassungsform.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p><strong>Bewertungskriterien:</strong></p>
+<ol>
+<li>
+<p>Funktion 1 (Kundendatenbank-Verknüpfung): Individualentwicklung (API-Integration) – das API ermöglicht eine technische Verbindung, die selbst entwickelt werden muss.
+   Funktion 2 (PDF-Bericht): Konfiguration oder leichte Individualentwicklung – viele SaaS-Systeme bieten Report-Funktionen; falls nicht vorhanden → kleines Skript per API.
+   Funktion 3 (Ampelfunktion): Konfiguration oder Customizing – viele Projekttools bieten Farbmarkierungen als Einstellung.</p>
+</li>
+<li>
+<p>Hilfsskripte: Refactoring. Risiko ohne Maßnahme: Wissensverlust, unkontrollierbare Fehler, keine Wartbarkeit.</p>
+</li>
+<li>
+<p>Priorisierung: Skripte-Refactoring (hohe Risikominderung) vor API-Integration (hoher Mehrwert) vor PDF-Bericht (praktisch) vor Ampelfunktion (möglicherweise per Konfiguration lösbar).</p>
+</li>
+<li>
+<p>Beratungsbrief: Klar strukturiert, alle Punkte adressiert, wirtschaftliche Argumentation vorhanden.</p>
+</li>
+</ol>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../kapitel1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Kapitel 1 – Programmiersprachen im Überblick">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 1 – Programmiersprachen im Überblick
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../kapitel3/" class="md-footer__link md-footer__link--next" aria-label="Next: Kapitel 3 – Phasen der Softwareentwicklung">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 3 – Phasen der Softwareentwicklung
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "navigation.prune", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

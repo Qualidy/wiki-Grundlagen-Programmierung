@@ -1,0 +1,1493 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../kapitel8/">
+      
+      
+        <link rel="next" href="../kapitel10/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Kapitel 9 – Entity-Relationship-Modell - Grundlagen Programmierung</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"DM Sans";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/theme.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/mermaid.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-9-entity-relationship-modell-erm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Grundlagen Programmierung" class="md-header__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Grundlagen Programmierung
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kapitel 9 – Entity-Relationship-Modell
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Übersicht
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 1 – Programmiersprachen im Überblick
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 2 – Softwareanpassung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 3 – Phasen der Softwareentwicklung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel4/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 4 – Vorgehensmodelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel5/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 5 – Lasten- und Pflichtenheft
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel6/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 6 – PAP und Struktogramm
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel7/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 7 – Datenflussplan und Entscheidungstabelle
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel8/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 8 – UML-Diagramme
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 9 – Entity-Relationship-Modell
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kapitel10/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Kapitel 10 – Grundlagen der Programmierung
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Grundlagen Programmierung" class="md-nav__button md-logo" aria-label="Grundlagen Programmierung" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Grundlagen Programmierung
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 1 – Programmiersprachen im Überblick
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 2 – Softwareanpassung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 3 – Phasen der Softwareentwicklung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 4 – Vorgehensmodelle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 5 – Lasten- und Pflichtenheft
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 6 – PAP und Struktogramm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 7 – Datenflussplan und Entscheidungstabelle
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 8 – UML-Diagramme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 9 – Entity-Relationship-Modell
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 9 – Entity-Relationship-Modell
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#was-du-in-diesem-kapitel-lernst" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was du in diesem Kapitel lernst
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-gehst-du-vor" class="md-nav__link">
+    <span class="md-ellipsis">
+      So gehst du vor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#91-was-ist-ein-entity-relationship-modell" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 Was ist ein Entity-Relationship-Modell?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92-grundbegriffe-entitaten-und-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 Grundbegriffe: Entitäten und Attribute
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.2 Grundbegriffe: Entitäten und Attribute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entität
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribut" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primarschlussel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primärschlüssel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93-beziehungen-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 Beziehungen (Relationships)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#94-kardinalitaten" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 Kardinalitäten
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.4 Kardinalitäten">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-beziehung" class="md-nav__link">
+    <span class="md-ellipsis">
+      1:1-Beziehung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1n-beziehung" class="md-nav__link">
+    <span class="md-ellipsis">
+      1:n-Beziehung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mn-beziehung" class="md-nav__link">
+    <span class="md-ellipsis">
+      m:n-Beziehung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kardinalitaten-im-uberblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kardinalitäten im Überblick
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#95-notationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5 Notationen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.5 Notationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chen-notation-klassisch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chen-Notation (klassisch)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crows-foot-notation-modern-praxisnah" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crow's-Foot-Notation (modern, praxisnah)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#96-vollstandiges-beispiel-online-shop" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.6 Vollständiges Beispiel: Online-Shop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kurzubungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kurzübungen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workshop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workshop
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kapitel 10 – Grundlagen der Programmierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="kapitel-9-entity-relationship-modell-erm">Kapitel 9 – Entity-Relationship-Modell (ERM)<a class="headerlink" href="#kapitel-9-entity-relationship-modell-erm" title="Permanent link">&para;</a></h1>
+<div class="kurs-progress">
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step done"></div>
+  <div class="step active"></div>
+  <div class="step"></div>
+</div>
+
+<div class="lernziele">
+<h3 id="was-du-in-diesem-kapitel-lernst">Was du in diesem Kapitel lernst<a class="headerlink" href="#was-du-in-diesem-kapitel-lernst" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Was ein Entity-Relationship-Modell (ERM) ist und wozu es dient</li>
+<li>Was Entitäten, Attribute und Beziehungen sind</li>
+<li>Was Kardinalitäten bedeuten (1:1, 1:n, m:n)</li>
+<li>Wie du ein einfaches ER-Diagramm liest und erstellt</li>
+</ul>
+</div>
+<hr />
+<h2 id="so-gehst-du-vor">So gehst du vor<a class="headerlink" href="#so-gehst-du-vor" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Lies die Kapitelinhalte und präge dir die Grundbegriffe ein.</li>
+<li>Bearbeite die <strong>Kurzübungen</strong> der Reihe nach – von Grundlagen bis Experte.</li>
+<li>Arbeite die <strong>Workshop-Aufgabe</strong> durch. Sie vertieft das Gelernte an einem zusammenhängenden Szenario.</li>
+</ol>
+<hr />
+<h2 id="91-was-ist-ein-entity-relationship-modell">9.1 Was ist ein Entity-Relationship-Modell?<a class="headerlink" href="#91-was-ist-ein-entity-relationship-modell" title="Permanent link">&para;</a></h2>
+<p>Das <strong>Entity-Relationship-Modell</strong> (ERM, auch ER-Modell) ist ein konzeptionelles Datenbankmodell. Es beschreibt, <strong>welche Daten</strong> in einem System gespeichert werden sollen und <strong>wie diese Daten miteinander in Beziehung</strong> stehen – unabhängig von der konkreten Datenbanktechnologie.</p>
+<p>Das ER-Modell wurde 1976 von Peter Chen entwickelt und ist bis heute das wichtigste Werkzeug für den Datenbankentwurf in der Analysephase.</p>
+<p><strong>Warum ERM?</strong>
+- Kommunikation zwischen Fachabteilung und IT ohne Datenbankfachkenntnisse
+- Grundlage für das spätere relationale Datenbankschema
+- Fehler in der Datenstruktur früh erkennen und beheben</p>
+<div class="admonition info">
+<p class="admonition-title">Vertiefung in Modul 3</p>
+<p>Dieses Kapitel gibt eine Einführung in das ERM. Die Umsetzung in konkrete Datenbankstrukturen (Normalisierung, SQL) wird im Modul „Datenbanken planen und differenzieren" vertieft.</p>
+</div>
+<hr />
+<h2 id="92-grundbegriffe-entitaten-und-attribute">9.2 Grundbegriffe: Entitäten und Attribute<a class="headerlink" href="#92-grundbegriffe-entitaten-und-attribute" title="Permanent link">&para;</a></h2>
+<h3 id="entitat">Entität<a class="headerlink" href="#entitat" title="Permanent link">&para;</a></h3>
+<p>Eine <strong>Entität</strong> ist ein eindeutig identifizierbares Objekt der realen Welt, über das Daten gespeichert werden sollen.</p>
+<p><strong>Beispiele:</strong>
+- Ein Kunde (z. B. „Maria Müller, Kundennummer 1234")
+- Ein Produkt (z. B. „Laptop, Artikel-Nr. L-001")
+- Eine Bestellung (z. B. „Bestellung Nr. 5678 vom 01.06.2026")</p>
+<p>Gleichartige Entitäten werden zu einem <strong>Entitätstyp</strong> zusammengefasst. Im ER-Diagramm wird ein Entitätstyp als <strong>Rechteck</strong> dargestellt.</p>
+<h3 id="attribut">Attribut<a class="headerlink" href="#attribut" title="Permanent link">&para;</a></h3>
+<p>Ein <strong>Attribut</strong> beschreibt eine Eigenschaft einer Entität. Im ER-Diagramm werden Attribute als <strong>Ellipsen</strong> (Chen-Notation) oder als Liste im Rechteck (Crow's-Foot-Notation) dargestellt.</p>
+<p><strong>Beispiel – Entitätstyp „Kunde" mit Attributen:</strong></p>
+<pre class="mermaid"><code>erDiagram
+    KUNDE {
+        int KundenID PK
+        string Vorname
+        string Nachname
+        string Email
+        string Telefon
+    }</code></pre>
+<h3 id="primarschlussel">Primärschlüssel<a class="headerlink" href="#primarschlussel" title="Permanent link">&para;</a></h3>
+<p>Der <strong>Primärschlüssel</strong> (PK, <em>Primary Key</em>) ist ein Attribut (oder eine Kombination), das eine Entität eindeutig identifiziert. Jede Entität muss einen Primärschlüssel haben.</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Geeignet als PK?</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kundennummer</td>
+<td>✅ Ja</td>
+<td>Eindeutig, unveränderlich</td>
+</tr>
+<tr>
+<td>E-Mail-Adresse</td>
+<td>⚠️ Bedingt</td>
+<td>Kann sich ändern</td>
+</tr>
+<tr>
+<td>Vorname</td>
+<td>❌ Nein</td>
+<td>Nicht eindeutig</td>
+</tr>
+<tr>
+<td>Name + Geburtsdatum</td>
+<td>⚠️ Bedingt</td>
+<td>Kombination meist eindeutig, aber nicht garantiert</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="93-beziehungen-relationships">9.3 Beziehungen (Relationships)<a class="headerlink" href="#93-beziehungen-relationships" title="Permanent link">&para;</a></h2>
+<p>Eine <strong>Beziehung</strong> beschreibt, wie zwei Entitätstypen miteinander verknüpft sind. Im ER-Diagramm wird eine Beziehung als <strong>Raute</strong> (Chen-Notation) dargestellt.</p>
+<p><strong>Beispiele:</strong>
+- Ein Kunde <strong>gibt auf</strong> eine Bestellung
+- Ein Produkt <strong>gehört zu</strong> einer Kategorie
+- Ein Lehrer <strong>unterrichtet</strong> mehrere Schüler</p>
+<p>Beziehungen können selbst <strong>Attribute</strong> haben. Zum Beispiel hat die Beziehung „Kunde kauft Produkt" das Attribut „Menge".</p>
+<hr />
+<h2 id="94-kardinalitaten">9.4 Kardinalitäten<a class="headerlink" href="#94-kardinalitaten" title="Permanent link">&para;</a></h2>
+<p>Die <strong>Kardinalität</strong> einer Beziehung gibt an, wie viele Entitäten einer Seite mit wie vielen Entitäten der anderen Seite verknüpft sein können.</p>
+<h3 id="11-beziehung">1:1-Beziehung<a class="headerlink" href="#11-beziehung" title="Permanent link">&para;</a></h3>
+<p>Eine Entität auf der linken Seite ist mit <strong>genau einer</strong> Entität auf der rechten Seite verknüpft – und umgekehrt.</p>
+<p><strong>Beispiel:</strong> Ein Mitarbeiter hat genau <strong>einen</strong> Firmenwagen. Ein Firmenwagen gehört genau <strong>einem</strong> Mitarbeiter.</p>
+<pre class="mermaid"><code>erDiagram
+    MITARBEITER ||--|| FIRMENWAGEN : "hat"</code></pre>
+<p><strong>Wann kommt 1:1 vor?</strong> Selten – oft können die Tabellen zusammengeführt werden.</p>
+<h3 id="1n-beziehung">1:n-Beziehung<a class="headerlink" href="#1n-beziehung" title="Permanent link">&para;</a></h3>
+<p>Eine Entität auf der linken Seite ist mit <strong>mehreren</strong> Entitäten auf der rechten Seite verknüpft. Aber jede Entität rechts gehört zu <strong>genau einer</strong> links.</p>
+<p><strong>Beispiel:</strong> Eine Bestellung enthält <strong>mehrere</strong> Bestellpositionen. Jede Bestellposition gehört zu <strong>genau einer</strong> Bestellung.</p>
+<pre class="mermaid"><code>erDiagram
+    BESTELLUNG ||--o{ BESTELLPOSITION : "enthält"</code></pre>
+<p><strong>Das häufigste Muster</strong> in relationalen Datenbanken.</p>
+<h3 id="mn-beziehung">m:n-Beziehung<a class="headerlink" href="#mn-beziehung" title="Permanent link">&para;</a></h3>
+<p>Eine Entität links ist mit <strong>mehreren</strong> rechts verknüpft – und umgekehrt.</p>
+<p><strong>Beispiel:</strong> Ein Schüler besucht <strong>mehrere</strong> Fächer. Ein Fach wird von <strong>mehreren</strong> Schülern besucht.</p>
+<pre class="mermaid"><code>erDiagram
+    SCHUELER }o--o{ FACH : "besucht"</code></pre>
+<p><strong>Hinweis:</strong> m:n-Beziehungen müssen bei der Umsetzung in ein relationales Datenbankschema durch eine <strong>Zwischentabelle</strong> (Verknüpfungstabelle) aufgelöst werden.</p>
+<h3 id="kardinalitaten-im-uberblick">Kardinalitäten im Überblick<a class="headerlink" href="#kardinalitaten-im-uberblick" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Leseweise</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1:1</strong></td>
+<td>Genau einem – genau einem</td>
+<td>Mitarbeiter ↔ Firmenwagen</td>
+</tr>
+<tr>
+<td><strong>1:n</strong></td>
+<td>Einem – mehreren</td>
+<td>Bestellung ↔ Bestellpositionen</td>
+</tr>
+<tr>
+<td><strong>n:1</strong></td>
+<td>Mehreren – einem</td>
+<td>(Umkehrung von 1:n)</td>
+</tr>
+<tr>
+<td><strong>m:n</strong></td>
+<td>Mehreren – mehreren</td>
+<td>Schüler ↔ Fächer</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="95-notationen">9.5 Notationen<a class="headerlink" href="#95-notationen" title="Permanent link">&para;</a></h2>
+<p>Es gibt verschiedene Notationen für ER-Diagramme. Die zwei wichtigsten:</p>
+<h3 id="chen-notation-klassisch">Chen-Notation (klassisch)<a class="headerlink" href="#chen-notation-klassisch" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Entitätstypen: <strong>Rechtecke</strong></li>
+<li>Attribute: <strong>Ellipsen</strong></li>
+<li>Beziehungen: <strong>Rauten</strong></li>
+<li>Kardinalitäten: Beschriftung an den Verbindungslinien (1, N, M)</li>
+</ul>
+<h3 id="crows-foot-notation-modern-praxisnah">Crow's-Foot-Notation (modern, praxisnah)<a class="headerlink" href="#crows-foot-notation-modern-praxisnah" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Entitätstypen: <strong>Rechtecke</strong> mit Attributliste</li>
+<li>Keine gesonderten Attribute</li>
+<li>Kardinalitäten: Symbolische Notation am Ende der Linien (Krähenfuß = „viele")</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\|\|</code></td>
+<td>Genau eins (Pflicht)</td>
+</tr>
+<tr>
+<td><code>o\|</code></td>
+<td>Null oder eins (optional)</td>
+</tr>
+<tr>
+<td><code>\|{</code></td>
+<td>Eins oder viele</td>
+</tr>
+<tr>
+<td><code>o{</code></td>
+<td>Null oder viele</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel in Crow's-Foot:</strong></p>
+<pre class="mermaid"><code>erDiagram
+    KUNDE {
+        int KundenID PK
+        string Name
+        string Email
+    }
+    BESTELLUNG {
+        int BestellID PK
+        date Datum
+        decimal Betrag
+        int KundenID FK
+    }
+    KUNDE ||--o{ BESTELLUNG : "gibt auf"</code></pre>
+<hr />
+<h2 id="96-vollstandiges-beispiel-online-shop">9.6 Vollständiges Beispiel: Online-Shop<a class="headerlink" href="#96-vollstandiges-beispiel-online-shop" title="Permanent link">&para;</a></h2>
+<p><strong>Anforderungen:</strong>
+- Kunden können mehrere Bestellungen aufgeben
+- Jede Bestellung enthält eine oder mehrere Positionen
+- Jede Position bezieht sich auf genau ein Produkt
+- Produkte gehören zu genau einer Kategorie; eine Kategorie hat mehrere Produkte</p>
+<pre class="mermaid"><code>erDiagram
+    KUNDE {
+        int KundenID PK
+        string Vorname
+        string Nachname
+        string Email
+    }
+    BESTELLUNG {
+        int BestellID PK
+        date Datum
+        decimal Gesamtbetrag
+        int KundenID FK
+    }
+    BESTELLPOSITION {
+        int PosID PK
+        int Menge
+        decimal Einzelpreis
+        int BestellID FK
+        int ProduktID FK
+    }
+    PRODUKT {
+        int ProduktID PK
+        string Bezeichnung
+        decimal Preis
+        int KategID FK
+    }
+    KATEGORIE {
+        int KategID PK
+        string Name
+    }
+    KUNDE ||--o{ BESTELLUNG : "gibt auf"
+    BESTELLUNG ||--o{ BESTELLPOSITION : "enthält"
+    BESTELLPOSITION }o--|| PRODUKT : "betrifft"
+    KATEGORIE ||--o{ PRODUKT : "enthält"</code></pre>
+<hr />
+<h2 id="kurzubungen">Kurzübungen<a class="headerlink" href="#kurzubungen" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--1">Grundlagen</span> ERM-Grundbegriffe</summary>
+<p>Beantworte die folgenden Fragen zu den Grundbegriffen des ERM:</p>
+<ol>
+<li>Was ist eine <strong>Entität</strong>? Nenne ein Beispiel.</li>
+<li>Was ist ein <strong>Entitätstyp</strong>? Wie unterscheidet er sich von einer Entität?</li>
+<li>Was ist ein <strong>Attribut</strong>? Nenne zwei Attribute für den Entitätstyp „Mitarbeiter".</li>
+<li>Was ist ein <strong>Primärschlüssel</strong>? Warum braucht jeder Entitätstyp einen?</li>
+<li>Ist eine E-Mail-Adresse ein guter Primärschlüssel? Begründe kurz.</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<p>Eine Entität ist ein konkretes Einzelobjekt, ein Entitätstyp ist die Kategorie (Schablone).</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li>
+<p>Eine Entität ist ein konkretes, eindeutig identifizierbares Objekt der realen Welt, über das Daten gespeichert werden sollen. Beispiel: „Mitarbeiterin Maria Müller, MitarbeiterID 42".</p>
+</li>
+<li>
+<p>Ein Entitätstyp fasst gleichartige Entitäten zusammen – er ist die Schablone. „Mitarbeiter" ist ein Entitätstyp. Maria Müller (ID 42) ist eine konkrete Entität dieses Typs.</p>
+</li>
+<li>
+<p>Beispiele: Name, Gehalt, Abteilung, Einstellungsdatum</p>
+</li>
+<li>
+<p>Ein Primärschlüssel identifiziert jede Entität eindeutig. Ohne ihn können zwei Datensätze nicht sicher voneinander unterschieden werden.</p>
+</li>
+<li>
+<p>Bedingt geeignet – eine E-Mail kann sich ändern (kein stabiler Schlüssel) und ist technisch gesehen recht lang. Besser ist eine technische ID (z. B. integer-basierte Mitarbeiternummer).</p>
+</li>
+</ol>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--2">Fortgeschritten</span> Kardinalitäten bestimmen</summary>
+<p>Bestimme für die folgenden Beziehungen die passende Kardinalität (1:1, 1:n oder m:n) und begründe deine Wahl kurz.</p>
+<ol>
+<li>Ein <strong>Autor</strong> schreibt <strong>Bücher</strong>. Ein Buch hat genau einen Autor (vereinfacht).</li>
+<li>Ein <strong>Student</strong> belegt <strong>Kurse</strong>. Ein Kurs wird von mehreren Studenten belegt.</li>
+<li>Ein <strong>Land</strong> hat genau eine <strong>Hauptstadt</strong>. Eine Hauptstadt gehört zu genau einem Land.</li>
+<li>Ein <strong>Arzt</strong> behandelt <strong>Patienten</strong>. Ein Patient wird von mehreren Ärzten behandelt.</li>
+<li>Eine <strong>Bestellung</strong> hat mindestens eine <strong>Bestellposition</strong>. Eine Bestellposition gehört zu genau einer Bestellung.</li>
+<li>Ein <strong>Mitarbeiter</strong> leitet genau eine <strong>Abteilung</strong>. Eine Abteilung wird von genau einem Mitarbeiter geleitet.</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<p>Frage immer beide Richtungen: „Wie viele X gehören zu einem Y?" und „Wie viele Y gehören zu einem X?"</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li><strong>1:n</strong> – Ein Autor → mehrere Bücher; ein Buch → genau ein Autor</li>
+<li><strong>m:n</strong> – Ein Student → mehrere Kurse; ein Kurs → mehrere Studenten</li>
+<li><strong>1:1</strong> – Ein Land → eine Hauptstadt; eine Hauptstadt → ein Land</li>
+<li><strong>m:n</strong> – Ein Arzt → mehrere Patienten; ein Patient → mehrere Ärzte</li>
+<li><strong>1:n</strong> – Eine Bestellung → mehrere Positionen; eine Position → genau eine Bestellung</li>
+<li><strong>1:1</strong> – Ein Mitarbeiter → eine Abteilung; eine Abteilung → ein Mitarbeiter</li>
+</ol>
+</details>
+</details>
+<details class="question">
+<summary><span class="task-level task-level--3">Experte</span> ER-Diagramm lesen und ergänzen</summary>
+<p>Betrachte das folgende ER-Diagramm für ein Hotelreservierungssystem:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>┌───────────┐      1:n     ┌──────────────────┐     n:1    ┌───────────┐
+│   Gast    │──────────────│   Reservierung   │────────────│   Zimmer  │
+├───────────┤              ├──────────────────┤            ├───────────┤
+│ GastID PK │              │ ReservierungID PK│            │ ZimmerNr  │
+│ Name      │              │ Anreise          │            │ Typ       │
+│ E-Mail    │              │ Abreise          │            │ Preis/Nacht│
+└───────────┘              │ Gesamtbetrag     │            └───────────┘
+                           └──────────────────┘
+</code></pre></div></td></tr></table></div>
+<p><strong>Aufgaben:</strong></p>
+<ol>
+<li>
+<p>Erkläre in Worten, was dieses ER-Diagramm beschreibt.</p>
+</li>
+<li>
+<p>Kann ein Zimmer mehrere Reservierungen haben? Begründe anhand des Diagramms.</p>
+</li>
+<li>
+<p>Ein Gast bucht gleichzeitig zwei Zimmer für dasselbe Datum. Wie viele Reservierungs-Datensätze entstehen?</p>
+</li>
+<li>
+<p>Das Hotel möchte auch <strong>Mitarbeiter</strong> erfassen, die Reservierungen anlegen. Ergänze: Welche Kardinalität hätte die Beziehung zwischen „Mitarbeiter" und „Reservierung"? Welche Attribute bräuchte der Entitätstyp Mitarbeiter mindestens?</p>
+</li>
+<li>
+<p>Was bedeutet „PK" – und was passiert, wenn zwei Reservierungen dieselbe ReservierungID hätten?</p>
+</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<p>1:n bedeutet: Eine Seite hat „1", die andere „n" (viele). Schau, auf welcher Seite die 1 steht.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<ol>
+<li>
+<p>Das Diagramm beschreibt: Gäste können mehrere Reservierungen machen. Jede Reservierung gehört zu genau einem Gast und genau einem Zimmer. Ein Zimmer kann mehrere Reservierungen haben (zu verschiedenen Zeiten).</p>
+</li>
+<li>
+<p>Ja. Die Beziehung Zimmer – Reservierung ist n:1 (aus Zimmer-Sicht: Ein Zimmer hat mehrere Reservierungen). Ein Zimmer kann also zu verschiedenen Zeiträumen mehrfach gebucht sein.</p>
+</li>
+<li>
+<p><strong>2 Reservierungs-Datensätze</strong> – für jedes Zimmer eine separate Reservierung.</p>
+</li>
+<li>
+<p>Mitarbeiter – Reservierung: <strong>1:n</strong> (ein Mitarbeiter legt mehrere Reservierungen an; eine Reservierung wurde von genau einem Mitarbeiter angelegt). Attribute: MitarbeiterID (PK), Name, Rolle.</p>
+</li>
+<li>
+<p>PK = Primärschlüssel. Wenn zwei Reservierungen dieselbe ID hätten, wäre die Eindeutigkeit verletzt – das Datenbanksystem würde dies als Fehler abweisen.</p>
+</li>
+</ol>
+</details>
+</details>
+<hr />
+<h2 id="workshop">Workshop<a class="headerlink" href="#workshop" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary><span class="task-level task-level--4">Workshop</span> ER-Modell für eine Schulverwaltung</summary>
+<p><strong>Szenario:</strong> Eine Schule soll ein neues Verwaltungssystem erhalten. Du wirst als Analyst beauftragt, das Datenmodell zu entwerfen.</p>
+<p><strong>Anforderungen (aus Interviews):</strong>
+- Schüler haben: Name, Geburtsdatum, Klasse, Schülernummer
+- Lehrer haben: Name, Fachrichtung, Personalnummer
+- Fächer haben: Bezeichnung, Stunden pro Woche, Fach-ID
+- Ein Lehrer unterrichtet mehrere Fächer; ein Fach kann von mehreren Lehrern unterrichtet werden
+- Ein Schüler besucht mehrere Fächer; in jedem Fach bekommt er eine Note (1–6)
+- Eine Klasse hat genau einen Klassenlehrer; ein Lehrer kann Klassenlehrer von maximal einer Klasse sein
+- Klassen haben: Bezeichnung (z. B. „10a"), Schuljahr, Klassen-ID</p>
+<hr />
+<p><strong>Aufgaben:</strong></p>
+<ol>
+<li>
+<p>Identifiziere alle <strong>Entitätstypen</strong> und ihre <strong>Attribute</strong> (inkl. Primärschlüssel).</p>
+</li>
+<li>
+<p>Bestimme alle <strong>Beziehungen</strong> zwischen den Entitätstypen und gib die <strong>Kardinalitäten</strong> an.</p>
+</li>
+<li>
+<p>Welche m:n-Beziehungen gibt es? Welche Zwischentabellen (Verknüpfungstabellen) würden benötigt?</p>
+</li>
+<li>
+<p>Erstelle das <strong>ER-Diagramm</strong> (Textdarstellung mit Entitäten, Beziehungslinien und Kardinalitäten).</p>
+</li>
+<li>
+<p>Das System soll auch Eltern erfassen, die Nachrichten an Lehrer senden können. Wie würdest du das ERM erweitern?</p>
+</li>
+</ol>
+<p><strong>Deliverables:</strong> Entitätsliste + Beziehungsübersicht + ER-Diagramm (Text) + Erweiterungsvorschlag</p>
+<details class="info">
+<summary>Tipp</summary>
+<p>Starte mit den Entitätstypen (Schüler, Lehrer, Fach, Klasse). Dann analysiere Beziehungen für jedes Paar.</p>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<p><strong>Bewertungskriterien:</strong></p>
+<ol>
+<li>
+<p>Entitäten: Schüler (SchülerNr PK, Name, Geburtsdatum, KlasseID FK), Lehrer (PersonalNr PK, Name, Fachrichtung), Fach (FachID PK, Bezeichnung, StundenProWoche), Klasse (KlassenID PK, Bezeichnung, Schuljahr).</p>
+</li>
+<li>
+<p>Beziehungen: Schüler–Klasse: n:1. Lehrer–Klasse (Klassenlehrer): 1:1. Lehrer–Fach: m:n. Schüler–Fach: m:n (mit Note als Beziehungsattribut).</p>
+</li>
+<li>
+<p>m:n-Beziehungen: Lehrer–Fach → Zwischentabelle LehrerFach (LehrerID, FachID). Schüler–Fach → Zwischentabelle Note (SchülerID, FachID, Note).</p>
+</li>
+<li>
+<p>Diagramm: Rechtecke für alle 4 Entitäten, Verbindungslinien mit Kardinalitäten, Zwischentabellen als Entitäten modelliert.</p>
+</li>
+<li>
+<p>Erweiterung: Eltern-Entität (ElternID, Name, Telefon) mit 1:n-Beziehung zu Schüler (ein Schüler hat 1–2 Elternteile). Nachricht-Entität (NachrichtID, Inhalt, Datum) mit Beziehungen zu Eltern und Lehrer.</p>
+</li>
+</ol>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../kapitel8/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Kapitel 8 – UML-Diagramme">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 8 – UML-Diagramme
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../kapitel10/" class="md-footer__link md-footer__link--next" aria-label="Next: Kapitel 10 – Grundlagen der Programmierung">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Kapitel 10 – Grundlagen der Programmierung
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://de.linkedin.com/company/qualidy" target="_blank" rel="noopener" title="de.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://qualidy.de" target="_blank" rel="noopener" title="qualidy.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "navigation.prune", "toc.follow", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
